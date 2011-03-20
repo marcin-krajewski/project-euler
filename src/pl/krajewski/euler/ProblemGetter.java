@@ -3,9 +3,7 @@ package pl.krajewski.euler;
 import java.util.Date;
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.ProblemResolver;
-import pl.krajewski.euler.problems.implementations.Problem1;
-import pl.krajewski.euler.problems.implementations.Problem2;
-import pl.krajewski.euler.problems.implementations.Problem3;
+import pl.krajewski.euler.problems.implementations.*;
 
 
 public class ProblemGetter {
@@ -22,6 +20,9 @@ public class ProblemGetter {
 		else if(problemNumber == 3) {
 			return new Problem3(parameters);
 		}
+		else if(problemNumber == 4) {
+			return new Problem4(parameters);
+		}
 		return null;
 	}
 
@@ -34,6 +35,9 @@ public class ProblemGetter {
 		}
 		else if(problemNumber == 3) {
 			return new Parameters(new Double(600851475143.0));
+		}
+		else if(problemNumber == 4) {
+			return new Parameters(3);
 		}
 		return null;
 	}
