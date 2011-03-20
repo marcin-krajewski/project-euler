@@ -1,5 +1,6 @@
 package pl.krajewski.euler;
 
+import java.text.DecimalFormat;
 import java.util.Date;
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.ProblemResolver;
@@ -10,38 +11,17 @@ public class ProblemGetter {
 
 	private static Date startDate, stopDate;
 	private static ProblemResolver getProblemForNumber(int problemNumber) {
-		Parameters parameters = getParametersForNumber(problemNumber);
-		if(problemNumber == 1) {
-			return new Problem1(parameters);
-		}
-		else if(problemNumber == 2) {
-			return new Problem2(parameters);
-		}
-		else if(problemNumber == 3) {
-			return new Problem3(parameters);
-		}
-		else if(problemNumber == 4) {
-			return new Problem4(parameters);
+		Parameters parameters = ParametersGetter.getParametersForNumber(problemNumber);
+		switch(problemNumber) {
+		case 1: return new Problem1(parameters);
+		case 2: return new Problem2(parameters);
+		case 3: return new Problem3(parameters);
+		case 4: return new Problem4(parameters);
+		case 5: return new Problem5(parameters);
 		}
 		return null;
 	}
 
-	private static Parameters getParametersForNumber(int problemNumber) {
-		if(problemNumber == 1) {
-			return new Parameters(3,5,1000);
-		}
-		else if(problemNumber == 2) {
-			return new Parameters(4000000);
-		}
-		else if(problemNumber == 3) {
-			return new Parameters(new Double(600851475143.0));
-		}
-		else if(problemNumber == 4) {
-			return new Parameters(3);
-		}
-		return null;
-	}
-	
 	public static void resolveProblem(int problemNumber) {
 		resolveAndPrintProblem(getProblemForNumber(problemNumber), problemNumber);
 	}
@@ -58,7 +38,7 @@ public class ProblemGetter {
 		sb.append("RESULT FOR NUMBER: ");
 		sb.append(problemCallNumber);
 		sb.append(" IS ");
-		sb.append(result);
+		sb.append((new DecimalFormat("0")).format(result));
 		return sb.toString();
 	}
 	

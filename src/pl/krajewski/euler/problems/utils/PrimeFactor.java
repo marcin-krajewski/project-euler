@@ -12,7 +12,6 @@ public class PrimeFactor {
 		
 		double factor = number;
 		while(factor > 1) {
-			System.out.println("FACTOR "+factor);
 			for(double i=2; i<=factor; i++) {
 				
 				if(factor%i == 0.0f) {
@@ -39,9 +38,13 @@ public class PrimeFactor {
 	
 	public static Double getUniqueFactorsMultiplied(double number) {
 
-		Set<Double> factorsOfNumber = getUniquePrimeFactorsOfNumber(number);
+		return multiplyFactors(getUniquePrimeFactorsOfNumber(number));
+	}
+	
+	public static Double multiplyFactors(Set<Double> factors) {
+		
 		double result = 1;
-		for(Double i : factorsOfNumber) {
+		for(Double i : factors) {
 			result *= i;
 		}
 		return result;
