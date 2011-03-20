@@ -22,10 +22,10 @@ public class Parameters {
 		}
 	}
 
-	public <T> T getParameterForNumber(Integer number) {
+	public Object getParameterForNumber(Integer number) {
 		if(number == null) {
 			return null;
 		}
-		return (T) this.parameters.get(number);
+		return this.parameters.get(number);
 	}
 }

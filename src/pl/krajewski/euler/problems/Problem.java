@@ -1,12 +1,14 @@
 package pl.krajewski.euler.problems;
 
-import java.util.Map;
+public abstract class Problem<T> implements ProblemResolver<T> {
 
-public abstract class Problem {
-
-	protected Parameters parameters;
+	private Parameters parameters;
 	
 	public Problem(Parameters parameters) {
 		this.parameters = parameters;
+	}
+	
+	protected <S> S getParameterForNumber(Integer number) {
+		return (S)this.parameters.getParameterForNumber(number);
 	}
 }
