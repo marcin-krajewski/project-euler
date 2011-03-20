@@ -6,7 +6,7 @@ package pl.krajewski.euler;
 public class ProjectEuler {
 
 	
-	private static Integer problemCallNumber = 5;
+	private static Integer problemCallNumber = 6;
 	/**
 	 * @param args
 	 */

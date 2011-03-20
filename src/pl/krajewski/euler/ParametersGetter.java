@@ -11,6 +11,7 @@ public class ParametersGetter {
 		case 3: return new Parameters(new Double(600851475143.0));
 		case 4: return new Parameters(3);
 		case 5: return new Parameters(1.0, 20.0);
+		case 6: return new Parameters(1.0, 100.0);
 		}
 		return null;
 	}
