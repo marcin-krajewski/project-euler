@@ -1,4 +1,4 @@
-package pl.krajewski.euler.problems.implementations;
+package pl.krajewski.euler.problems.implementations.problems1_10;
 
 import java.util.HashSet;
 import java.util.Set;

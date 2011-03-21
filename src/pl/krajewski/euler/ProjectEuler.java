@@ -1,9 +1,12 @@
 package pl.krajewski.euler;
 
+import pl.krajewski.euler.problems.utils.PrimeFactor;
+import pl.krajewski.euler.problems.utils.PrimeNumbers;
+
 public class ProjectEuler {
 
 	
-	private static Integer problemCallNumber = 9;
+	private static Integer problemCallNumber = 10;
 	/**
 	 * @param args
 	 */

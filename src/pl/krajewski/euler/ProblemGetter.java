@@ -5,6 +5,7 @@ import java.util.Date;
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.ProblemResolver;
 import pl.krajewski.euler.problems.implementations.*;
+import pl.krajewski.euler.problems.implementations.problems1_10.*;
 
 
 public class ProblemGetter {
@@ -22,6 +23,7 @@ public class ProblemGetter {
 		case 7: return new Problem7(parameters);
 		case 8: return new Problem8(parameters);
 		case 9: return new Problem9(parameters);
+		case 10: return new Problem10(parameters);
 		}
 		return null;
 	}
