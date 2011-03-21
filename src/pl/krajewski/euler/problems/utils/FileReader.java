@@ -32,4 +32,8 @@ public class FileReader {
 			return null;
 		}
 	}
+	
+	public static String readProblemFileInOneLine(String fileName) {
+		return readProblemFile(fileName).replaceAll("\n", "");
+	}
 }

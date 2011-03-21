@@ -17,7 +17,7 @@ public class Problem8 extends Problem<Integer> {
 		
 		Integer result = 0;
 		
-		String number = FileReader.readProblemFile(fileName).trim();
+		String number = FileReader.readProblemFileInOneLine(fileName).trim();
 		int res = 1;
 		int len = number.length();
 		for(int i=0; i<=len-consecutiveDigits; i++, res = 1) {
