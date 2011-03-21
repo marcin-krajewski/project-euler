@@ -3,7 +3,8 @@ package pl.krajewski.euler.problems.utils;
 public class PrimeNumbers {
 
 	public static boolean isNumberPrime(double number) {
-		for(double i=2; i<number; i++) {
+		double len = number/2+1;
+		for(double i=2; i<len; i++) {
 			if(number%i == 0) {
 				return false;
 			}
