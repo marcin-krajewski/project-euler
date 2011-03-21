@@ -21,6 +21,7 @@ public class ProblemGetter {
 		case 6: return new Problem6(parameters);
 		case 7: return new Problem7(parameters);
 		case 8: return new Problem8(parameters);
+		case 9: return new Problem9(parameters);
 		}
 		return null;
 	}
