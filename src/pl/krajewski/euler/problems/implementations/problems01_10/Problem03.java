@@ -1,12 +1,12 @@
-package pl.krajewski.euler.problems.implementations.problems01_09;
+package pl.krajewski.euler.problems.implementations.problems01_10;
 
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.PrimeFactor;
 
-public class Problem3 extends Problem<Double> {
+public class Problem03 extends Problem<Double> {
 
-	public Problem3(Parameters params) {
+	public Problem03(Parameters params) {
 		super(params);
 	}
 	

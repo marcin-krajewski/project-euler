@@ -1,4 +1,4 @@
-package pl.krajewski.euler.problems.implementations.problems01_09;
+package pl.krajewski.euler.problems.implementations.problems01_10;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -6,9 +6,9 @@ import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.LeastCommonMultiple;
 
-public class Problem5 extends Problem<Double> {
+public class Problem05 extends Problem<Double> {
 
-	public Problem5(Parameters parameters) {
+	public Problem05(Parameters parameters) {
 		super(parameters);
 	}
 

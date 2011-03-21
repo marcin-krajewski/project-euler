@@ -1,12 +1,12 @@
-package pl.krajewski.euler.problems.implementations.problems01_09;
+package pl.krajewski.euler.problems.implementations.problems01_10;
 
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.FileReader;
 
-public class Problem8 extends Problem<Integer> {
+public class Problem08 extends Problem<Integer> {
 
-	public Problem8(Parameters parameters) {
+	public Problem08(Parameters parameters) {
 		super(parameters);
 	}
 

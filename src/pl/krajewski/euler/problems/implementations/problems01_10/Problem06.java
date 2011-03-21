@@ -1,13 +1,13 @@
-package pl.krajewski.euler.problems.implementations.problems01_09;
+package pl.krajewski.euler.problems.implementations.problems01_10;
 
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.PowerOfSum;
 import pl.krajewski.euler.problems.utils.SumOfPowers;
 
-public class Problem6 extends Problem<Double>{
+public class Problem06 extends Problem<Double>{
 
-	public Problem6(Parameters parameters) {
+	public Problem06(Parameters parameters) {
 		super(parameters);
 	}
 

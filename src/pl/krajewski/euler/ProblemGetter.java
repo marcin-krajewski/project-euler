@@ -5,10 +5,9 @@ import java.util.Date;
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.ProblemResolver;
 import pl.krajewski.euler.problems.implementations.*;
-import pl.krajewski.euler.problems.implementations.problems01_09.*;
-import pl.krajewski.euler.problems.implementations.problems_10_19.Problem10;
-import pl.krajewski.euler.problems.implementations.problems_10_19.Problem11;
-import pl.krajewski.euler.problems.implementations.problems_10_19.Problem12;
+import pl.krajewski.euler.problems.implementations.problems01_10.*;
+import pl.krajewski.euler.problems.implementations.problems_11_20.Problem11;
+import pl.krajewski.euler.problems.implementations.problems_11_20.Problem12;
 
 
 public class ProblemGetter {
@@ -17,15 +16,15 @@ public class ProblemGetter {
 	private static ProblemResolver getProblemForNumber(int problemNumber) {
 		Parameters parameters = ParametersGetter.getParametersForNumber(problemNumber);
 		switch(problemNumber) {
-		case 1: return new Problem1(parameters);
-		case 2: return new Problem2(parameters);
-		case 3: return new Problem3(parameters);
-		case 4: return new Problem4(parameters);
-		case 5: return new Problem5(parameters);
-		case 6: return new Problem6(parameters);
-		case 7: return new Problem7(parameters);
-		case 8: return new Problem8(parameters);
-		case 9: return new Problem9(parameters);
+		case 1: return new Problem01(parameters);
+		case 2: return new Problem02(parameters);
+		case 3: return new Problem03(parameters);
+		case 4: return new Problem04(parameters);
+		case 5: return new Problem05(parameters);
+		case 6: return new Problem06(parameters);
+		case 7: return new Problem07(parameters);
+		case 8: return new Problem08(parameters);
+		case 9: return new Problem09(parameters);
 		case 10: return new Problem10(parameters);
 		case 11: return new Problem11(parameters);
 		case 12: return new Problem12(parameters);
