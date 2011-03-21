@@ -8,6 +8,7 @@ import pl.krajewski.euler.problems.implementations.*;
 import pl.krajewski.euler.problems.implementations.problems1_9.*;
 import pl.krajewski.euler.problems.implementations.problems_10_19.Problem10;
 import pl.krajewski.euler.problems.implementations.problems_10_19.Problem11;
+import pl.krajewski.euler.problems.implementations.problems_10_19.Problem12;
 
 
 public class ProblemGetter {
@@ -27,6 +28,7 @@ public class ProblemGetter {
 		case 9: return new Problem9(parameters);
 		case 10: return new Problem10(parameters);
 		case 11: return new Problem11(parameters);
+		case 12: return new Problem12(parameters);
 		}
 		return null;
 	}

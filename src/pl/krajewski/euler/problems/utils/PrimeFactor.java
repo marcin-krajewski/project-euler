@@ -21,7 +21,7 @@ public class PrimeFactor {
 				}
 			}
 		}
-		System.out.println("LIST "+list);
+//		System.out.println("LIST "+list);
 		return list.toArray(new Double[]{});
 	}
 	
@@ -32,7 +32,7 @@ public class PrimeFactor {
 		for(int i=0; i<factors.length; i++) {
 			set.add(factors[i]);
 		}
-		System.out.println("SET "+set);
+//		System.out.println("SET "+set);
 		return set;
 	}
 	

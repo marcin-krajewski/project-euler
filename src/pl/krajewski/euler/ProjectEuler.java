@@ -6,7 +6,7 @@ import pl.krajewski.euler.problems.utils.PrimeNumbers;
 public class ProjectEuler {
 
 	
-	private static Integer problemCallNumber = 11;
+	private static Integer problemCallNumber = 12;
 	/**
 	 * @param args
 	 */
