@@ -5,7 +5,8 @@ import java.util.Date;
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.ProblemResolver;
 import pl.krajewski.euler.problems.implementations.*;
-import pl.krajewski.euler.problems.implementations.problems1_10.*;
+import pl.krajewski.euler.problems.implementations.problems1_9.*;
+import pl.krajewski.euler.problems.implementations.problems_10_19.Problem10;
 
 
 public class ProblemGetter {

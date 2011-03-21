@@ -1,4 +1,4 @@
-package pl.krajewski.euler.problems.implementations.problems1_10;
+package pl.krajewski.euler.problems.implementations.problems_10_19;
 
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
