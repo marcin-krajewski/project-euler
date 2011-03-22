@@ -36,7 +36,14 @@ public class FileReader {
 
 	private static BufferedReader getReader(String fileName)
 			throws FileNotFoundException {
-		FileInputStream fileInputStream = new FileInputStream(new File("res\\files\\"+fileName));
+		File file = new File("res/files/"+fileName);
+		try {
+            System.out.println("FILE "+file.getCanonicalPath());
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        FileInputStream fileInputStream = new FileInputStream(file);
 		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
 		return bufferedReader;
 	}

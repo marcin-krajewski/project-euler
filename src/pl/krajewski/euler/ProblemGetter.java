@@ -8,6 +8,7 @@ import pl.krajewski.euler.problems.implementations.*;
 import pl.krajewski.euler.problems.implementations.problems01_10.*;
 import pl.krajewski.euler.problems.implementations.problems_11_20.Problem11;
 import pl.krajewski.euler.problems.implementations.problems_11_20.Problem12;
+import pl.krajewski.euler.problems.implementations.problems_11_20.Problem13;
 
 
 public class ProblemGetter {
@@ -28,6 +29,7 @@ public class ProblemGetter {
 		case 10: return new Problem10(parameters);
 		case 11: return new Problem11(parameters);
 		case 12: return new Problem12(parameters);
+		case 13: return new Problem13(parameters);
 		}
 		return null;
 	}
@@ -48,7 +50,12 @@ public class ProblemGetter {
 		sb.append("RESULT FOR NUMBER: ");
 		sb.append(problemCallNumber);
 		sb.append(" IS ");
-		sb.append((new DecimalFormat("0")).format(result));
+		if(result instanceof String) {
+		    sb.append(result);
+		}
+		else {
+		    sb.append((new DecimalFormat("0")).format(result));
+		}
 		return sb.toString();
 	}
 	
