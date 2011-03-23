@@ -1,9 +1,11 @@
 package pl.krajewski.euler;
 
+import pl.krajewski.euler.problems.utils.StringAsNum;
+
 
 public class ProjectEuler {
 
-	public static Integer problemCallNumber = 15;
+	public static Integer problemCallNumber = 16;
 	/**
 	 * @param args
 	 */
