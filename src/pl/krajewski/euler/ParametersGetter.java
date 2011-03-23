@@ -20,6 +20,7 @@ public class ParametersGetter {
 		case 12: return new Parameters(500);
 		case 13: return new Parameters("problem13.txt", 10, 50);
 		case 14: return new Parameters(1000000.0);
+		case 15: return new Parameters(20.0);
 		}
 		return null;
 	}
