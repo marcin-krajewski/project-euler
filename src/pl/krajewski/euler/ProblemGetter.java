@@ -11,6 +11,7 @@ import pl.krajewski.euler.problems.implementations.problems_11_20.Problem12;
 import pl.krajewski.euler.problems.implementations.problems_11_20.Problem13;
 import pl.krajewski.euler.problems.implementations.problems_11_20.Problem14;
 import pl.krajewski.euler.problems.implementations.problems_11_20.Problem15;
+import pl.krajewski.euler.problems.implementations.problems_11_20.Problem16;
 
 
 public class ProblemGetter {
@@ -34,6 +35,7 @@ public class ProblemGetter {
 		case 13: return new Problem13(parameters);
 		case 14: return new Problem14(parameters);
 		case 15: return new Problem15(parameters);
+		case 16: return new Problem16(parameters);
 		}
 		return null;
 	}
@@ -96,6 +98,7 @@ public class ProblemGetter {
             case 12: return "76576500";
             case 13: return "5537376230";
             case 14: return "837799";
+            case 15: return "137846528820";
         }
         
         return "";

@@ -13,27 +13,31 @@ public class Problem15 extends Problem<Double> {
 	@Override
 	public Double resolveProblem() {
 		double gridWidth = getParameterForNumber(0);
-		return Factorial.factorial((long)gridWidth+1);
+		
+		int width = (int)gridWidth;
+		
+		Double[][] tab = new Double[width+1][width+1];
+		for(int i=0; i<width+1; i++) {
+			for(int j=0; j<width+1; j++) {
+				tab[i][j] = null;
+			}
+		}
+		
+		return res(width, width, tab);
 	}
 	
-	public double resolveWithoutRecursion(double width) {
-		double res = 1.0;
-		double temp = width;
-		for(int i=0; i<width; i++) {
-			res += temp++;
+	public double res(int i, int j, Double[][] tab) {
+		
+		if(tab[i][j] != null) {
+			return tab[i][j];
 		}
-		return res;
-	}
-	
-	public void resolveWithRecursion(int i, int j, Double[] count, double width) {
-		if(i == width && j == width) {
-			count[0]++;
+		
+		if(i == 0 || j == 0) {
+			tab[i][j] = 1.0;
+			return tab[i][j];
 		}
-		if(i < width) {
-			resolveWithRecursion(i+1, j, count, width);
-		}
-		if(j < width) {
-			resolveWithRecursion(i, j+1, count, width);
-		}
+		
+		tab[i][j] = res(i-1, j, tab)+res(i, j-1, tab);
+		return tab[i][j];
 	}
 }
