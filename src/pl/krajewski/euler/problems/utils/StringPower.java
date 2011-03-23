@@ -1,12 +1,12 @@
 package pl.krajewski.euler.problems.utils;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class StringPower {
 
 	public static String getPowerForNumberBelow10(int number, int pow) {
 		
-		if(number >= 10) {
-			return "";
-		}
 		String stringPower = "1";
 		int c;
 		int[] tab;
@@ -16,17 +16,29 @@ public class StringPower {
 			c = 0;
 			tab = StringAsNum.getStringAsNumArray0IsLowerMaxIsHigher(stringPower);
 			
-			StringBuilder sb = new StringBuilder();
-			for(int j=0; j<tab.length; j++) {
+			List<String> list = new ArrayList<String>();
+			int tempNumber = number;
+			int zeros = 0;
+			while(tempNumber > 0) {
+				StringBuilder sb = new StringBuilder();
 				
-				temp = number*tab[j]+c;
-				c = temp/10;
-				sb.append(temp%10);
-				if(j == tab.length-1) {
-					sb.append((new StringBuilder(c)).reverse());
+				for(int ii=0; ii<zeros; ii++) {
+					sb.append("0");
 				}
+				
+				for(int j=0; j<tab.length; j++) {
+					temp = (tempNumber%10)*tab[j]+c;
+					c = temp/10;
+					sb.append(temp%10);
+					if(j == tab.length-1 && c != 0) {
+						sb.append((new StringBuilder(String.valueOf(c))).reverse());
+					}
+				}
+				list.add(sb.reverse().toString());
+				tempNumber /= 10;
+				zeros++;
 			}
-			stringPower = sb.reverse().toString();
+			stringPower = StringAsNum.sumStringNumbers(list.toArray(new String[]{}));
 		}
 		return stringPower;
 	}

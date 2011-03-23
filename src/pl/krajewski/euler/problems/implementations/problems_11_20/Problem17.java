@@ -13,10 +13,8 @@ public class Problem17 extends Problem<Double> {
 		Double sum = 0.0;
 		
 		for(int i=start; i<=end; i++) {
-			System.out.println("I "+i+" -- STR "+EnglishNumbersWordLength.getStringForNumberBelow10000(i));
 			sum += EnglishNumbersWordLength.getNumberLen(i);
 		}
-		
 		return sum;
 	}
 
