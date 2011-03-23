@@ -6,10 +6,6 @@ import pl.krajewski.euler.problems.utils.PrimeNumbers;
 
 public class Problem10 extends Problem<Double> {
 
-	public Problem10(Parameters parameters) {
-		super(parameters);
-	}
-
 	@Override
 	public Double resolveProblem() {
 		int max = getParameterForNumber(0);

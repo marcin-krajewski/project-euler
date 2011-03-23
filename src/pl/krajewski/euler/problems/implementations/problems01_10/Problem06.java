@@ -7,10 +7,6 @@ import pl.krajewski.euler.problems.utils.SumOfPowers;
 
 public class Problem06 extends Problem<Double>{
 
-	public Problem06(Parameters parameters) {
-		super(parameters);
-	}
-
 	@Override
 	public Double resolveProblem() {
 		double min = getParameterForNumber(0);

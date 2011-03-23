@@ -9,10 +9,6 @@ import pl.krajewski.euler.problems.utils.FileReader;
 
 public class Problem13 extends Problem<String> {
 
-    public Problem13(Parameters parameters) {
-        super(parameters);
-    }
-
     @Override
     public String resolveProblem() {
         

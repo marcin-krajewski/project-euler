@@ -8,10 +8,6 @@ import pl.krajewski.euler.problems.utils.LeastCommonMultiple;
 
 public class Problem05 extends Problem<Double> {
 
-	public Problem05(Parameters parameters) {
-		super(parameters);
-	}
-
 	@Override
 	public Double resolveProblem() {
 		double min = getParameterForNumber(0);

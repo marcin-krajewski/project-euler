@@ -5,10 +5,6 @@ import pl.krajewski.euler.problems.Problem;
 
 public class Problem09 extends Problem<Integer> {
 
-	public Problem09(Parameters parameters) {
-		super(parameters);
-	}
-
 	@Override
 	public Integer resolveProblem() {
 		

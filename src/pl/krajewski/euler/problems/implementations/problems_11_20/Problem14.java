@@ -6,10 +6,6 @@ import pl.krajewski.euler.problems.utils.CollatzSequence;
 
 public class Problem14  extends Problem<Double> {
 
-	public Problem14(Parameters parameters) {
-		super(parameters);
-	}
-
 	@Override
 	public Double resolveProblem() {
 		double number = getParameterForNumber(0);

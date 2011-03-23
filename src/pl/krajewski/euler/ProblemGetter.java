@@ -19,26 +19,34 @@ public class ProblemGetter {
 	private static Date startDate, stopDate;
 	public static ProblemResolver getProblemForNumber(int problemNumber) {
 		Parameters parameters = ParametersGetter.getParametersForNumber(problemNumber);
-		switch(problemNumber) {
-		case 1: return new Problem01(parameters);
-		case 2: return new Problem02(parameters);
-		case 3: return new Problem03(parameters);
-		case 4: return new Problem04(parameters);
-		case 5: return new Problem05(parameters);
-		case 6: return new Problem06(parameters);
-		case 7: return new Problem07(parameters);
-		case 8: return new Problem08(parameters);
-		case 9: return new Problem09(parameters);
-		case 10: return new Problem10(parameters);
-		case 11: return new Problem11(parameters);
-		case 12: return new Problem12(parameters);
-		case 13: return new Problem13(parameters);
-		case 14: return new Problem14(parameters);
-		case 15: return new Problem15(parameters);
-		case 16: return new Problem16(parameters);
-		}
-		return null;
+		ProblemResolver problemResolver = getProblemResolverForNumber(problemNumber);
+		problemResolver.setParameters(parameters);
+		return problemResolver;
 	}
+	
+	private static ProblemResolver getProblemResolverForNumber(Integer problemNumber) {
+		
+		switch(problemNumber) {
+			case 1: return new Problem01();
+			case 2: return new Problem02();
+			case 3: return new Problem03();
+			case 4: return new Problem04();
+			case 5: return new Problem05();
+			case 6: return new Problem06();
+			case 7: return new Problem07();
+			case 8: return new Problem08();
+			case 9: return new Problem09();
+			case 10: return new Problem10();
+			case 11: return new Problem11();
+			case 12: return new Problem12();
+			case 13: return new Problem13();
+			case 14: return new Problem14();
+			case 15: return new Problem15();
+			case 16: return new Problem16();
+			default: return null;
+		}
+	}
+	
 
 	public static void resolveProblem(int problemNumber) {
 		resolveAndPrintProblem(getProblemForNumber(problemNumber), problemNumber);

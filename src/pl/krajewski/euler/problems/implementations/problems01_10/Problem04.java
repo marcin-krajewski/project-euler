@@ -5,10 +5,6 @@ import pl.krajewski.euler.problems.Problem;
 
 public class Problem04 extends Problem<Integer> {
 
-	public Problem04(Parameters parameters) {
-		super(parameters);
-	}
-	
 	@Override
 	public Integer resolveProblem() {
 		int maxDigits = getParameterForNumber(0);

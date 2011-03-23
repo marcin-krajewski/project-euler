@@ -6,10 +6,6 @@ import pl.krajewski.euler.problems.Problem;
 
 public class Problem16 extends Problem<Integer> {
 
-	public Problem16(Parameters parameters) {
-		super(parameters);
-	}
-
 	@Override
 	public Integer resolveProblem() {
 		int number = getParameterForNumber(0);

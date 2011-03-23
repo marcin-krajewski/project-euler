@@ -6,10 +6,6 @@ import pl.krajewski.euler.problems.utils.FileReader;
 
 public class Problem08 extends Problem<Integer> {
 
-	public Problem08(Parameters parameters) {
-		super(parameters);
-	}
-
 	@Override
 	public Integer resolveProblem() {
 		String fileName = getParameterForNumber(0);

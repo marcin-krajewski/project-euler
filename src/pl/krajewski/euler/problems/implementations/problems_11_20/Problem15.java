@@ -6,10 +6,6 @@ import pl.krajewski.euler.problems.utils.Factorial;
 
 public class Problem15 extends Problem<Double> {
 
-	public Problem15(Parameters parameters) {
-		super(parameters);
-	}
-
 	@Override
 	public Double resolveProblem() {
 		double gridWidth = getParameterForNumber(0);
