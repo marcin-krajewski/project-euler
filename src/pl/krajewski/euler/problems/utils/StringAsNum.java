@@ -55,7 +55,7 @@ public class StringAsNum {
 	public static String sumStringNumbers(String[] strings) {
 
 		if(strings.length == 1) {
-			return strings[0];
+			return new StringBuilder(strings[0]).reverse().toString();
 		}
 		StringBuilder sb = new StringBuilder();
 		
@@ -127,5 +127,13 @@ public class StringAsNum {
 		}
 		
 		return sumStringNumbers(stringsToSum.toArray(new String[]{}));
+	}
+	
+	public static int sumNumbersInStringNumber(String number) {
+		int sum=0;
+		for(int i : StringAsNum.getStringAsNumArray0IsHigherMaxIsLower(number)) {
+			sum += i;
+		}
+		return sum;
 	}
 }

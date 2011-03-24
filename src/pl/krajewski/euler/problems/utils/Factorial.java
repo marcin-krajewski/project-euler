@@ -8,4 +8,12 @@ public class Factorial {
 		}
 		return num*factorial(num-1);
 	}
+	
+	public static String factorial(int max) {
+		String factorial = "1";
+		for(int i=1; i<=max; i++) {
+			factorial = StringAsNum.productTwoNumbers(i+"", factorial);
+		}
+		return factorial;
+	}
 }

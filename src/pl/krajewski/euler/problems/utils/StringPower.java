@@ -14,7 +14,7 @@ public class StringPower {
 		for(int i=0; i<pow; i++) {
 			
 			
-			stringPower = new StringBuilder(StringAsNum.productTwoNumbers(number+"", stringPower)).reverse().toString();
+			stringPower = StringAsNum.productTwoNumbers(number+"", stringPower);
 //			c = 0;
 //			tab = StringAsNum.getStringAsNumArray0IsLowerMaxIsHigher(stringPower);
 //			
