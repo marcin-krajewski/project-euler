@@ -113,6 +113,7 @@ public class ProblemGetter {
             case 15: return "137846528820";
             case 16: return "1366";
             case 17: return "21124";
+            case 18: return "1074";
         }
         
         return "";
