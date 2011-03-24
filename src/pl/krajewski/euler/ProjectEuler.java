@@ -7,13 +7,13 @@ import pl.krajewski.euler.problems.utils.StringPower;
 
 public class ProjectEuler {
 
-	public static Integer problemCallNumber = 18;
+	public static Integer problemCallNumber = 11;
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-//		ProblemGetter.resolveProblem(problemCallNumber);
-		print(StringPower.getPowerForNumberBelow10(12, 12));
+		ProblemGetter.resolveProblem(problemCallNumber);
+//		print(StringPower.getPowerForNumberBelow10(12, 12));
 	}
 	
 	private static void print(Object a) {

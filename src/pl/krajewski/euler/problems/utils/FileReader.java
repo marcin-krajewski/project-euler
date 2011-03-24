@@ -76,4 +76,30 @@ public class FileReader {
 			
 		return list.toArray(new String[]{});
 	}
+	
+	public static MapDoubleKey<Integer, Integer, Integer> getLinesWithNumbersSeparatedWithSpace(String[] arr) {
+        MapDoubleKey<Integer, Integer, Integer> numbers = new MapDoubleKey<Integer, Integer, Integer>(); 
+        
+        int colNumber = 0;
+        for(int rowNumber=0; rowNumber<arr.length; rowNumber++) {
+            String line = arr[rowNumber];
+            StringBuilder sb = new StringBuilder();
+            for(int j=0; j<line.length(); j++) {
+                char c = line.charAt(j);
+                if(Character.isDigit(c)) {
+                    sb.append(Character.toString(c));
+                }
+                else if(!sb.toString().trim().isEmpty()){
+                    numbers.put(rowNumber, colNumber++, Integer.parseInt(sb.toString()));
+                    sb = new StringBuilder();
+                }
+            }
+            if(!sb.toString().trim().isEmpty()){
+                numbers.put(rowNumber, colNumber++, Integer.parseInt(sb.toString()));
+                sb = new StringBuilder();
+            }
+            colNumber = 0;
+        }
+        return numbers;
+    }
 }
