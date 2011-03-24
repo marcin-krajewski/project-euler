@@ -23,6 +23,7 @@ public class ParametersGetter {
 		case 15: return new Parameters(20.0);
 		case 16: return new Parameters(2, 1000);
 		case 17: return new Parameters(1, 1000);
+		case 18: return new Parameters("problem18.txt");
 		}
 		return null;
 	}

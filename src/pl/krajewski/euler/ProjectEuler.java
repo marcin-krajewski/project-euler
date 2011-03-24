@@ -7,7 +7,7 @@ import pl.krajewski.euler.problems.utils.StringPower;
 
 public class ProjectEuler {
 
-	public static Integer problemCallNumber = 11;
+	public static Integer problemCallNumber = 18;
 	/**
 	 * @param args
 	 */
