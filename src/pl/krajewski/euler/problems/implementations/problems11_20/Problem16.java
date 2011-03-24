@@ -19,7 +19,7 @@ public class Problem16 extends Problem<Integer> {
 			sum += numbers[i];
 		}
 		
-		System.out.println("STRING "+stringPow);
+		System.out.println("STRING "+sum);
 		return sum;
 	}
 	

@@ -16,7 +16,6 @@ public class Problem11 extends Problem<Integer> {
 		String fileName = getParameterForNumber(0);
 		int consecutiveNumbers = getParameterForNumber(1);
 		
-		
         MapDoubleKey<Integer, Integer, Integer> numbers = 
             FileReader.getLinesWithNumbersSeparatedWithSpaceForFileName(fileName);
 		

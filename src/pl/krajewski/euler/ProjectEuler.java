@@ -9,14 +9,13 @@ import pl.krajewski.euler.problems.utils.DateChecker.Month;
 
 public class ProjectEuler {
 
-	public static Integer problemCallNumber = 19;
+	public static Integer problemCallNumber = 20;
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		ProblemGetter.resolveProblem(problemCallNumber);
-//		print(DateChecker.checkWhichDayWasDate(29, Month.NOV, 1986));
-//		print(StringPower.getPowerForNumberBelow10(12, 12));
+		print(StringAsNum.productTwoNumbers("115", "23"));
 	}
 	
 	private static void print(Object a) {

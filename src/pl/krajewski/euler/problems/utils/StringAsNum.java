@@ -1,5 +1,8 @@
 package pl.krajewski.euler.problems.utils;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class StringAsNum {
 
 	public static int[] getStringAsNumArray0IsHigherMaxIsLower(String s) {
@@ -36,17 +39,24 @@ public class StringAsNum {
 			}
 		}
 		
-//		System.out.print(" S "+s+" >>>");
-//		for(int i=len2; i>=0; i--) {
-//			System.out.print(numbers[i]);
-//		}
-//		System.out.print("<<<");
-		
 		return numbers;
 	}
 	
+	public static String sumStringNumbersReverse(String[] strings) {
+		
+		List<String> stringsList = new ArrayList<String>();
+		
+		for(String s : strings) {
+			stringsList.add((new StringBuilder(s)).reverse().toString());
+		}
+		
+		return sumStringNumbers(stringsList.toArray(new String[]{}));
+	}
 	public static String sumStringNumbers(String[] strings) {
 
+		if(strings.length == 1) {
+			return strings[0];
+		}
 		StringBuilder sb = new StringBuilder();
 		
 		int maxLen = 0;
@@ -59,7 +69,7 @@ public class StringAsNum {
 		
 		int c = 0;
 		String string;
-        for(int i=maxLen-1; i>=0; i--) {
+        for(int i=0; i<maxLen; i++) {
             int sum = c;
             for(String s : strings) {
             	try {
@@ -74,11 +84,48 @@ public class StringAsNum {
             int result = sum%10;
             c = (sum/10);
             sb.append(result);
-            if(i == 0) {
+            if(i == maxLen-1) {
                 sb.append( (new StringBuilder(String.valueOf(c))).reverse().toString());
             }
         }
 		
         return sb.reverse().toString();
+	}
+	
+	public static String productTwoNumbers(String num1, String num2) {
+		
+//		System.out.println("MNO¯ENIE: "+num1+"x"+num2);
+		int c = 0;
+		boolean num1larger = num1.length() > num2.length();
+		int[] tab1 = StringAsNum.getStringAsNumArray0IsLowerMaxIsHigher(num1larger ? num2 : num1);
+		int[] tab2 = StringAsNum.getStringAsNumArray0IsLowerMaxIsHigher(num1larger ? num1 : num2);
+		
+		List<String> stringsToSum = new ArrayList<String>();
+		int len = tab2.length-1;
+		int j2;
+		int temp;
+		StringBuilder sb;
+		for(int i=0; i<tab1.length; i++) {
+			
+			c = 0;
+			sb = new StringBuilder();
+			for(int k=0; k<i; k++) {
+				sb.append("0");
+			}
+			j2 = tab1[i]%10;
+			for(int j=0; j<tab2.length; j++) {
+				
+				temp = j2*tab2[j]+c;
+				c = temp/10;
+				sb.append(temp%10);
+				if(j == len && c != 0) {
+					sb.append((new StringBuilder(String.valueOf(c))).reverse());
+				}
+				
+			}
+			stringsToSum.add(sb.toString());
+		}
+		
+		return sumStringNumbers(stringsToSum.toArray(new String[]{}));
 	}
 }
