@@ -77,6 +77,10 @@ public class FileReader {
 		return list.toArray(new String[]{});
 	}
 	
+	public static MapDoubleKey<Integer, Integer, Integer> getLinesWithNumbersSeparatedWithSpaceForFileName(String fileName) {
+	    String[] fileLines = readProblemFileLines(fileName);
+        return FileReader.getLinesWithNumbersSeparatedWithSpace(fileLines);
+	}
 	public static MapDoubleKey<Integer, Integer, Integer> getLinesWithNumbersSeparatedWithSpace(String[] arr) {
         MapDoubleKey<Integer, Integer, Integer> numbers = new MapDoubleKey<Integer, Integer, Integer>(); 
         

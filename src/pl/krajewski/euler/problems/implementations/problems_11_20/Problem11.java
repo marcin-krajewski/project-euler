@@ -16,20 +16,19 @@ public class Problem11 extends Problem<Integer> {
 		String fileName = getParameterForNumber(0);
 		int consecutiveNumbers = getParameterForNumber(1);
 		
-		int max = 0;
 		
-		String[] arr = FileReader.readProblemFileLines(fileName);
-		
-		MapDoubleKey<Integer, Integer, Integer> numbers = 
-		    FileReader.getLinesWithNumbersSeparatedWithSpace(arr);
+        MapDoubleKey<Integer, Integer, Integer> numbers = 
+            FileReader.getLinesWithNumbersSeparatedWithSpaceForFileName(fileName);
 		
 		int[][] diffs = { 
-				{0, 1}, {1, 0}, 
-				{1, 1}
-				, {1, -1} 
-				};
+			{0, 1}, 
+			{1, 0}, 
+			{1, 1}, 
+			{1, -1} 
+		};
 		
 		
+        int max = 0;
 		int res;
 		boolean hasProducts;
 		
