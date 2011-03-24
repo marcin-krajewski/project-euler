@@ -4,16 +4,25 @@ import java.text.DecimalFormat;
 import java.util.Date;
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.ProblemResolver;
-import pl.krajewski.euler.problems.implementations.*;
-import pl.krajewski.euler.problems.implementations.problems01_10.*;
-import pl.krajewski.euler.problems.implementations.problems_11_20.Problem11;
-import pl.krajewski.euler.problems.implementations.problems_11_20.Problem12;
-import pl.krajewski.euler.problems.implementations.problems_11_20.Problem13;
-import pl.krajewski.euler.problems.implementations.problems_11_20.Problem14;
-import pl.krajewski.euler.problems.implementations.problems_11_20.Problem15;
-import pl.krajewski.euler.problems.implementations.problems_11_20.Problem16;
-import pl.krajewski.euler.problems.implementations.problems_11_20.Problem17;
-import pl.krajewski.euler.problems.implementations.problems_11_20.Problem18;
+import pl.krajewski.euler.problems.implementations.problems01_10.Problem01;
+import pl.krajewski.euler.problems.implementations.problems01_10.Problem02;
+import pl.krajewski.euler.problems.implementations.problems01_10.Problem03;
+import pl.krajewski.euler.problems.implementations.problems01_10.Problem04;
+import pl.krajewski.euler.problems.implementations.problems01_10.Problem05;
+import pl.krajewski.euler.problems.implementations.problems01_10.Problem06;
+import pl.krajewski.euler.problems.implementations.problems01_10.Problem07;
+import pl.krajewski.euler.problems.implementations.problems01_10.Problem08;
+import pl.krajewski.euler.problems.implementations.problems01_10.Problem09;
+import pl.krajewski.euler.problems.implementations.problems01_10.Problem10;
+import pl.krajewski.euler.problems.implementations.problems11_20.Problem11;
+import pl.krajewski.euler.problems.implementations.problems11_20.Problem12;
+import pl.krajewski.euler.problems.implementations.problems11_20.Problem13;
+import pl.krajewski.euler.problems.implementations.problems11_20.Problem14;
+import pl.krajewski.euler.problems.implementations.problems11_20.Problem15;
+import pl.krajewski.euler.problems.implementations.problems11_20.Problem16;
+import pl.krajewski.euler.problems.implementations.problems11_20.Problem17;
+import pl.krajewski.euler.problems.implementations.problems11_20.Problem18;
+import pl.krajewski.euler.problems.implementations.problems11_20.Problem19;
 
 
 public class ProblemGetter {
@@ -47,6 +56,7 @@ public class ProblemGetter {
 			case 16: return new Problem16();
 			case 17: return new Problem17();
 			case 18: return new Problem18();
+			case 19: return new Problem19();
 			default: return null;
 		}
 	}
@@ -114,6 +124,7 @@ public class ProblemGetter {
             case 16: return "1366";
             case 17: return "21124";
             case 18: return "1074";
+            case 19: return "171";
         }
         
         return "";

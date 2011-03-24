@@ -1,6 +1,7 @@
 package pl.krajewski.euler;
 
 import pl.krajewski.euler.problems.Parameters;
+import pl.krajewski.euler.problems.utils.DateChecker.DayOfWeek;
 
 public class ParametersGetter {
 
@@ -24,6 +25,7 @@ public class ParametersGetter {
 		case 16: return new Parameters(2, 1000);
 		case 17: return new Parameters(1, 1000);
 		case 18: return new Parameters("problem18.txt");
+		case 19: return new Parameters(1901, 2000, 1, DayOfWeek.SUN);
 		}
 		return null;
 	}
