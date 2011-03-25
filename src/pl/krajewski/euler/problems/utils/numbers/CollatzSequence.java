@@ -1,12 +1,18 @@
 package pl.krajewski.euler.problems.utils.numbers;
 
+import java.util.Map;
+
 public class CollatzSequence {
 
-	public static double numberOfSteps(double number) {
+	public static double numberOfSteps(double number, Map<Double, Double> map) {
 		
 		double steps = 1.0;
 		if(number <= 1.0) {
 			return steps;
+		}
+		
+		if(map.containsKey(number)) {
+			return map.get(number);
 		}
 		
 		while(true) {
@@ -20,6 +26,9 @@ public class CollatzSequence {
 				if(number == 1.0) {
 					break;
 				}
+			}
+			if(map.containsKey(number)) {
+				return steps + map.get(number);
 			}
 		}
 		

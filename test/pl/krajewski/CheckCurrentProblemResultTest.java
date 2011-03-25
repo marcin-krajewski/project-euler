@@ -23,6 +23,6 @@ public class CheckCurrentProblemResultTest {
         assertNotSame("", problemResult);
         
         ProblemResolver resolver = ProblemGetter.getProblemForNumber(problemNumber);
-        assertEquals(ProblemGetter.getFormattedResult(resolver.resolveProblem()).trim(), problemResult);
+        assertEquals(problemResult, ProblemGetter.getFormattedResult(resolver.resolveProblem()).trim());
     }
 }
