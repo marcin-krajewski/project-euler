@@ -1,7 +1,7 @@
 package pl.krajewski.euler.problems.implementations.problems11_20;
 
 import pl.krajewski.euler.problems.Problem;
-import pl.krajewski.euler.problems.utils.EnglishNumbersWordLength;
+import pl.krajewski.euler.problems.utils.string.EnglishNumbersWordLength;
 
 public class Problem17 extends Problem<Double> {
 

@@ -2,8 +2,8 @@ package pl.krajewski.euler.problems.implementations.problems01_10;
 
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
-import pl.krajewski.euler.problems.utils.PowerOfSum;
-import pl.krajewski.euler.problems.utils.SumOfPowers;
+import pl.krajewski.euler.problems.utils.numbers.PowerOfSum;
+import pl.krajewski.euler.problems.utils.numbers.SumOfPowers;
 
 public class Problem06 extends Problem<Double>{
 

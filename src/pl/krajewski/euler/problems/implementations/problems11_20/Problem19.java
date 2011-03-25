@@ -1,9 +1,9 @@
 package pl.krajewski.euler.problems.implementations.problems11_20;
 
 import pl.krajewski.euler.problems.Problem;
-import pl.krajewski.euler.problems.utils.DateChecker;
-import pl.krajewski.euler.problems.utils.DateChecker.DayOfWeek;
-import pl.krajewski.euler.problems.utils.DateChecker.Month;
+import pl.krajewski.euler.problems.utils.numbers.DateChecker;
+import pl.krajewski.euler.problems.utils.numbers.DateChecker.DayOfWeek;
+import pl.krajewski.euler.problems.utils.numbers.DateChecker.Month;
 
 public class Problem19 extends Problem<Integer> {
 

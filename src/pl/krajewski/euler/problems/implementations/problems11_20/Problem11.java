@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Map;
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
-import pl.krajewski.euler.problems.utils.FileReader;
-import pl.krajewski.euler.problems.utils.MapDoubleKey;
+import pl.krajewski.euler.problems.utils.classes.MapDoubleKey;
+import pl.krajewski.euler.problems.utils.string.FileReader;
 
 public class Problem11 extends Problem<Integer> {
 

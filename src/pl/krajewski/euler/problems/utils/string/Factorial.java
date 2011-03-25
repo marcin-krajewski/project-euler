@@ -1,4 +1,5 @@
-package pl.krajewski.euler.problems.utils;
+package pl.krajewski.euler.problems.utils.string;
+
 
 public class Factorial {
 

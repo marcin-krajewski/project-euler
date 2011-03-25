@@ -1,4 +1,4 @@
-package pl.krajewski.euler.problems.utils;
+package pl.krajewski.euler.problems.utils.string;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import pl.krajewski.euler.problems.utils.classes.MapDoubleKey;
 
 public class FileReader {
 

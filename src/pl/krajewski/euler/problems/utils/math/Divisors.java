@@ -1,8 +1,9 @@
-package pl.krajewski.euler.problems.utils;
+package pl.krajewski.euler.problems.utils.math;
 
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import pl.krajewski.euler.problems.utils.numbers.LeastCommonMultiple;
 
 public class Divisors {
 

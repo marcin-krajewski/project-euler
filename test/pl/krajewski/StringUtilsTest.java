@@ -2,7 +2,7 @@ package pl.krajewski;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import pl.krajewski.euler.problems.utils.StringAsNum;
+import pl.krajewski.euler.problems.utils.string.StringAsNum;
 
 public class StringUtilsTest {
 

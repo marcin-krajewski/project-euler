@@ -2,8 +2,8 @@ package pl.krajewski.euler.problems.implementations.problems11_20;
 
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
-import pl.krajewski.euler.problems.utils.Divisors;
-import pl.krajewski.euler.problems.utils.SequenceOfTriangle;
+import pl.krajewski.euler.problems.utils.math.Divisors;
+import pl.krajewski.euler.problems.utils.numbers.SequenceOfTriangle;
 
 public class Problem12 extends Problem<Double> {
 

@@ -3,8 +3,8 @@ package pl.krajewski.euler.problems.implementations.problems21_30;
 import java.util.HashSet;
 import java.util.Set;
 
-import pl.krajewski.euler.problems.utils.ArrayUtils;
-import pl.krajewski.euler.problems.utils.PrimeFactor;
+import pl.krajewski.euler.problems.utils.classes.ArrayUtils;
+import pl.krajewski.euler.problems.utils.math.PrimeFactor;
 
 public class Problem21 extends pl.krajewski.euler.problems.Problem<Integer> {
 

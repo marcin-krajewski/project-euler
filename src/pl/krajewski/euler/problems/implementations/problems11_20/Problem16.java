@@ -1,8 +1,8 @@
 package pl.krajewski.euler.problems.implementations.problems11_20;
 
 import pl.krajewski.euler.problems.Problem;
-import pl.krajewski.euler.problems.utils.StringAsNum;
-import pl.krajewski.euler.problems.utils.StringPower;
+import pl.krajewski.euler.problems.utils.string.StringAsNum;
+import pl.krajewski.euler.problems.utils.string.StringPower;
 
 public class Problem16 extends Problem<Integer> {
 

@@ -2,7 +2,7 @@ package pl.krajewski.euler.problems.implementations.problems01_10;
 
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
-import pl.krajewski.euler.problems.utils.PrimeNumbers;
+import pl.krajewski.euler.problems.utils.math.PrimeNumbers;
 
 public class Problem07 extends Problem<Double> {
 

@@ -1,8 +1,8 @@
 package pl.krajewski.euler.problems.implementations.problems11_20;
 
 import pl.krajewski.euler.problems.Problem;
-import pl.krajewski.euler.problems.utils.FileReader;
-import pl.krajewski.euler.problems.utils.MapDoubleKey;
+import pl.krajewski.euler.problems.utils.classes.MapDoubleKey;
+import pl.krajewski.euler.problems.utils.string.FileReader;
 
 public class Problem18 extends Problem<Double> {
 

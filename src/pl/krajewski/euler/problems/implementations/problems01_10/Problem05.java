@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
-import pl.krajewski.euler.problems.utils.LeastCommonMultiple;
+import pl.krajewski.euler.problems.utils.numbers.LeastCommonMultiple;
 
 public class Problem05 extends Problem<Double> {
 

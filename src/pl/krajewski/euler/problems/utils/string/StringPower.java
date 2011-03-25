@@ -1,4 +1,4 @@
-package pl.krajewski.euler.problems.utils;
+package pl.krajewski.euler.problems.utils.string;
 
 import java.util.ArrayList;
 import java.util.List;

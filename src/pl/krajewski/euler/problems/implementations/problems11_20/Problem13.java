@@ -1,8 +1,8 @@
 package pl.krajewski.euler.problems.implementations.problems11_20;
 
 import pl.krajewski.euler.problems.Problem;
-import pl.krajewski.euler.problems.utils.FileReader;
-import pl.krajewski.euler.problems.utils.StringAsNum;
+import pl.krajewski.euler.problems.utils.string.FileReader;
+import pl.krajewski.euler.problems.utils.string.StringAsNum;
 
 public class Problem13 extends Problem<String> {
 

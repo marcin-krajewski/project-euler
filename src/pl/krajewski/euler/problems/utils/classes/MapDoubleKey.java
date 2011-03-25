@@ -1,4 +1,4 @@
-package pl.krajewski.euler.problems.utils;
+package pl.krajewski.euler.problems.utils.classes;
 
 import java.util.Collection;
 import java.util.HashMap;

@@ -2,7 +2,7 @@ package pl.krajewski.euler.problems.implementations.problems11_20;
 
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
-import pl.krajewski.euler.problems.utils.Factorial;
+import pl.krajewski.euler.problems.utils.string.Factorial;
 
 public class Problem15 extends Problem<Double> {
 
