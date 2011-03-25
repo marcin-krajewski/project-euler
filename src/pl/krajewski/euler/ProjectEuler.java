@@ -10,7 +10,7 @@ import pl.krajewski.euler.problems.utils.DateChecker.Month;
 
 public class ProjectEuler {
 
-	public static Integer problemCallNumber = 20;
+	public static Integer problemCallNumber = 21;
 	/**
 	 * @param args
 	 */

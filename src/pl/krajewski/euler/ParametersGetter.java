@@ -27,6 +27,7 @@ public class ParametersGetter {
 		case 18: return new Parameters("problem18.txt");
 		case 19: return new Parameters(1901, 2000, 1, DayOfWeek.SUN);
 		case 20: return new Parameters(100);
+		case 21: return new Parameters(10000);
 		}
 		return null;
 	}

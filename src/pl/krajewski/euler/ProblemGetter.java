@@ -24,6 +24,7 @@ import pl.krajewski.euler.problems.implementations.problems11_20.Problem17;
 import pl.krajewski.euler.problems.implementations.problems11_20.Problem18;
 import pl.krajewski.euler.problems.implementations.problems11_20.Problem19;
 import pl.krajewski.euler.problems.implementations.problems11_20.Problem20;
+import pl.krajewski.euler.problems.implementations.problems21_30.Problem21;
 
 
 public class ProblemGetter {
@@ -59,6 +60,7 @@ public class ProblemGetter {
 			case 18: return new Problem18();
 			case 19: return new Problem19();
 			case 20: return new Problem20();
+			case 21: return new Problem21();
 			default: return null;
 		}
 	}
