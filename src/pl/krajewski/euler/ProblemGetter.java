@@ -129,6 +129,8 @@ public class ProblemGetter {
             case 17: return "21124";
             case 18: return "1074";
             case 19: return "171";
+            case 20: return "648";
+            case 21: return "31626";
         }
         
         return "";
