@@ -142,6 +142,7 @@ public class ProblemGetter {
             case 22: return "871198282";
             case 23: return "4179871";
             case 24: return "2783915460";
+            case 25: return "4782";
         }
         
         return "";
