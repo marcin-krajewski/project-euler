@@ -1,29 +1,32 @@
 package pl.krajewski.euler.problems.implementations.problems01_10;
 
-import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 
 public class Problem02 extends Problem<Integer> {
 
+	private Integer maximumFibonacciValueIndex = 0;
+
 	@Override
 	public Integer resolveProblem() {
-		Integer max = this.getParameterForNumber(0);
-		
-		Integer ret = 0;
-		
-		int i = 1;
-		int prev = 1;
-		int temp;
-		while(i < max) {
-			if(i%2 == 0) {
-				ret += i;
+
+		Integer maximumFibonacciValue = this
+				.getParameterForNumber(maximumFibonacciValueIndex);
+
+		Integer sumOfEvenOddNumbers = 0;
+
+		int currentNumber = 1;
+		int previousNumber = 1;
+		int tempVariable;
+		while (currentNumber < maximumFibonacciValue) {
+			if (currentNumber % 2 == 0) {
+				sumOfEvenOddNumbers += currentNumber;
 			}
-			temp = i;
-			i += prev;
-			prev = temp;
+			tempVariable = currentNumber;
+			currentNumber += previousNumber;
+			previousNumber = tempVariable;
 		}
-		
-		return ret;
+
+		return sumOfEvenOddNumbers;
 	}
 
 }

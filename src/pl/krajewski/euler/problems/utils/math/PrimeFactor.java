@@ -26,6 +26,7 @@ public class PrimeFactor {
 	}
 	
 	public static Set<Double> getUniquePrimeFactorsOfNumber(double number) {
+		
 		Double[] factors = getPrimeFactorsOfNumber(number);
 		
 		Set<Double> set = new HashSet<Double>();
@@ -43,21 +44,15 @@ public class PrimeFactor {
 	
 	public static double getUniqueFactorsSummed(double number) {
 	    
-	    return sumFactors(getUniquePrimeFactorsOfNumber2(number));
-	}
-	
-	private static Set<Double> getUniquePrimeFactorsOfNumber2(double number) {
-	    Set<Double> set = new HashSet<Double>();
-        for(double i=1.0; i<(number/2.0)+1; i++) {
+		double sum = 0.0;
+		for(double i=1.0; i<=number/2.0; i++) {
             if(number % i == 0.0) {
-                set.add(i);
+                sum += i;
             }
         }
-//        set.add(number);
-//        System.out.println("NUMBER: "+number+ " --- SET "+set);
-        return set;
-    }
-
+	    return sum;
+	}
+	
     public static Double multiplyFactors(Set<Double> factors) {
 		
 		double result = 1;
@@ -77,12 +72,13 @@ public class PrimeFactor {
 	}
 	
 	public static Double getLargestPrimeFactorOfNumber(double number) {
+		
 		Set<Double> factorsOfNumber = getUniquePrimeFactorsOfNumber(number);
 		
 		double max = 0.0;
-		for(Double f : factorsOfNumber) {
-			if(max < f) {
-				max = f;
+		for(Double currentFactor : factorsOfNumber) {
+			if(max < currentFactor) {
+				max = currentFactor;
 			}
 		}
 		return max;

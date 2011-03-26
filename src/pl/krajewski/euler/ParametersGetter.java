@@ -33,6 +33,7 @@ public class ParametersGetter {
 			case 22: return new Parameters("problem22.txt", ",");
 			case 23: return new Parameters(28123);
 			case 24: return new Parameters(getMapForProblem24(), 1000000);
+			case 25: return new Parameters(1000);
 		}
 		return null;
 	}

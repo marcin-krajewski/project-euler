@@ -10,21 +10,21 @@ public class Problem08 extends Problem<Integer> {
 	public Integer resolveProblem() {
 		String fileName = getParameterForNumber(0);
 		int consecutiveDigits = getParameterForNumber(1);
-		
+
 		Integer result = 0;
-		
+
 		String number = FileReader.readProblemFileInOneLine(fileName).trim();
 		int res = 1;
 		int len = number.length();
-		for(int i=0; i<=len-consecutiveDigits; i++, res = 1) {
-			for(int j=i; j<i+consecutiveDigits; j++) {
-				res *= Integer.parseInt(number.substring(j, j+1));
+		for (int i = 0; i <= len - consecutiveDigits; i++, res = 1) {
+			for (int j = i; j < i + consecutiveDigits; j++) {
+				res *= Integer.parseInt(number.substring(j, j + 1));
 			}
-			if(res > result) {
+			if (res > result) {
 				result = res;
 			}
 		}
-		
+
 		return result;
 	}
 

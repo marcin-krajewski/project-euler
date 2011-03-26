@@ -9,10 +9,10 @@ public class Problem17 extends Problem<Double> {
 	public Double resolveProblem() {
 		int start = getParameterForNumber(0);
 		int end = getParameterForNumber(1);
-		
+
 		Double sum = 0.0;
-		
-		for(int i=start; i<=end; i++) {
+
+		for (int i = start; i <= end; i++) {
 			sum += EnglishNumbersWordLength.getNumberLen(i);
 		}
 		return sum;

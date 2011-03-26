@@ -10,12 +10,12 @@ public class Problem12 extends Problem<Double> {
 	@Override
 	public Double resolveProblem() {
 		int divisorsCount = getParameterForNumber(0);
-		
-		Double level = (double)divisorsCount; 
+
+		Double level = (double) divisorsCount;
 		double value = SequenceOfTriangle.getTriangle(level);
-		while(true) {
+		while (true) {
 			int divisors = Divisors.getCountOfDivisorsForNumber(value);
-			if(divisors > divisorsCount) {
+			if (divisors > divisorsCount) {
 				return value;
 			}
 			level++;

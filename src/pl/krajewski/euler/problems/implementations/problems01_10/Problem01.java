@@ -3,26 +3,31 @@ package pl.krajewski.euler.problems.implementations.problems01_10;
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 
-public class Problem01 extends Problem<Integer>  {
+public class Problem01 extends Problem<Integer> {
+
+	private Integer multiplier1Index = 0;
+	private Integer multiplier2Index = 1;
+	private Integer maximumNumberIndex = 2;
 
 	@Override
 	public Integer resolveProblem() {
-		
-		Integer multiplier1 = this.getParameterForNumber(0);
-		Integer multiplier2 = this.getParameterForNumber(1);
-		Integer max = this.getParameterForNumber(2);
-		
-		int ret = 0;
-		for(int i=1; i<max; i++) {
-			if(i%multiplier1 == 0) {
-				ret += i;
+
+		Integer multiplier1 = this.getParameterForNumber(multiplier1Index);
+		Integer multiplier2 = this.getParameterForNumber(multiplier2Index);
+		Integer maximumNumber = this.getParameterForNumber(maximumNumberIndex);
+
+		int resultOfProblem1 = 0;
+		for (int currentNumber = 1; currentNumber < maximumNumber; currentNumber++) {
+
+			if (currentNumber % multiplier1 == 0) {
+				resultOfProblem1 += currentNumber;
 			}
-			else if(i%multiplier2 == 0) {
-				ret += i;
+			else if (currentNumber % multiplier2 == 0) {
+				resultOfProblem1 += currentNumber;
 			}
 		}
-		
-		return ret;
+
+		return resultOfProblem1;
 	}
 
 }

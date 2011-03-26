@@ -46,7 +46,7 @@ public class CheckAllProblemsResultTest {
     
     private void printTimes() {
     	for(Integer number=1; number<=this.problemNumber; number++) {
-    		System.out.println("NUMBER: "+number+" -- TIME: "+(new DecimalFormat("0.00")).format((double)callTimes.get(number)/1000.0)+"s");
+    		System.out.println("NUMBER: "+number+" -- TIME: "+(new DecimalFormat("0.000")).format((double)callTimes.get(number)/1000.0)+"s");
     	}
     }
 }

@@ -8,10 +8,10 @@ public class Problem10 extends Problem<Double> {
 	@Override
 	public Double resolveProblem() {
 		int max = getParameterForNumber(0);
-		
+
 		double sum = 0.0;
-		for(double i=1; i<max; i++) {
-			if(PrimeNumbers.isNumberPrime(i)) {
+		for (double i = 1; i < max; i++) {
+			if (PrimeNumbers.isNumberPrime(i)) {
 				sum += i;
 			}
 		}

@@ -12,12 +12,12 @@ public class Problem05 extends Problem<Double> {
 	public Double resolveProblem() {
 		double min = getParameterForNumber(0);
 		double max = getParameterForNumber(1);
-		
+
 		Set<Double> set = new HashSet<Double>();
-		for(double i=min; i <= max; i++) {
+		for (double i = min; i <= max; i++) {
 			set.add(i);
 		}
 		return LeastCommonMultiple.getLeastCommonMultipleForAllInSet(set);
-	} 
+	}
 
 }

@@ -1,22 +1,19 @@
 package pl.krajewski.euler;
 
-import pl.krajewski.euler.problems.utils.math.Permutations;
-import pl.krajewski.euler.problems.utils.numbers.DateChecker;
-import pl.krajewski.euler.problems.utils.numbers.DateChecker.Month;
-import pl.krajewski.euler.problems.utils.string.EnglishNumbersWordLength;
-import pl.krajewski.euler.problems.utils.string.Factorial;
-import pl.krajewski.euler.problems.utils.string.StringAsNum;
-import pl.krajewski.euler.problems.utils.string.StringPower;
+import pl.krajewski.euler.problems.utils.math.FibonacciSequence;
 
 
 public class ProjectEuler {
 
-	public static Integer problemCallNumber = 24;
+	public static Integer problemCallNumber = 25;
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		ProblemGetter.resolveProblem(problemCallNumber);
+//		for(int i=1; i<=30; i++) {
+//			print(FibonacciSequence.findFibonacciStringForIndex(i));
+//		}
 	}
 	
 	private static void print(Object a) {

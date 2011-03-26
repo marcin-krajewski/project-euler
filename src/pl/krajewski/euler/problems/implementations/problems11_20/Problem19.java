@@ -13,12 +13,13 @@ public class Problem19 extends Problem<Integer> {
 		int maxYear = getParameterForNumber(1);
 		Integer dayOfMonth = getParameterForNumber(2);
 		DayOfWeek day = getParameterForNumber(3);
-		
+
 		int countOfDays = 0;
-		for(int year=minYear; year <= maxYear; year++) {
-			for(Month m : Month.values()) {
-				DayOfWeek dow = DateChecker.checkWhichDayWasDate(dayOfMonth, m, year);
-				if(dow == day) {
+		for (int year = minYear; year <= maxYear; year++) {
+			for (Month m : Month.values()) {
+				DayOfWeek dow = DateChecker.checkWhichDayWasDate(dayOfMonth, m,
+						year);
+				if (dow == day) {
 					countOfDays++;
 				}
 			}

@@ -24,6 +24,7 @@ public class Permutations {
 			s.add(string);
 			for(String ss : getLowestNotUsed(map, s)) {
 				l.put(ind++, string+ss);
+//				System.out.println(l.get(ind-1));
 				if(ind > maxInd) {
 					return l;
 				}

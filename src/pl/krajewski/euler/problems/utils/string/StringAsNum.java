@@ -11,26 +11,29 @@ public class StringAsNum {
 	public static int[] getStringAsNumArray0IsLowerMaxIsHigher(String s) {
 		return getStringAsNumArray(s, false);
 	}
-	public static int[] getStringAsNumArray(String s, boolean reverse) {
-		
-		s = s.trim();
-		
+	
+	public static String clearStringNumberFromLeadingZeros(String stringNumber) {
 		int index = 0;
 		while(true) {
-			char c = s.charAt(index);
+			char c = stringNumber.charAt(index);
 			if(c != '0') {
 				break;
 			}
 			index++;
 		}
-		s = s.substring(index);
+		return stringNumber.substring(index);
+	}
+	
+	public static int[] getStringAsNumArray(String stringNumber, boolean reverse) {
 		
-		int len = s.length();
+		stringNumber = clearStringNumberFromLeadingZeros(stringNumber.trim());
+		
+		int len = stringNumber.length();
 		int[] numbers = new int[len];
 		
 		int len2 = len-1;
 		for(int i=0; i<len; i++) {
-			char c = s.charAt(i);
+			char c = stringNumber.charAt(i);
 			if(reverse) {
 				numbers[i] = Integer.parseInt(Character.toString(c));
 			}
@@ -89,7 +92,7 @@ public class StringAsNum {
             }
         }
 		
-        return sb.reverse().toString();
+        return clearStringNumberFromLeadingZeros(sb.reverse().toString());
 	}
 	
 	public static String productTwoNumbers(String num1, String num2) {
