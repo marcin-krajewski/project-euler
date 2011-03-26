@@ -1,5 +1,7 @@
 package pl.krajewski.euler;
 
+import java.util.HashMap;
+import java.util.Map;
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.utils.numbers.DateChecker.DayOfWeek;
 
@@ -30,7 +32,23 @@ public class ParametersGetter {
 			case 21: return new Parameters(10000);
 			case 22: return new Parameters("problem22.txt", ",");
 			case 23: return new Parameters(28123);
+			case 24: return new Parameters(getMapForProblem24(), 1000000);
 		}
 		return null;
+	}
+
+	private static Map<Integer, String> getMapForProblem24() {
+		Map<Integer, String> map = new HashMap<Integer, String>();
+		map.put(1, "0");
+		map.put(2, "1");
+		map.put(3, "2");
+		map.put(4, "3");
+		map.put(5, "4");
+		map.put(6, "5");
+		map.put(7, "6");
+		map.put(8, "7");
+		map.put(9, "8");
+		map.put(10, "9");
+		return map;
 	}
 }
