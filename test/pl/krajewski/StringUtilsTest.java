@@ -12,8 +12,8 @@ public class StringUtilsTest {
 		String num2 = "24";
 		String product1 = StringAsNum.productTwoNumbers(num1, num2);
 		String product2 = StringAsNum.productTwoNumbers(num2, num1);
-		assertEquals("02760", product1);
-		assertEquals("02760", product2);
+		assertEquals("2760", product1);
+		assertEquals("2760", product2);
 		assertEquals(product1, product2);
 	}
 }

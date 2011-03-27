@@ -9,6 +9,7 @@ import java.util.Map;
 import org.junit.Before;
 import org.junit.Test;
 
+import pl.krajewski.euler.ProblemAnswers;
 import pl.krajewski.euler.ProblemGetter;
 import pl.krajewski.euler.ProjectEuler;
 import pl.krajewski.euler.problems.ProblemResolver;
@@ -38,7 +39,7 @@ public class CheckAllProblemsResultTest {
             end = new Date();
             callTimes.put(problemNumberToCheck, end.getTime()-start.getTime());
             assertNotNull(problemResult);
-            assertEquals(problemResult, ProblemGetter.getProblemResultForProblemNumber(problemNumberToCheck));
+            assertEquals(problemResult, ProblemAnswers.getProblemResultForProblemNumber(problemNumberToCheck));
             System.out.println("\t TEST SUCCESS");
         }
         printTimes();

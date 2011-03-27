@@ -5,6 +5,7 @@ import java.util.Date;
 
 import org.junit.Test;
 
+import pl.krajewski.euler.ProblemAnswers;
 import pl.krajewski.euler.ProblemGetter;
 import pl.krajewski.euler.ProjectEuler;
 import pl.krajewski.euler.problems.ProblemResolver;
@@ -35,7 +36,7 @@ public class CheckCurrentProblemResultTest {
     }
 
 	private String getAndTestExpectedProblemResult(Integer problemNumber) {
-		String expectedProblemResult = ProblemGetter.getProblemResultForProblemNumber(problemNumber);
+		String expectedProblemResult = ProblemAnswers.getProblemResultForProblemNumber(problemNumber);
         assertNotNull(expectedProblemResult);
         expectedProblemResult = expectedProblemResult.trim();
         assertNotSame("", expectedProblemResult);

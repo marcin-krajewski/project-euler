@@ -30,6 +30,7 @@ import pl.krajewski.euler.problems.implementations.problems21_30.Problem23;
 import pl.krajewski.euler.problems.implementations.problems21_30.Problem24;
 import pl.krajewski.euler.problems.implementations.problems21_30.Problem25;
 import pl.krajewski.euler.problems.implementations.problems21_30.Problem26;
+import pl.krajewski.euler.problems.implementations.problems21_30.Problem27;
 
 
 public class ProblemGetter {
@@ -71,6 +72,7 @@ public class ProblemGetter {
 			case 24: return new Problem24();
 			case 25: return new Problem25();
 			case 26: return new Problem26();
+			case 27: return new Problem27();
 			default: return null;
 		}
 	}
@@ -112,42 +114,4 @@ public class ProblemGetter {
 		sb.append(timeMillis);
 		return sb.toString();
 	}
-	
-	public static String getProblemResultForProblemNumber(Integer problemNumberToCheck) {
-	        
-        if(problemNumberToCheck == null) {
-            return null;
-        }
-        
-        switch(problemNumberToCheck) {
-            case 1: return "233168";
-            case 2: return "4613732";
-            case 3: return "6857";
-            case 4: return "906609";
-            case 5: return "232792560";
-            case 6: return "25164150";
-            case 7: return "104743";
-            case 8: return "40824";
-            case 9: return "31875000";
-            case 10: return "142913828922";
-            case 11: return "70600674";
-            case 12: return "76576500";
-            case 13: return "5537376230";
-            case 14: return "837799";
-            case 15: return "137846528820";
-            case 16: return "1366";
-            case 17: return "21124";
-            case 18: return "1074";
-            case 19: return "171";
-            case 20: return "648";
-            case 21: return "31626";
-            case 22: return "871198282";
-            case 23: return "4179871";
-            case 24: return "2783915460";
-            case 25: return "4782";
-            case 26: return "983";
-        }
-        
-        return "";
-    }
 }

@@ -35,6 +35,7 @@ public class ParametersGetter {
 			case 24: return new Parameters(getMapForProblem24(), 1000000);
 			case 25: return new Parameters(1000);
 			case 26: return new Parameters(1000);
+			case 27: return new Parameters(1000, 1000);
 		}
 		return null;
 	}
