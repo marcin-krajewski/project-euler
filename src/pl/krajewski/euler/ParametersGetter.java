@@ -36,6 +36,7 @@ public class ParametersGetter {
 			case 25: return new Parameters(1000);
 			case 26: return new Parameters(1000);
 			case 27: return new Parameters(1000, 1000);
+			case 28: return new Parameters(1001);
 		}
 		return null;
 	}

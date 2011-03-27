@@ -36,6 +36,7 @@ public class ProblemAnswers {
             case 25: return "4782";
             case 26: return "983";
             case 27: return "-59231";
+            case 28: return "669171001";
         }
         
         return "";
