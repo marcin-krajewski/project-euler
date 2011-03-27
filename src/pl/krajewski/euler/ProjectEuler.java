@@ -1,20 +1,17 @@
 package pl.krajewski.euler;
 
+import pl.krajewski.euler.problems.utils.math.RecurringCycle;
+
 
 
 public class ProjectEuler {
 
-	public static Integer problemCallNumber = 25;
+	public static Integer problemCallNumber = 26;
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		ProblemGetter.resolveProblem(problemCallNumber);
-		
-
-		// for(double i = 1.0; i<20; i++) {
-		// RecurringCycle.getReccuringCycleLengthForNumber(i);
-		// }
 	}
 	
 	private static void print(Object a) {

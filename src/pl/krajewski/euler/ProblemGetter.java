@@ -29,6 +29,7 @@ import pl.krajewski.euler.problems.implementations.problems21_30.Problem22;
 import pl.krajewski.euler.problems.implementations.problems21_30.Problem23;
 import pl.krajewski.euler.problems.implementations.problems21_30.Problem24;
 import pl.krajewski.euler.problems.implementations.problems21_30.Problem25;
+import pl.krajewski.euler.problems.implementations.problems21_30.Problem26;
 
 
 public class ProblemGetter {
@@ -69,6 +70,7 @@ public class ProblemGetter {
 			case 23: return new Problem23();
 			case 24: return new Problem24();
 			case 25: return new Problem25();
+			case 26: return new Problem26();
 			default: return null;
 		}
 	}
@@ -143,6 +145,7 @@ public class ProblemGetter {
             case 23: return "4179871";
             case 24: return "2783915460";
             case 25: return "4782";
+            case 26: return "983";
         }
         
         return "";
