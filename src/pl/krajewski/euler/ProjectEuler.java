@@ -6,7 +6,7 @@ import pl.krajewski.euler.problems.utils.math.RecurringCycle;
 
 public class ProjectEuler {
 
-	public static Integer problemCallNumber = 28;
+	public static Integer problemCallNumber = 29;
 	/**
 	 * @param args
 	 */

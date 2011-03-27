@@ -129,7 +129,7 @@ public class StringAsNum {
 			stringsToSum.add(sb.toString());
 		}
 		
-		return sumStringNumbers(stringsToSum.toArray(new String[]{}));
+		return clearStringNumberFromLeadingZeros(sumStringNumbers(stringsToSum.toArray(new String[]{})));
 	}
 	
 	public static int sumNumbersInStringNumber(String number) {
