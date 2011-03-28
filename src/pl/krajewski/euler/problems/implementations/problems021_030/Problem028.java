@@ -2,7 +2,7 @@ package pl.krajewski.euler.problems.implementations.problems021_030;
 
 import pl.krajewski.euler.problems.Problem;
 
-public class Problem28 extends Problem<Double> {
+public class Problem028 extends Problem<Double> {
 
 	private Integer spiralWidthIndex = 0;
 

@@ -9,7 +9,7 @@ import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.classes.MapDoubleKey;
 import pl.krajewski.euler.problems.utils.string.FileReader;
 
-public class Problem11 extends Problem<Integer> {
+public class Problem011 extends Problem<Integer> {
 
 	@Override
 	public Integer resolveProblem() {

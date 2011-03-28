@@ -4,7 +4,7 @@ import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.string.FileReader;
 import pl.krajewski.euler.problems.utils.string.StringAsNum;
 
-public class Problem13 extends Problem<String> {
+public class Problem013 extends Problem<String> {
 
 	@Override
 	public String resolveProblem() {

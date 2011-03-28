@@ -4,7 +4,7 @@ import java.util.Map;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.math.Permutations;
 
-public class Problem24 extends Problem<String> {
+public class Problem024 extends Problem<String> {
 
 	@Override
 	public String resolveProblem() {

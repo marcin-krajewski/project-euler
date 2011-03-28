@@ -5,7 +5,7 @@ import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.numbers.PowerOfSum;
 import pl.krajewski.euler.problems.utils.numbers.SumOfPowers;
 
-public class Problem06 extends Problem<Double> {
+public class Problem006 extends Problem<Double> {
 
 	@Override
 	public Double resolveProblem() {

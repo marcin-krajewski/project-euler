@@ -3,7 +3,7 @@ package pl.krajewski.euler.problems.implementations.problems021_030;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.math.RecurringCycle;
 
-public class Problem26 extends Problem<Integer> {
+public class Problem026 extends Problem<Integer> {
 
 	private Integer maximumNumberIndex = 0;
 

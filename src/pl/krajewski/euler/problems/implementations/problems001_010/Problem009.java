@@ -2,7 +2,7 @@ package pl.krajewski.euler.problems.implementations.problems001_010;
 
 import pl.krajewski.euler.problems.Problem;
 
-public class Problem09 extends Problem<Integer> {
+public class Problem009 extends Problem<Integer> {
 
 	@Override
 	public Integer resolveProblem() {

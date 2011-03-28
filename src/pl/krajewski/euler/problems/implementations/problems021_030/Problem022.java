@@ -9,7 +9,7 @@ import pl.krajewski.euler.problems.utils.string.EnglishAlphabet;
 import pl.krajewski.euler.problems.utils.string.FileReader;
 import pl.krajewski.euler.problems.utils.string.StringUtils;
 
-public class Problem22 extends Problem<Double> {
+public class Problem022 extends Problem<Double> {
 
 	@Override
 	public Double resolveProblem() {

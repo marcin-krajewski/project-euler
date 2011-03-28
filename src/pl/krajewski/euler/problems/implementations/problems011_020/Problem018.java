@@ -4,7 +4,7 @@ import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.classes.MapDoubleKey;
 import pl.krajewski.euler.problems.utils.string.FileReader;
 
-public class Problem18 extends Problem<Double> {
+public class Problem018 extends Problem<Double> {
 
 	@Override
 	public Double resolveProblem() {

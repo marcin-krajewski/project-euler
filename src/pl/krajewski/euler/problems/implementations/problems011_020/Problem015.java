@@ -4,7 +4,7 @@ import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.string.Factorial;
 
-public class Problem15 extends Problem<Double> {
+public class Problem015 extends Problem<Double> {
 
 	@Override
 	public Double resolveProblem() {

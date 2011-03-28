@@ -3,7 +3,7 @@ package pl.krajewski.euler.problems.implementations.problems001_010;
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 
-public class Problem01 extends Problem<Integer> {
+public class Problem001 extends Problem<Integer> {
 
 	private Integer multiplier1Index = 0;
 	private Integer multiplier2Index = 1;

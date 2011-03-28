@@ -6,7 +6,7 @@ import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.numbers.LeastCommonMultiple;
 
-public class Problem05 extends Problem<Double> {
+public class Problem005 extends Problem<Double> {
 
 	@Override
 	public Double resolveProblem() {

@@ -6,7 +6,7 @@ import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.numbers.CollatzSequence;
 
-public class Problem14 extends Problem<Double> {
+public class Problem014 extends Problem<Double> {
 
 	@Override
 	public Double resolveProblem() {

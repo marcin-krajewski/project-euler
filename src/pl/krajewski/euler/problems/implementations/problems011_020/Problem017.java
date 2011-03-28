@@ -3,7 +3,7 @@ package pl.krajewski.euler.problems.implementations.problems011_020;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.string.EnglishNumbersWordLength;
 
-public class Problem17 extends Problem<Double> {
+public class Problem017 extends Problem<Double> {
 
 	@Override
 	public Double resolveProblem() {

@@ -5,7 +5,7 @@ import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.string.Factorial;
 import pl.krajewski.euler.problems.utils.string.StringAsNum;
 
-public class Problem20 extends Problem<Integer> {
+public class Problem020 extends Problem<Integer> {
 
 	@Override
 	public Integer resolveProblem() {

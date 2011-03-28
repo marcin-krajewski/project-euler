@@ -6,7 +6,7 @@ import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.math.PrimeFactor;
 import pl.krajewski.euler.problems.utils.math.PrimeNumbers;
 
-public class Problem23 extends Problem<Double> {
+public class Problem023 extends Problem<Double> {
 
 	@Override
 	public Double resolveProblem() {

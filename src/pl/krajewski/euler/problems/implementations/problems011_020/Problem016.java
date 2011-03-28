@@ -4,7 +4,7 @@ import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.string.StringAsNum;
 import pl.krajewski.euler.problems.utils.string.StringPower;
 
-public class Problem16 extends Problem<Integer> {
+public class Problem016 extends Problem<Integer> {
 
 	@Override
 	public Integer resolveProblem() {

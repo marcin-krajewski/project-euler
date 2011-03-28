@@ -2,7 +2,7 @@ package pl.krajewski.euler.problems.implementations.problems001_010;
 
 import pl.krajewski.euler.problems.Problem;
 
-public class Problem04 extends Problem<Integer> {
+public class Problem004 extends Problem<Integer> {
 
 	private Integer maximumNumberOfDigitsIndex = 0;
 

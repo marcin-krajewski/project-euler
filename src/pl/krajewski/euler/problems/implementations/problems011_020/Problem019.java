@@ -5,7 +5,7 @@ import pl.krajewski.euler.problems.utils.numbers.DateChecker;
 import pl.krajewski.euler.problems.utils.numbers.DateChecker.DayOfWeek;
 import pl.krajewski.euler.problems.utils.numbers.DateChecker.Month;
 
-public class Problem19 extends Problem<Integer> {
+public class Problem019 extends Problem<Integer> {
 
 	@Override
 	public Integer resolveProblem() {

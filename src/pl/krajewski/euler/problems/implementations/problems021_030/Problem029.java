@@ -5,7 +5,7 @@ import java.util.Set;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.string.StringPower;
 
-public class Problem29 extends Problem<Integer> {
+public class Problem029 extends Problem<Integer> {
 
 	private Integer minAIndex = 0;
 	private Integer maxAIndex = 1;

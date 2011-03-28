@@ -5,7 +5,7 @@ import java.util.Set;
 import pl.krajewski.euler.problems.utils.classes.ArrayUtils;
 import pl.krajewski.euler.problems.utils.math.PrimeFactor;
 
-public class Problem21 extends pl.krajewski.euler.problems.Problem<Integer> {
+public class Problem021 extends pl.krajewski.euler.problems.Problem<Integer> {
 
 	@Override
 	public Integer resolveProblem() {

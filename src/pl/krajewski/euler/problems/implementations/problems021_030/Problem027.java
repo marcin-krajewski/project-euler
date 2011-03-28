@@ -2,7 +2,7 @@ package pl.krajewski.euler.problems.implementations.problems021_030;
 
 import pl.krajewski.euler.problems.Problem;
 
-public class Problem27 extends Problem<Integer> {
+public class Problem027 extends Problem<Integer> {
 
 	private Integer maxAbsoluteOfAIndex = 0;
 	private Integer maxAbsoluteOfBIndex = 1;
