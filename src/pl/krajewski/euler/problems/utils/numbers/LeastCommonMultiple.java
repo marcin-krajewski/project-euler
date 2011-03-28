@@ -27,7 +27,6 @@ public class LeastCommonMultiple {
 		
 		Double res = 1.0;
 		for(Double d : map.keySet()) {
-			
 			res *= Math.pow(d, map.get(d));
 		}
 		return res;

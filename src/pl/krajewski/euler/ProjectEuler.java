@@ -1,12 +1,13 @@
 package pl.krajewski.euler;
 
 import pl.krajewski.euler.problems.utils.math.RecurringCycle;
+import pl.krajewski.euler.problems.utils.string.Factorial;
 
 
 
 public class ProjectEuler {
 
-	public static Integer problemCallNumber = 29;
+	public static Integer problemCallNumber = 30;
 	/**
 	 * @param args
 	 */

@@ -13,8 +13,14 @@ public class StringAsNum {
 	}
 	
 	public static String clearStringNumberFromLeadingZeros(String stringNumber) {
+	    if(stringNumber.trim().isEmpty()) {
+	        return "";
+	    }
 		int index = 0;
 		while(true) {
+		    if(stringNumber.length() - index == 1) {
+		        break;
+		    }
 			char c = stringNumber.charAt(index);
 			if(c != '0') {
 				break;
@@ -97,7 +103,7 @@ public class StringAsNum {
 	
 	public static String productTwoNumbers(String num1, String num2) {
 		
-//		System.out.println("MNO¯ENIE: "+num1+"x"+num2);
+//		System.out.println("MNOï¿½ENIE: "+num1+"x"+num2);
 		int c = 0;
 		boolean num1larger = num1.length() > num2.length();
 		int[] tab1 = StringAsNum.getStringAsNumArray0IsLowerMaxIsHigher(num1larger ? num2 : num1);
