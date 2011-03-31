@@ -39,6 +39,7 @@ public class ProblemAnswers {
             case 28: return "669171001";
             case 29: return "9183";
             case 30: return "443839";
+            case 31: return "73682";
         }
         
         return "";

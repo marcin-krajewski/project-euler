@@ -25,7 +25,7 @@ public class Problem030 extends Problem<Double> {
         for(int number = 0; number < 10; number++) {
             String numberToPower = StringPower.getPowerForNumberBelow10(number, power);
             mapWithPowers.put(number, Integer.parseInt(numberToPower));
-            System.out.println("NUMBER "+number+" - POWER "+power+" -- "+numberToPower);
+//            System.out.println("NUMBER "+number+" - POWER "+power+" -- "+numberToPower);
         }
         
         int level = 1;
