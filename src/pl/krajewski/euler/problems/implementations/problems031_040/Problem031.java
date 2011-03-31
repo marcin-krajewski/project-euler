@@ -24,37 +24,37 @@ public class Problem031 extends Problem<Integer> {
 				sum++;
 				continue;
 			}
-			for (int coin100 = coin200; coin100 <= max + coin200; coin100 += 100) {
+			for (int coin100 = coin200; coin100 <= max; coin100 += 100) {
 				if (coin100 == max) {
 					sum++;
 					continue;
 				}
-				for (int coin50 = coin100; coin50 <= max + coin100; coin50 += 50) {
+				for (int coin50 = coin100; coin50 <= max; coin50 += 50) {
 					if (coin50 == max) {
 						sum++;
 						continue;
 					}
-					for (int coin20 = coin50; coin20 <= max + coin50; coin20 += 20) {
+					for (int coin20 = coin50; coin20 <= max; coin20 += 20) {
 						if (coin20 == max) {
 							sum++;
 							continue;
 						}
-						for (int coin10 = coin20; coin10 <= max + coin20; coin10 += 10) {
+						for (int coin10 = coin20; coin10 <= max; coin10 += 10) {
 							if (coin10 == max) {
 								sum++;
 								continue;
 							}
-							for (int coin5 = coin10; coin5 <= max + coin10; coin5 += 5) {
+							for (int coin5 = coin10; coin5 <= max; coin5 += 5) {
 								if (coin5 == max) {
 									sum++;
 									continue;
 								}
-								for (int coin2 = coin5; coin2 <= max + coin5; coin2 += 2) {
+								for (int coin2 = coin5; coin2 <= max; coin2 += 2) {
 									if (coin2 == max) {
 										sum++;
 										continue;
 									}
-									for (int coin1 = coin2; coin1 <= max + coin2; coin1 += 1) {
+									for (int coin1 = coin2; coin1 <= max; coin1 += 1) {
 										if (coin1 == max) {
 											sum++;
 											continue;
@@ -86,13 +86,10 @@ public class Problem031 extends Problem<Integer> {
 		try {
 			int currentCoin = coinsList.get(indexOfCurrentCoin);
 			int sumOfCombinations = 0;
-			for (int currentCoinAcceptedValue = previousCoin; currentCoinAcceptedValue <= maxSumOfCoins + previousCoin; currentCoinAcceptedValue += currentCoin) {
+			for (int currentCoinAcceptedValue = previousCoin; currentCoinAcceptedValue <= maxSumOfCoins; currentCoinAcceptedValue += currentCoin) {
 				if (currentCoinAcceptedValue == maxSumOfCoins) {
 					sumOfCombinations++;
 					continue;
-				}
-				else if(currentCoinAcceptedValue > maxSumOfCoins){
-					break;
 				}
 				sumOfCombinations += getResultOfExampleForUnknownParameters(indexOfCurrentCoin+1, coinsList, maxSumOfCoins, currentCoinAcceptedValue);
 			}
