@@ -9,6 +9,9 @@ import java.util.Set;
 
 public class Permutations {
 
+    public static Map<Integer, String> createAllPermutations(Map<Integer, String> map) {
+        return getForStart(map, 0);
+    }
 	public static Map<Integer, String> createPermutations(Map<Integer, String> map, Integer maxInd) {
 		return getForStart(map, maxInd);
 	}
@@ -24,8 +27,7 @@ public class Permutations {
 			s.add(string);
 			for(String ss : getLowestNotUsed(map, s)) {
 				l.put(ind++, string+ss);
-//				System.out.println(l.get(ind-1));
-				if(ind > maxInd) {
+				if(ind > maxInd && maxInd > 0 ) {
 					return l;
 				}
 			}
