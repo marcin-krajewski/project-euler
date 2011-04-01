@@ -16,7 +16,7 @@ public class FibonacciSequence {
 		
 		String value = "";
 		for(int i=3; i<=index; i++) {
-			value = StringAsNum.sumStringNumbersReverse(new String[] {prev1, prev2});
+			value = StringAsNum.sumStringNumbers(new String[] {prev1, prev2});
 			prev1 = prev2;
 			prev2 = value;
 		}
@@ -29,7 +29,7 @@ public class FibonacciSequence {
 		String value = "";
 		int index = 3;
 		while(true) {
-			value = StringAsNum.sumStringNumbersReverse(new String[] {prev1, prev2});
+			value = StringAsNum.sumStringNumbers(new String[] {prev1, prev2});
 			if(value.length() >= numberOfDigits) {
 				return index;
 			}

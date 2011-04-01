@@ -11,6 +11,13 @@ public class Factorial {
 	}
 	
 	public static String factorial(int max) {
+	    if(max == 0) {
+	        return "1";
+	    }
+	    else if(max <= 0) {
+	        return "0";
+	    }
+	    
 		String factorial = "1";
 		for(int i=1; i<=max; i++) {
 			factorial = StringAsNum.productTwoNumbers(i+"", factorial);

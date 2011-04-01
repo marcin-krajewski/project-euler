@@ -30,7 +30,7 @@ public class StringAsNum {
 		return stringNumber.substring(index);
 	}
 	
-	public static int[] getStringAsNumArray(String stringNumber, boolean reverse) {
+	private static int[] getStringAsNumArray(String stringNumber, boolean reverse) {
 		
 		stringNumber = clearStringNumberFromLeadingZeros(stringNumber.trim());
 		
@@ -51,7 +51,7 @@ public class StringAsNum {
 		return numbers;
 	}
 	
-	public static String sumStringNumbersReverse(String[] strings) {
+	public static String sumStringNumbers(String[] strings) {
 		
 		List<String> stringsList = new ArrayList<String>();
 		
@@ -59,9 +59,10 @@ public class StringAsNum {
 			stringsList.add((new StringBuilder(s)).reverse().toString());
 		}
 		
-		return sumStringNumbers(stringsList.toArray(new String[]{}));
+		return sumStringNumbersReverse(stringsList.toArray(new String[]{}));
 	}
-	public static String sumStringNumbers(String[] strings) {
+	
+	public static String sumStringNumbersReverse(String[] strings) {
 
 		if(strings.length == 1) {
 			return new StringBuilder(strings[0]).reverse().toString();
@@ -135,7 +136,7 @@ public class StringAsNum {
 			stringsToSum.add(sb.toString());
 		}
 		
-		return clearStringNumberFromLeadingZeros(sumStringNumbers(stringsToSum.toArray(new String[]{})));
+		return clearStringNumberFromLeadingZeros(sumStringNumbersReverse(stringsToSum.toArray(new String[]{})));
 	}
 	
 	public static int sumNumbersInStringNumber(String number) {

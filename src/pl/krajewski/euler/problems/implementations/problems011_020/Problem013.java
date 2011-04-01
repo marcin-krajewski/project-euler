@@ -14,7 +14,7 @@ public class Problem013 extends Problem<String> {
 
 		String[] lines = FileReader.readProblemFileLines(fileName);
 
-		String numberString = StringAsNum.sumStringNumbersReverse(lines);
+		String numberString = StringAsNum.sumStringNumbers(lines);
 		StringBuilder sb = new StringBuilder();
 		int[] tab = StringAsNum
 				.getStringAsNumArray0IsHigherMaxIsLower(numberString);
