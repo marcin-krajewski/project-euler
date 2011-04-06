@@ -67,10 +67,6 @@ public class Permutations {
         List<Integer[]> lista = new ArrayList<Integer[]>(); 
         permutacje(tab, size, 0, tab1, lista);
         System.out.println("LIST SIZE "+lista.size());
-        Integer[] i = lista.get(permutationIndex);
-        for(int ii=0; ii<size; ii++){
-        	System.out.println(i[ii]);
-        }
         return StringAsNum.getIntegerArrayAsString(lista.get(permutationIndex));
 	}
 	
