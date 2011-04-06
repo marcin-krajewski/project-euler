@@ -1,9 +1,8 @@
-package pl.krajewski.euler.problems.utils.numbers;
+package pl.krajewski.euler.problems.utils.math;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-import pl.krajewski.euler.problems.utils.math.PrimeFactor;
 
 public class LeastCommonMultiple {
 

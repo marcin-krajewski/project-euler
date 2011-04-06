@@ -43,6 +43,7 @@ public class ParametersGetter {
 			case 30: return new Parameters(5);
 			case 31: return new Parameters(getCoinsForProblem31(), 200);
 			case 32: return new Parameters(1, 9);
+			case 33: return new Parameters();
 		}
 		return null;
 	}

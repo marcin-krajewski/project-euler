@@ -8,7 +8,7 @@ import pl.krajewski.euler.problems.utils.string.Factorial;
 
 public class ProjectEuler {
 
-	public static Integer problemCallNumber = 32;
+	public static Integer problemCallNumber = 33;
 	/**
 	 * @param args
 	 */

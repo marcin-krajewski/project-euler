@@ -41,6 +41,7 @@ public class ProblemAnswers {
             case 30: return "443839";
             case 31: return "73682";
             case 32: return "45228";
+            case 33: return "100";
         }
         
         return "";
