@@ -8,13 +8,10 @@ public class Problem024 extends Problem<String> {
 
 	@Override
 	public String resolveProblem() {
-		Map<Integer, String> mapOfSignsToPermuteWithPriorities = getParameterForNumber(0);
 		int indexOfExpectedPermutation = getParameterForNumber(1);
 
 		return Permutations
-				.createPermutations(mapOfSignsToPermuteWithPriorities,
-						indexOfExpectedPermutation)
-				.get(indexOfExpectedPermutation).toString();
+				.getPermutationForIndex(indexOfExpectedPermutation);
 	}
 
 }

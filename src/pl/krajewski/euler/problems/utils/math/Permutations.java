@@ -6,6 +6,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import pl.krajewski.euler.problems.utils.classes.ArrayUtils;
+import pl.krajewski.euler.problems.utils.string.StringAsNum;
 
 public class Permutations {
 
@@ -58,20 +60,34 @@ public class Permutations {
 		return l;
 	}
 	
-	public static void createPermutations() {
-	    List<String> list = new ArrayList<String>();
-//	    list.add("0");
-//	    list.add("1");
-//	    list.add("2");
-//	    list.add("3");
-//	    list.add("4");
-//	    list.add("5");
-//	    list.add("6");
-//	    list.add("7");
-//	    list.add("8");
-//	    list.add("9");
-//	    List<String> s = getPermutations(list, 10);
-//	    System.out.println("PERMUTATIONS "+s.size());
+	public static String getPermutationForIndex(int permutationIndex) {
+		int size = 10;
+        Boolean[] tab = ArrayUtils.createArrayWithSizeAndValue(size, Boolean.FALSE, Boolean.class);
+        Integer[] tab1 = ArrayUtils.createArrayWithSizeAndValue(size, -1, Integer.class);
+        List<Integer[]> lista = new ArrayList<Integer[]>(); 
+        permutacje(tab, size, 0, tab1, lista);
+        System.out.println("LIST SIZE "+lista.size());
+        Integer[] i = lista.get(permutationIndex);
+        for(int ii=0; ii<size; ii++){
+        	System.out.println(i[ii]);
+        }
+        return StringAsNum.getIntegerArrayAsString(lista.get(permutationIndex));
 	}
 	
+	private static void permutacje(Boolean[] tab, int max, int index, Integer[] values, List<Integer[]> list) {
+    	
+    	if(index == max) {
+    		list.add(values);
+    		return;
+    	}
+    	
+    	for(int i=0; i<max; i++) {
+    		if(!tab[i]) {
+    			tab[i] = true;
+    			values[index] = i;
+    			permutacje(tab, max, index+1, values, list);
+    			tab[i] = false;
+    		}
+    	}
+    }
 }

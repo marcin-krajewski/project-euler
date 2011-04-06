@@ -146,4 +146,15 @@ public class StringAsNum {
 		}
 		return sum;
 	}
+	
+	public static String getIntegerArrayAsString(Integer[] numbers) {
+		StringBuilder sb = new StringBuilder();
+		if(numbers == null || numbers.length == 0) {
+			return sb.toString();
+		}
+		for(Integer number : numbers) {
+			sb.append(number);
+		}
+		return sb.toString();
+	}
 }
