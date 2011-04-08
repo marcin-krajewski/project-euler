@@ -2,6 +2,8 @@ package pl.krajewski.euler.problems.implementations.problems021_030;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.string.StringPower;
 
@@ -12,6 +14,11 @@ public class Problem029 extends Problem<Integer> {
 	private Integer minBIndex = 2;
 	private Integer maxBIndex = 3;
 
+	@Override
+	protected Parameters getParametersForProblem() {
+	    return new Parameters(2, 100, 2, 100);
+	}
+	
 	@Override
 	public Integer resolveProblem() {
 		int minA = getParameterForNumber(minAIndex);
@@ -28,5 +35,10 @@ public class Problem029 extends Problem<Integer> {
 		}
 		return powers.size();
 	}
+
+    @Override
+    public Integer getCorrectProblemAnswer() {
+        return 9183;
+    }
 
 }

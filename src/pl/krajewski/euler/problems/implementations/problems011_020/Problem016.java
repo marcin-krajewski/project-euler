@@ -1,11 +1,17 @@
 package pl.krajewski.euler.problems.implementations.problems011_020;
 
+import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.string.StringAsNum;
 import pl.krajewski.euler.problems.utils.string.StringPower;
 
 public class Problem016 extends Problem<Integer> {
 
+    @Override
+    protected Parameters getParametersForProblem() {
+        return new Parameters(2, 1000);
+    }
+    
 	@Override
 	public Integer resolveProblem() {
 		int number = getParameterForNumber(0);
@@ -24,5 +30,10 @@ public class Problem016 extends Problem<Integer> {
 		System.out.println("STRING " + sum);
 		return sum;
 	}
+
+    @Override
+    public Integer getCorrectProblemAnswer() {
+        return 1366;
+    }
 
 }

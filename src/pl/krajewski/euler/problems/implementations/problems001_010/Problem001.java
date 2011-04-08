@@ -29,5 +29,15 @@ public class Problem001 extends Problem<Integer> {
 
 		return resultOfProblem1;
 	}
+	
+	@Override
+	protected Parameters getParametersForProblem() {
+	    return new Parameters(3,5,1000);
+	}
+
+    @Override
+    public Integer getCorrectProblemAnswer() {
+        return 233168;
+    }
 
 }

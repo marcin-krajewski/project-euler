@@ -1,5 +1,6 @@
 package pl.krajewski.euler.problems.implementations.problems001_010;
 
+import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 
 public class Problem002 extends Problem<Integer> {
@@ -28,5 +29,15 @@ public class Problem002 extends Problem<Integer> {
 
 		return sumOfEvenOddNumbers;
 	}
+	
+	@Override
+	protected Parameters getParametersForProblem() {
+	    return new Parameters(4000000);
+	}
+
+    @Override
+    public Integer getCorrectProblemAnswer() {
+        return 4613732;
+    }
 
 }

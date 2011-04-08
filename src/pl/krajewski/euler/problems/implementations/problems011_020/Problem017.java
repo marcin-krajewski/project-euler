@@ -1,10 +1,16 @@
 package pl.krajewski.euler.problems.implementations.problems011_020;
 
+import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.string.EnglishNumbersWordLength;
 
 public class Problem017 extends Problem<Double> {
 
+    @Override
+    protected Parameters getParametersForProblem() {
+        return new Parameters(1, 1000);
+    }
+    
 	@Override
 	public Double resolveProblem() {
 		int start = getParameterForNumber(0);
@@ -18,4 +24,8 @@ public class Problem017 extends Problem<Double> {
 		return sum;
 	}
 
+    @Override
+    public Double getCorrectProblemAnswer() {
+        return 21124.0;
+    }
 }

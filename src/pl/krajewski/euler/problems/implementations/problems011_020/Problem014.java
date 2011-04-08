@@ -8,6 +8,11 @@ import pl.krajewski.euler.problems.utils.numbers.CollatzSequence;
 
 public class Problem014 extends Problem<Double> {
 
+    @Override
+    protected Parameters getParametersForProblem() {
+        return new Parameters(1000000.0);
+    }
+    
 	@Override
 	public Double resolveProblem() {
 		double number = getParameterForNumber(0);
@@ -26,5 +31,10 @@ public class Problem014 extends Problem<Double> {
 		}
 		return res;
 	}
+
+    @Override
+    public Double getCorrectProblemAnswer() {
+        return 837799.0;
+    }
 
 }

@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.string.StringAsNum;
 import pl.krajewski.euler.problems.utils.string.StringPower;
@@ -15,6 +16,11 @@ public class Problem030 extends Problem<Double> {
 
     private Integer powerIndex = 0;
 
+    @Override
+    protected Parameters getParametersForProblem() {
+        return new Parameters(5);
+    }
+    
     @Override
     public Double resolveProblem() {
         
@@ -95,5 +101,10 @@ public class Problem030 extends Problem<Double> {
     		temp.remove(index);
     	}
     	return temp.isEmpty();
+    }
+
+    @Override
+    public Double getCorrectProblemAnswer() {
+        return 443839.0;
     }
 }

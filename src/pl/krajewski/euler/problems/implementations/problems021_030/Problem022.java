@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+
+import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.string.EnglishAlphabet;
 import pl.krajewski.euler.problems.utils.string.FileReader;
@@ -11,6 +13,11 @@ import pl.krajewski.euler.problems.utils.string.StringUtils;
 
 public class Problem022 extends Problem<Double> {
 
+    @Override
+    protected Parameters getParametersForProblem() {
+        return new Parameters("problem22.txt", ",");
+    }
+    
 	@Override
 	public Double resolveProblem() {
 		String fileName = getParameterForNumber(0);
@@ -52,5 +59,10 @@ public class Problem022 extends Problem<Double> {
 		}
 		return value;
 	}
+
+    @Override
+    public Double getCorrectProblemAnswer() {
+        return 871198282.0;
+    }
 
 }

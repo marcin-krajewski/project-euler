@@ -1,10 +1,17 @@
 package pl.krajewski.euler.problems.implementations.problems031_040;
 
+import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.math.GreatestCommonDivisor;
 
 public class Problem033 extends Problem<Integer> {
 
+    @Override
+    protected Parameters getParametersForProblem() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+    
 	@Override
 	public Integer resolveProblem() {
 
@@ -37,5 +44,10 @@ public class Problem033 extends Problem<Integer> {
 		return (int) (denominatorProduct / GreatestCommonDivisor
 				.getGreatestCommonDivisor(nominatorProduct, denominatorProduct));
 	}
+
+    @Override
+    public Integer getCorrectProblemAnswer() {
+        return 100;
+    }
 
 }

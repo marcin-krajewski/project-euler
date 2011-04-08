@@ -7,6 +7,11 @@ import pl.krajewski.euler.problems.utils.numbers.SequenceOfTriangle;
 
 public class Problem012 extends Problem<Double> {
 
+    @Override
+    protected Parameters getParametersForProblem() {
+        return new Parameters(500);
+    }
+    
 	@Override
 	public Double resolveProblem() {
 		int divisorsCount = getParameterForNumber(0);
@@ -22,5 +27,10 @@ public class Problem012 extends Problem<Double> {
 			value += level;
 		}
 	}
+
+    @Override
+    public Double getCorrectProblemAnswer() {
+        return 76576500.0;
+    }
 
 }

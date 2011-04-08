@@ -1,11 +1,17 @@
 package pl.krajewski.euler.problems.implementations.problems021_030;
 
+import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 
 public class Problem028 extends Problem<Double> {
 
 	private Integer spiralWidthIndex = 0;
 
+	@Override
+	protected Parameters getParametersForProblem() {
+	    return new Parameters(1001);
+	}
+	
 	@Override
 	public Double resolveProblem() {
 		int spiralWidth = getParameterForNumber(spiralWidthIndex);
@@ -74,5 +80,10 @@ public class Problem028 extends Problem<Double> {
 		}
 		return false;
 	}
+
+    @Override
+    public Double getCorrectProblemAnswer() {
+        return 669171001.0;
+    }
 
 }

@@ -1,5 +1,9 @@
 package pl.krajewski.euler.problems;
 
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
 public abstract class Problem<T> implements ProblemResolver<T> {
 
 	private Parameters parameters;
@@ -8,8 +12,14 @@ public abstract class Problem<T> implements ProblemResolver<T> {
 		return (S)this.parameters.getParameterForNumber(number);
 	}
 	
-	@Override
-	public void setParameters(Parameters parameters) {
-		this.parameters = parameters;
-	}
+	public Problem() {
+	    this.parameters = getParametersForProblem();
+    }
+
+    protected abstract Parameters getParametersForProblem();
+    
+    @Test
+    public void testIfProblemIsCorrect() {
+        assertEquals(this.getCorrectProblemAnswer(), this.resolveProblem());
+    }
 }

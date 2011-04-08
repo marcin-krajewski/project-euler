@@ -1,11 +1,17 @@
 package pl.krajewski.euler.problems.implementations.problems011_020;
 
+import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.classes.MapDoubleKey;
 import pl.krajewski.euler.problems.utils.string.FileReader;
 
 public class Problem018 extends Problem<Double> {
 
+    @Override
+    protected Parameters getParametersForProblem() {
+        return new Parameters("problem18.txt");
+    }
+    
 	@Override
 	public Double resolveProblem() {
 		String fileName = getParameterForNumber(0);
@@ -67,5 +73,10 @@ public class Problem018 extends Problem<Double> {
 		}
 		return returnValue;
 	}
+
+    @Override
+    public Double getCorrectProblemAnswer() {
+        return 1074.0;
+    }
 
 }

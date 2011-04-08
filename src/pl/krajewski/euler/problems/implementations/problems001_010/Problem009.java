@@ -1,9 +1,15 @@
 package pl.krajewski.euler.problems.implementations.problems001_010;
 
+import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 
 public class Problem009 extends Problem<Integer> {
 
+    @Override
+    protected Parameters getParametersForProblem() {
+        return new Parameters(1000);
+    }
+    
 	@Override
 	public Integer resolveProblem() {
 
@@ -25,5 +31,10 @@ public class Problem009 extends Problem<Integer> {
 
 		return 0;
 	}
+
+    @Override
+    public Integer getCorrectProblemAnswer() {
+        return 31875000;
+    }
 
 }

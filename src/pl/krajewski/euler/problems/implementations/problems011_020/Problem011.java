@@ -1,6 +1,7 @@
 package pl.krajewski.euler.problems.implementations.problems011_020;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,6 +12,11 @@ import pl.krajewski.euler.problems.utils.string.FileReader;
 
 public class Problem011 extends Problem<Integer> {
 
+    @Override
+    protected Parameters getParametersForProblem() {
+        return new Parameters("problem11.txt", 4);
+    }
+    
 	@Override
 	public Integer resolveProblem() {
 		String fileName = getParameterForNumber(0);
@@ -19,6 +25,7 @@ public class Problem011 extends Problem<Integer> {
 		MapDoubleKey<Integer, Integer, Integer> numbers = FileReader
 				.getLinesWithNumbersSeparatedWithSpaceForFileName(fileName);
 
+		Date d1 = new Date();
 		int[][] diffs = { { 0, 1 }, { 1, 0 }, { 1, 1 }, { 1, -1 } };
 
 		int max = 0;
@@ -47,6 +54,13 @@ public class Problem011 extends Problem<Integer> {
 				}
 			}
 		}
+		Date d2 = new Date();
+		System.out.println(d2.getTime() - d1.getTime()+" --- TIME");
 		return max;
 	}
+
+    @Override
+    public Integer getCorrectProblemAnswer() {
+        return 70600674;
+    }
 }

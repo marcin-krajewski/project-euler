@@ -1,5 +1,8 @@
 package pl.krajewski.euler.problems.utils.math;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class PrimeNumbers {
 
 	public static boolean isNumberPrime(double number) {
@@ -27,5 +30,16 @@ public class PrimeNumbers {
 			j++;
 		}
 		return prime;
+	}
+	
+	public static Set<Double> getPrimesBelowNumber(int number) {
+	    
+	    Set<Double> primeNumbersBelowNumber = new HashSet<Double>();
+	    for(double i=2.0; i<number; i++) {
+	        if(isNumberPrime(i)) {
+	            primeNumbersBelowNumber.add(i);
+	        }
+	    }
+	    return primeNumbersBelowNumber;
 	}
 }

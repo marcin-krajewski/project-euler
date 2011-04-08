@@ -2,11 +2,18 @@ package pl.krajewski.euler.problems.implementations.problems021_030;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.utils.classes.ArrayUtils;
 import pl.krajewski.euler.problems.utils.math.PrimeFactor;
 
 public class Problem021 extends pl.krajewski.euler.problems.Problem<Integer> {
 
+    @Override
+    protected Parameters getParametersForProblem() {
+        return new Parameters(10000);
+    }
+    
 	@Override
 	public Integer resolveProblem() {
 
@@ -72,5 +79,10 @@ public class Problem021 extends pl.krajewski.euler.problems.Problem<Integer> {
 
 		return sum;
 	}
+
+    @Override
+    public Integer getCorrectProblemAnswer() {
+        return 31626;
+    }
 
 }

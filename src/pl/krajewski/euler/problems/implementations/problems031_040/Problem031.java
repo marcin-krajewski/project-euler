@@ -3,15 +3,36 @@ package pl.krajewski.euler.problems.implementations.problems031_040;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 
 public class Problem031 extends Problem<Integer> {
 
 	private Integer coinsIndex = 0;
 	private Integer maxMoneyIndex = 1;
+	
+	@Override
+	protected Parameters getParametersForProblem() {
+	    return new Parameters(getCoinsForProblem31(), 200);
+	}
+	
+	private static Set<Integer> getCoinsForProblem31() {
+        Set<Integer> coins = new HashSet<Integer>();
+        coins.add(1);
+        coins.add(2);
+        coins.add(5);
+        coins.add(10);
+        coins.add(20);
+        coins.add(50);
+        coins.add(100);
+        coins.add(200);
+        return coins;
+    }
 
 	@Override
 	public Integer resolveProblem() {
@@ -100,4 +121,9 @@ public class Problem031 extends Problem<Integer> {
 		}
 		
 	}
+
+    @Override
+    public Integer getCorrectProblemAnswer() {
+        return 73682;
+    }
 }

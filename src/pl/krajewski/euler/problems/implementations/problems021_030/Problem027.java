@@ -1,5 +1,6 @@
 package pl.krajewski.euler.problems.implementations.problems021_030;
 
+import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 
 public class Problem027 extends Problem<Integer> {
@@ -7,6 +8,11 @@ public class Problem027 extends Problem<Integer> {
 	private Integer maxAbsoluteOfAIndex = 0;
 	private Integer maxAbsoluteOfBIndex = 1;
 
+	@Override
+	protected Parameters getParametersForProblem() {
+	    return new Parameters(1000, 1000);
+	}
+	
 	@Override
 	public Integer resolveProblem() {
 		int maxAbsoluteOfA = getParameterForNumber(maxAbsoluteOfAIndex);
@@ -40,5 +46,10 @@ public class Problem027 extends Problem<Integer> {
 	private int getBForValue(int value) {
 		return value * value - 81 * value + 1681;
 	}
+
+    @Override
+    public Integer getCorrectProblemAnswer() {
+        return -59231;
+    }
 
 }

@@ -1,15 +1,21 @@
 package pl.krajewski.euler.problems.implementations.problems031_040;
 
+import pl.krajewski.euler.problems.Parameters;
 import java.util.HashSet;
 import java.util.Set;
 import pl.krajewski.euler.problems.Problem;
 
 public class Problem032 extends Problem<Double> {
 
-	static int level;
-	private Integer minDigitIndex = 0;
-	private Integer maxDigitIndex = 1;
-
+    private Integer minDigitIndex = 0;
+    private Integer maxDigitIndex = 1;
+    
+    @Override
+    protected Parameters getParametersForProblem() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+    
 	@Override
 	public Double resolveProblem() {
 
@@ -61,4 +67,9 @@ public class Problem032 extends Problem<Double> {
 		}
 		return true;
 	}
+
+    @Override
+    public Double getCorrectProblemAnswer() {
+        return 45228.0;
+    }
 }

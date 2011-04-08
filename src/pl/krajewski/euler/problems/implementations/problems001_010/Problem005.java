@@ -8,6 +8,11 @@ import pl.krajewski.euler.problems.utils.math.LeastCommonMultiple;
 
 public class Problem005 extends Problem<Double> {
 
+    @Override
+    protected Parameters getParametersForProblem() {
+        return new Parameters(1.0, 20.0);
+    }
+    
 	@Override
 	public Double resolveProblem() {
 		double min = getParameterForNumber(0);
@@ -19,5 +24,10 @@ public class Problem005 extends Problem<Double> {
 		}
 		return LeastCommonMultiple.getLeastCommonMultipleForAllInSet(set);
 	}
+
+    @Override
+    public Double getCorrectProblemAnswer() {
+        return 232792560.0;
+    }
 
 }

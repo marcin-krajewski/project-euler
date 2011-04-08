@@ -5,7 +5,6 @@ import java.util.Date;
 
 import org.junit.Test;
 
-import pl.krajewski.euler.ProblemAnswers;
 import pl.krajewski.euler.ProblemGetter;
 import pl.krajewski.euler.ProjectEuler;
 import pl.krajewski.euler.problems.ProblemResolver;
@@ -19,27 +18,17 @@ public class CheckCurrentProblemResultTest {
         System.out.println("TESTING SINGLE PROBLEM NUMBER: "+problemNumber);
         
         assertNotNull(problemNumber);
-        String expectedProblemResult = getAndTestExpectedProblemResult(problemNumber);
-        String problemResult = resolveProblemAndGetFormattedValue(problemNumber);
         
+        Long startMillis = new Date().getTime();
+        ProblemResolver problemForNumber = ProblemGetter.getProblemForNumber(problemNumber);
+        Object expectedProblemResult = problemForNumber.getCorrectProblemAnswer();
+        Object problemResult = problemForNumber.resolveProblem();
+        Long resolveMillis = new Date().getTime() - startMillis;
+
+        assertNotNull(expectedProblemResult);
+        assertNotNull(problemResult);
 		assertEquals(expectedProblemResult, problemResult);
         
-        System.out.println("\tTEST SUCCESSFUL");
+        System.out.println("\tTEST SUCCESSFUL WITH TIME "+resolveMillis);
     }
-    
-    private String resolveProblemAndGetFormattedValue(Integer problemNumber) {
-    	Long startMillis = new Date().getTime();
-    	Object problemResolution = ProblemGetter.getProblemForNumber(problemNumber).resolveProblem();
-    	Long resolveMillis = new Date().getTime() - startMillis;
-    	System.out.println("TEST RESOLVED WITH TIME "+resolveMillis+" ms");
-    	return ProblemGetter.getFormattedResult(problemResolution).trim();
-    }
-
-	private String getAndTestExpectedProblemResult(Integer problemNumber) {
-		String expectedProblemResult = ProblemAnswers.getProblemResultForProblemNumber(problemNumber);
-        assertNotNull(expectedProblemResult);
-        expectedProblemResult = expectedProblemResult.trim();
-        assertNotSame("", expectedProblemResult);
-		return expectedProblemResult;
-	}
 }

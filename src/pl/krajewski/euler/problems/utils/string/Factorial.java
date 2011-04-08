@@ -24,4 +24,14 @@ public class Factorial {
 		}
 		return factorial;
 	}
+	
+	public static Integer numberFactorial(int number) {
+	    try {
+	        return Integer.parseInt(factorial(number));
+	    }
+	    catch(Exception ex) {
+	        ex.printStackTrace();
+	        return null;
+	    }
+	}
 }

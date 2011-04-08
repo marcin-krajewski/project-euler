@@ -7,6 +7,11 @@ import pl.krajewski.euler.problems.utils.numbers.SumOfPowers;
 
 public class Problem006 extends Problem<Double> {
 
+    @Override
+    protected Parameters getParametersForProblem() {
+        return new Parameters(1.0, 100.0);
+    }
+    
 	@Override
 	public Double resolveProblem() {
 		double min = getParameterForNumber(0);
@@ -15,5 +20,10 @@ public class Problem006 extends Problem<Double> {
 		return new PowerOfSum().getPowerOfSum(min, max)
 				- new SumOfPowers().getSumOfPower(min, max);
 	}
+
+    @Override
+    public Double getCorrectProblemAnswer() {
+        return 25164150.0;
+    }
 
 }

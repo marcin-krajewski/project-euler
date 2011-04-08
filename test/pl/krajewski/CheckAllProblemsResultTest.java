@@ -9,44 +9,52 @@ import java.util.Map;
 import org.junit.Before;
 import org.junit.Test;
 
-import pl.krajewski.euler.ProblemAnswers;
 import pl.krajewski.euler.ProblemGetter;
 import pl.krajewski.euler.ProjectEuler;
 import pl.krajewski.euler.problems.ProblemResolver;
 
 public class CheckAllProblemsResultTest {
 
-    private Integer problemNumber;
-    
-    private Map<Integer, Long> callTimes = new HashMap<Integer, Long>(); 
+    private Map<Integer, Long> callTimes; 
     
     @Before
     public void init() {
-        this.problemNumber = ProjectEuler.problemCallNumber;
+        callTimes = new HashMap<Integer, Long>();
     }
     
     @Test
     public void checkIfAllTestsReturnsNotNullAndCorrectResult() {
         
         ProblemResolver problemResolver;
-        String problemResult;
+        Object problemResult;
+        Object expectedProblemResult;
         Date start, end;
-        for(int problemNumberToCheck = 1; problemNumberToCheck <= this.problemNumber; problemNumberToCheck++) {
+        for(Integer problemNumberToCheck : ProblemGetter.getProblems().keySet()) {
             System.out.println("CHECKING PROBLEM NUMBER "+problemNumberToCheck);
             problemResolver = ProblemGetter.getProblemForNumber(problemNumberToCheck);
+            
+            expectedProblemResult = problemResolver.getCorrectProblemAnswer();
+            if(expectedProblemResult == null) {
+                System.out.println("\tNO ANSWER FOR PROBLEM "+problemNumberToCheck);
+                continue;
+            }
+            
             start = new Date();
-            problemResult = ProblemGetter.getFormattedResult(problemResolver.resolveProblem());
+            problemResult = problemResolver.resolveProblem();
             end = new Date();
-            callTimes.put(problemNumberToCheck, end.getTime()-start.getTime());
+            
             assertNotNull(problemResult);
-            assertEquals(problemResult, ProblemAnswers.getProblemResultForProblemNumber(problemNumberToCheck));
+            assertEquals(problemResult, expectedProblemResult);
+            
+            callTimes.put(problemNumberToCheck, end.getTime()-start.getTime());
+            
             System.out.println("\t TEST SUCCESS");
         }
         printTimes();
     }
     
     private void printTimes() {
-    	for(Integer number=1; number<=this.problemNumber; number++) {
+    	for(Integer number : callTimes.keySet()) {
     		System.out.println("NUMBER: "+number+" -- TIME: "+(new DecimalFormat("0.000")).format((double)callTimes.get(number)/1000.0)+"s");
     	}
     }

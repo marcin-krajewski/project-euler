@@ -2,6 +2,9 @@ package pl.krajewski.euler;
 
 import java.text.DecimalFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.ProblemResolver;
 import pl.krajewski.euler.problems.implementations.problems001_010.Problem001;
@@ -37,57 +40,61 @@ import pl.krajewski.euler.problems.implementations.problems021_030.Problem030;
 import pl.krajewski.euler.problems.implementations.problems031_040.Problem031;
 import pl.krajewski.euler.problems.implementations.problems031_040.Problem032;
 import pl.krajewski.euler.problems.implementations.problems031_040.Problem033;
-
+import pl.krajewski.euler.problems.implementations.problems031_040.Problem034;
+import pl.krajewski.euler.problems.implementations.problems031_040.Problem035;
+import pl.krajewski.euler.problems.implementations.problems031_040.Problem036;
+import pl.krajewski.euler.problems.implementations.problems200_210.Problem210;
 
 public class ProblemGetter {
 
 	private static Date startDate, stopDate;
-	public static ProblemResolver getProblemForNumber(int problemNumber) {
-		Parameters parameters = ParametersGetter.getParametersForNumber(problemNumber);
-		ProblemResolver problemResolver = getProblemResolverForNumber(problemNumber);
-		problemResolver.setParameters(parameters);
-		return problemResolver;
+	
+	private static Map<Integer, ProblemResolver> problems = new HashMap<Integer, ProblemResolver>();
+	static {
+	    problems.put(1, new Problem001());
+        problems.put(2, new Problem002());
+        problems.put(3, new Problem003());
+        problems.put(4, new Problem004());
+        problems.put(5, new Problem005());
+        problems.put(6, new Problem006());
+        problems.put(7, new Problem007());
+        problems.put(8, new Problem008());
+        problems.put(9, new Problem009());
+        problems.put(10, new Problem010());
+        problems.put(11, new Problem011());
+        problems.put(12, new Problem012());
+        problems.put(13, new Problem013());
+        problems.put(14, new Problem014());
+        problems.put(15, new Problem015());
+        problems.put(16, new Problem016());
+        problems.put(17, new Problem017());
+        problems.put(18, new Problem018());
+        problems.put(19, new Problem019());
+        problems.put(20, new Problem020());
+        problems.put(21, new Problem021());
+        problems.put(22, new Problem022());
+        problems.put(23, new Problem023());
+        problems.put(24, new Problem024());
+        problems.put(25, new Problem025());
+        problems.put(26, new Problem026());
+        problems.put(27, new Problem027());
+        problems.put(28, new Problem028());
+        problems.put(29, new Problem029());
+        problems.put(30, new Problem030());
+        problems.put(31, new Problem031());
+        problems.put(34, new Problem034());
+        problems.put(35, new Problem035());
+        problems.put(36, new Problem036());
+        problems.put(210, new Problem210());
 	}
 	
-	private static ProblemResolver getProblemResolverForNumber(Integer problemNumber) {
-		
-		switch(problemNumber) {
-			case 1: return new Problem001();
-			case 2: return new Problem002();
-			case 3: return new Problem003();
-			case 4: return new Problem004();
-			case 5: return new Problem005();
-			case 6: return new Problem006();
-			case 7: return new Problem007();
-			case 8: return new Problem008();
-			case 9: return new Problem009();
-			case 10: return new Problem010();
-			case 11: return new Problem011();
-			case 12: return new Problem012();
-			case 13: return new Problem013();
-			case 14: return new Problem014();
-			case 15: return new Problem015();
-			case 16: return new Problem016();
-			case 17: return new Problem017();
-			case 18: return new Problem018();
-			case 19: return new Problem019();
-			case 20: return new Problem020();
-			case 21: return new Problem021();
-			case 22: return new Problem022();
-			case 23: return new Problem023();
-			case 24: return new Problem024();
-			case 25: return new Problem025();
-			case 26: return new Problem026();
-			case 27: return new Problem027();
-			case 28: return new Problem028();
-			case 29: return new Problem029();
-			case 30: return new Problem030();
-			case 31: return new Problem031();
-			case 32: return new Problem032();
-			case 33: return new Problem033();
-			default: return null;
-		}
+	public static ProblemResolver getProblemForNumber(Integer problemNumber) {
+		return problems.get(problemNumber);
 	}
+	
+	public static Map<Integer, ProblemResolver> getProblems() {
+        return problems;
+    }
 	
 
 	public static void resolveProblem(int problemNumber) {

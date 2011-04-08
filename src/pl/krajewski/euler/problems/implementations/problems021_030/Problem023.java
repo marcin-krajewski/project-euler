@@ -2,12 +2,19 @@ package pl.krajewski.euler.problems.implementations.problems021_030;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.math.PrimeFactor;
 import pl.krajewski.euler.problems.utils.math.PrimeNumbers;
 
 public class Problem023 extends Problem<Double> {
 
+    @Override
+    protected Parameters getParametersForProblem() {
+        return new Parameters(28123);
+    }
+    
 	@Override
 	public Double resolveProblem() {
 
@@ -49,5 +56,10 @@ public class Problem023 extends Problem<Double> {
 
 		return sumOfPositiveIntegersNotSummedWithTwoAbundants;
 	}
+
+    @Override
+    public Double getCorrectProblemAnswer() {
+        return 4179871.0;
+    }
 
 }

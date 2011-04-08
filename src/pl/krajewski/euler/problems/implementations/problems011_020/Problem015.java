@@ -6,6 +6,11 @@ import pl.krajewski.euler.problems.utils.string.Factorial;
 
 public class Problem015 extends Problem<Double> {
 
+    @Override
+    protected Parameters getParametersForProblem() {
+        return new Parameters(20.0);
+    }
+    
 	@Override
 	public Double resolveProblem() {
 		double gridWidth = getParameterForNumber(0);
@@ -36,4 +41,9 @@ public class Problem015 extends Problem<Double> {
 		tab[i][j] = res(i - 1, j, tab) + res(i, j - 1, tab);
 		return tab[i][j];
 	}
+
+    @Override
+    public Double getCorrectProblemAnswer() {
+        return 137846528820.0;
+    }
 }
