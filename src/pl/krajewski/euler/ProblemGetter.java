@@ -4,7 +4,6 @@ import java.text.DecimalFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.ProblemResolver;
 import pl.krajewski.euler.problems.implementations.problems001_010.Problem001;
@@ -43,69 +42,75 @@ import pl.krajewski.euler.problems.implementations.problems031_040.Problem033;
 import pl.krajewski.euler.problems.implementations.problems031_040.Problem034;
 import pl.krajewski.euler.problems.implementations.problems031_040.Problem035;
 import pl.krajewski.euler.problems.implementations.problems031_040.Problem036;
+import pl.krajewski.euler.problems.implementations.problems031_040.Problem037;
+import pl.krajewski.euler.problems.implementations.problems031_040.Problem038;
 import pl.krajewski.euler.problems.implementations.problems200_210.Problem210;
 
 public class ProblemGetter {
 
 	private static Date startDate, stopDate;
-	
+
 	private static Map<Integer, ProblemResolver> problems = new HashMap<Integer, ProblemResolver>();
 	static {
-	    problems.put(1, new Problem001());
-        problems.put(2, new Problem002());
-        problems.put(3, new Problem003());
-        problems.put(4, new Problem004());
-        problems.put(5, new Problem005());
-        problems.put(6, new Problem006());
-        problems.put(7, new Problem007());
-        problems.put(8, new Problem008());
-        problems.put(9, new Problem009());
-        problems.put(10, new Problem010());
-        problems.put(11, new Problem011());
-        problems.put(12, new Problem012());
-        problems.put(13, new Problem013());
-        problems.put(14, new Problem014());
-        problems.put(15, new Problem015());
-        problems.put(16, new Problem016());
-        problems.put(17, new Problem017());
-        problems.put(18, new Problem018());
-        problems.put(19, new Problem019());
-        problems.put(20, new Problem020());
-        problems.put(21, new Problem021());
-        problems.put(22, new Problem022());
-        problems.put(23, new Problem023());
-        problems.put(24, new Problem024());
-        problems.put(25, new Problem025());
-        problems.put(26, new Problem026());
-        problems.put(27, new Problem027());
-        problems.put(28, new Problem028());
-        problems.put(29, new Problem029());
-        problems.put(30, new Problem030());
-        problems.put(31, new Problem031());
-        problems.put(34, new Problem034());
-        problems.put(35, new Problem035());
-        problems.put(36, new Problem036());
-        problems.put(210, new Problem210());
+		problems.put(1, new Problem001());
+		problems.put(2, new Problem002());
+		problems.put(3, new Problem003());
+		problems.put(4, new Problem004());
+		problems.put(5, new Problem005());
+		problems.put(6, new Problem006());
+		problems.put(7, new Problem007());
+		problems.put(8, new Problem008());
+		problems.put(9, new Problem009());
+		problems.put(10, new Problem010());
+		problems.put(11, new Problem011());
+		problems.put(12, new Problem012());
+		problems.put(13, new Problem013());
+		problems.put(14, new Problem014());
+		problems.put(15, new Problem015());
+		problems.put(16, new Problem016());
+		problems.put(17, new Problem017());
+		problems.put(18, new Problem018());
+		problems.put(19, new Problem019());
+		problems.put(20, new Problem020());
+		problems.put(21, new Problem021());
+		problems.put(22, new Problem022());
+		problems.put(23, new Problem023());
+		problems.put(24, new Problem024());
+		problems.put(25, new Problem025());
+		problems.put(26, new Problem026());
+		problems.put(27, new Problem027());
+		problems.put(28, new Problem028());
+		problems.put(29, new Problem029());
+		problems.put(30, new Problem030());
+		problems.put(31, new Problem031());
+		problems.put(34, new Problem034());
+		problems.put(35, new Problem035());
+		problems.put(36, new Problem036());
+		problems.put(37, new Problem037());
+		problems.put(38, new Problem038());
+		problems.put(210, new Problem210());
 	}
-	
+
 	public static ProblemResolver getProblemForNumber(Integer problemNumber) {
 		return problems.get(problemNumber);
 	}
-	
+
 	public static Map<Integer, ProblemResolver> getProblems() {
-        return problems;
-    }
-	
+		return problems;
+	}
 
 	public static void resolveProblem(int problemNumber) {
-		resolveAndPrintProblem(getProblemForNumber(problemNumber), problemNumber);
+		resolveAndPrintProblem(getProblemForNumber(problemNumber),
+				problemNumber);
 	}
-	
-	private static void resolveAndPrintProblem(ProblemResolver problemResolver, int number) {
+
+	private static void resolveAndPrintProblem(ProblemResolver problemResolver,
+			int number) {
 		startDate = new Date();
 		Object result = problemResolver.resolveProblem();
 		stopDate = new Date();
-		System.out.println(addTimeToResult(getResult(result, number), (stopDate.getTime() - startDate.getTime())));
+		System.out.println(addTimeToResult(getResult(result, number),
+				(stopDate.getTime() - startDate.getTime())));
 	}
 
 	private static String getResult(Object result, int problemCallNumber) {
@@ -116,17 +121,17 @@ public class ProblemGetter {
 		sb.append(getFormattedResult(result));
 		return sb.toString();
 	}
-	
+
 	public static String getFormattedResult(Object result) {
-	    
-	    if(result instanceof String) {
-	        return (String)result;
-	    }
-	    else {
-	        return (new DecimalFormat("0")).format(result);
-	    }
+
+		if (result instanceof String) {
+			return (String) result;
+		}
+		else {
+			return (new DecimalFormat("0")).format(result);
+		}
 	}
-	
+
 	private static String addTimeToResult(String result, Long timeMillis) {
 		StringBuilder sb = new StringBuilder(result);
 		sb.append(" --- TIME: ");

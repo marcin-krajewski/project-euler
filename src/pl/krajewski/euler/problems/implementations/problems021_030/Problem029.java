@@ -2,9 +2,10 @@ package pl.krajewski.euler.problems.implementations.problems021_030;
 
 import java.util.HashSet;
 import java.util.Set;
-
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
+import pl.krajewski.euler.problems.utils.classes.MapDoubleKey;
+import pl.krajewski.euler.problems.utils.string.StringAsNum;
 import pl.krajewski.euler.problems.utils.string.StringPower;
 
 public class Problem029 extends Problem<Integer> {
@@ -16,29 +17,42 @@ public class Problem029 extends Problem<Integer> {
 
 	@Override
 	protected Parameters getParametersForProblem() {
-	    return new Parameters(2, 100, 2, 100);
+		return new Parameters(2, 100, 2, 100);
 	}
-	
+
 	@Override
 	public Integer resolveProblem() {
 		int minA = getParameterForNumber(minAIndex);
 		int maxA = getParameterForNumber(maxAIndex);
 		int minB = getParameterForNumber(minBIndex);
 		int maxB = getParameterForNumber(maxBIndex);
-		
+
 		Set<String> powers = new HashSet<String>();
-		for(int a=minA; a<=maxA; a++) {
-			for(int b=minB; b<=maxB; b++) {
-				String power = StringPower.getPowerForNumberBelow10(a, b);
-				powers.add(power);
-			}
+		for (int a = minA; a <= maxA; a++) {
+			powers.addAll(getPowerForNumberBelow(a, minB, maxB));
 		}
 		return powers.size();
 	}
 
-    @Override
-    public Integer getCorrectProblemAnswer() {
-        return 9183;
-    }
+	private Set<String> getPowerForNumberBelow(int number, int minPow,
+			int maxPow) {
+
+		Set<String> powers = new HashSet<String>();
+		String stringPower = StringPower.getPowerForNumberBelow10(number,
+				minPow);
+		powers.add(stringPower);
+
+		for (int i = minPow + 1; i <= maxPow; i++) {
+			stringPower = StringAsNum.productTwoNumbers(number + "",
+					stringPower);
+			powers.add(stringPower);
+		}
+		return powers;
+	}
+
+	@Override
+	public Integer getCorrectProblemAnswer() {
+		return 9183;
+	}
 
 }
