@@ -1,4 +1,4 @@
-package pl.krajewski.utils.string;
+package pl.krajewski.utils.numbers;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
