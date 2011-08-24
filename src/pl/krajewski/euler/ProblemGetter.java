@@ -1,9 +1,12 @@
 package pl.krajewski.euler;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -108,9 +111,9 @@ public class ProblemGetter {
 		return problems;
 	}
 	
-	public static Set<Integer> getProblemsToRandomize() {
+	public static List<Integer> getProblemsToRandomize() {
 		
-		Set<Integer> problemsToRandomize = new LinkedHashSet<Integer>();
+		List<Integer> problemsToRandomize = new ArrayList<Integer>();
 		for(int problemIndex=1; problemIndex<MAX_PROBLEM_NUMBER; problemIndex++) {
 			if(!problems.containsKey(problemIndex)) {
 				problemsToRandomize.add(problemIndex);
