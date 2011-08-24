@@ -3,7 +3,10 @@ package pl.krajewski.euler;
 import java.text.DecimalFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashSet;
 import java.util.Map;
+import java.util.Set;
+
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.ProblemResolver;
 import pl.krajewski.euler.problems.implementations.problems001_010.Problem001;
@@ -51,6 +54,8 @@ import pl.krajewski.euler.problems.implementations.problems200_210.Problem210;
 public class ProblemGetter {
 
 	private static Date startDate, stopDate;
+	
+	private static int MAX_PROBLEM_NUMBER = 344;
 
 	private static Map<Integer, ProblemResolver> problems = new HashMap<Integer, ProblemResolver>();
 	static {
@@ -101,6 +106,17 @@ public class ProblemGetter {
 
 	public static Map<Integer, ProblemResolver> getProblems() {
 		return problems;
+	}
+	
+	public static Set<Integer> getProblemsToRandomize() {
+		
+		Set<Integer> problemsToRandomize = new LinkedHashSet<Integer>();
+		for(int problemIndex=1; problemIndex<MAX_PROBLEM_NUMBER; problemIndex++) {
+			if(!problems.containsKey(problemIndex)) {
+				problemsToRandomize.add(problemIndex);
+			}
+		}
+		return problemsToRandomize;
 	}
 
 	public static void resolveProblem(int problemNumber) {
