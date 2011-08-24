@@ -1,15 +1,9 @@
 package pl.krajewski.euler;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import pl.krajewski.euler.problems.utils.math.Permutations;
-import pl.krajewski.euler.problems.utils.math.RecurringCycle;
-import pl.krajewski.euler.problems.utils.string.Factorial;
 
 public class ProjectEuler {
 
-	public static Integer problemCallNumber = 40;
+	public static Integer problemCallNumber = 304;
 
 	/**
 	 * @param args
@@ -18,6 +12,7 @@ public class ProjectEuler {
 		ProblemGetter.resolveProblem(problemCallNumber);
 	}
 
+	@SuppressWarnings("unused")
 	private static void print(Object a) {
 		System.out.println("OBJECT " + a);
 	}

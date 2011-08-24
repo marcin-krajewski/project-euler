@@ -50,4 +50,9 @@ public class PrimeNumbers {
 		}
 		return primeNumbersBelowNumber;
 	}
+
+	public static double getSmallestPrimeLargerThanParameter(double n) {
+		// TODO Auto-generated method stub
+		return n+n;
+	}
 }

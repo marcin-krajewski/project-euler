@@ -9,6 +9,7 @@ public abstract class Problem<T> implements ProblemResolver<T> {
 
 	private Parameters parameters;
 
+	@SuppressWarnings("unchecked")
 	protected <S> S getParameterForNumber(Integer number) {
 		return (S) this.parameters.getParameterForNumber(number);
 	}
@@ -20,8 +21,10 @@ public abstract class Problem<T> implements ProblemResolver<T> {
 	protected abstract Parameters getParametersForProblem();
 
 	@Test
-	public void testIfProblemIsCorrect() {
-		assertEquals(this.getCorrectProblemAnswer(), this.resolveProblem());
+	public final void testIfProblemIsCorrect() {
+		T resolveProblem = this.resolveProblem();
+		System.out.println("*** FULL CHECKING " + getCorrectProblemAnswer() + " FOR " + resolveProblem);
+		assertEquals(this.getCorrectProblemAnswer(), resolveProblem);
 	}
 
 	@Test

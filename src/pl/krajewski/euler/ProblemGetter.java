@@ -4,13 +4,9 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
-import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.ProblemResolver;
 import pl.krajewski.euler.problems.implementations.problems001_010.Problem001;
 import pl.krajewski.euler.problems.implementations.problems001_010.Problem002;
@@ -43,8 +39,6 @@ import pl.krajewski.euler.problems.implementations.problems021_030.Problem028;
 import pl.krajewski.euler.problems.implementations.problems021_030.Problem029;
 import pl.krajewski.euler.problems.implementations.problems021_030.Problem030;
 import pl.krajewski.euler.problems.implementations.problems031_040.Problem031;
-import pl.krajewski.euler.problems.implementations.problems031_040.Problem032;
-import pl.krajewski.euler.problems.implementations.problems031_040.Problem033;
 import pl.krajewski.euler.problems.implementations.problems031_040.Problem034;
 import pl.krajewski.euler.problems.implementations.problems031_040.Problem035;
 import pl.krajewski.euler.problems.implementations.problems031_040.Problem036;
@@ -53,7 +47,9 @@ import pl.krajewski.euler.problems.implementations.problems031_040.Problem038;
 import pl.krajewski.euler.problems.implementations.problems031_040.Problem039;
 import pl.krajewski.euler.problems.implementations.problems031_040.Problem040;
 import pl.krajewski.euler.problems.implementations.problems200_210.Problem210;
+import pl.krajewski.euler.problems.implementations.problems300_310.Problem304;
 
+@SuppressWarnings("rawtypes")
 public class ProblemGetter {
 
 	private static Date startDate, stopDate;
@@ -101,6 +97,7 @@ public class ProblemGetter {
 		problems.put(39, new Problem039());
 		problems.put(40, new Problem040());
 		problems.put(210, new Problem210());
+		problems.put(304, new Problem304());
 	}
 
 	public static ProblemResolver getProblemForNumber(Integer problemNumber) {

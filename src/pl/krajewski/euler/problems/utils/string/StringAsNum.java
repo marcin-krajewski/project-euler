@@ -27,7 +27,11 @@ public class StringAsNum {
 			}
 			index++;
 		}
-		return stringNumber.substring(index);
+		String substring = stringNumber.substring(index);
+		if(substring.trim().isEmpty()) {
+			return "0";
+		}
+		return substring;
 	}
 	
 	private static int[] getStringAsNumArray(String stringNumber, boolean reverse) {

@@ -5,17 +5,21 @@ import pl.krajewski.euler.problems.utils.string.StringAsNum;
 public class FibonacciSequence {
 
 	public static String findFibonacciStringForIndex(int index) {
+		return findFibonacciStringForDoubleIndex(index);
+	}
+	public static String findFibonacciStringForDoubleIndex(double index) {
+		
 		String prev1 = "1";
-		if(index == 1) {
+		if(index == 1.0) {
 			return prev1;
 		}
 		String prev2 = "1";
-		if(index == 2) {
+		if(index == 2.0) {
 			return prev2;
 		}
 		
 		String value = "";
-		for(int i=3; i<=index; i++) {
+		for(double i=3; i<=index; i++) {
 			value = StringAsNum.sumStringNumbers(new String[] {prev1, prev2});
 			prev1 = prev2;
 			prev2 = value;
