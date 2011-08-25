@@ -17,11 +17,18 @@ public class PrimeNumbers {
 			return false;
 		}
 
-		double len = Math.sqrt(number);
-		for (double i = 3.0; i <= len; i += 2.0) {
-			if (number % i == 0) {
+		double testNum = 3.0;
+		double testLimit = number;
+
+		while(testLimit > testNum) {
+			if (number % testNum == 0) {
 				return false;
 			}
+			
+			testLimit = (double) ((int)number / (int) testNum);
+			
+			testNum += 2.0;
+			
 		}
 		return true;
 	}
