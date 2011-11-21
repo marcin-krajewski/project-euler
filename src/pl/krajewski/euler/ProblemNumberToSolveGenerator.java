@@ -17,7 +17,7 @@ public class ProblemNumberToSolveGenerator {
 	
 	private static int getNumberToSolve() {
 		if(lastSolved) {
-			List<Integer> problemsToRandomize = ProblemGetter.getProblemsToRandomize();
+			List<Integer> problemsToRandomize = ProblemGetter.getInstance().getProblemsToRandomize();
 			int nextInt = new Random().nextInt(problemsToRandomize.size()-1);
 			return problemsToRandomize.get(nextInt);
 		} 

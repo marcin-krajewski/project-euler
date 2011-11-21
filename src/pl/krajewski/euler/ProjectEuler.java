@@ -9,7 +9,7 @@ public class ProjectEuler {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		ProblemGetter.resolveProblem(problemCallNumber);
+		ProblemGetter.getInstance().resolveProblem(problemCallNumber);
 	}
 
 	@SuppressWarnings("unused")

@@ -27,12 +27,12 @@ public class CheckAllProblemsResultTest {
 		Object problemResult;
 		Object expectedProblemResult;
 		Date start, end;
-		for (Integer problemNumberToCheck : ProblemGetter.getProblems()
-				.keySet()) {
+		for (Integer problemNumberToCheck : ProblemGetter.getInstance()
+				.getProblems().keySet()) {
 			System.out.println("CHECKING PROBLEM NUMBER "
 					+ problemNumberToCheck);
-			problemResolver = ProblemGetter
-					.getProblemForNumber(problemNumberToCheck);
+			problemResolver = ProblemGetter.getInstance().getProblemForNumber(
+					problemNumberToCheck);
 
 			expectedProblemResult = problemResolver.getCorrectProblemAnswer();
 			if (expectedProblemResult == null) {

@@ -8,55 +8,23 @@ import java.util.List;
 import java.util.Map;
 
 import pl.krajewski.euler.problems.ProblemResolver;
-import pl.krajewski.euler.problems.implementations.problems001_010.Problem001;
-import pl.krajewski.euler.problems.implementations.problems001_010.Problem002;
-import pl.krajewski.euler.problems.implementations.problems001_010.Problem003;
-import pl.krajewski.euler.problems.implementations.problems001_010.Problem004;
-import pl.krajewski.euler.problems.implementations.problems001_010.Problem005;
-import pl.krajewski.euler.problems.implementations.problems001_010.Problem006;
-import pl.krajewski.euler.problems.implementations.problems001_010.Problem007;
-import pl.krajewski.euler.problems.implementations.problems001_010.Problem008;
-import pl.krajewski.euler.problems.implementations.problems001_010.Problem009;
-import pl.krajewski.euler.problems.implementations.problems001_010.Problem010;
-import pl.krajewski.euler.problems.implementations.problems011_020.Problem011;
-import pl.krajewski.euler.problems.implementations.problems011_020.Problem012;
-import pl.krajewski.euler.problems.implementations.problems011_020.Problem013;
-import pl.krajewski.euler.problems.implementations.problems011_020.Problem014;
-import pl.krajewski.euler.problems.implementations.problems011_020.Problem015;
-import pl.krajewski.euler.problems.implementations.problems011_020.Problem016;
-import pl.krajewski.euler.problems.implementations.problems011_020.Problem017;
-import pl.krajewski.euler.problems.implementations.problems011_020.Problem018;
-import pl.krajewski.euler.problems.implementations.problems011_020.Problem019;
-import pl.krajewski.euler.problems.implementations.problems011_020.Problem020;
-import pl.krajewski.euler.problems.implementations.problems021_030.Problem021;
-import pl.krajewski.euler.problems.implementations.problems021_030.Problem022;
-import pl.krajewski.euler.problems.implementations.problems021_030.Problem023;
-import pl.krajewski.euler.problems.implementations.problems021_030.Problem024;
-import pl.krajewski.euler.problems.implementations.problems021_030.Problem025;
-import pl.krajewski.euler.problems.implementations.problems021_030.Problem026;
-import pl.krajewski.euler.problems.implementations.problems021_030.Problem027;
-import pl.krajewski.euler.problems.implementations.problems021_030.Problem028;
-import pl.krajewski.euler.problems.implementations.problems021_030.Problem029;
-import pl.krajewski.euler.problems.implementations.problems021_030.Problem030;
-import pl.krajewski.euler.problems.implementations.problems031_040.Problem031;
-import pl.krajewski.euler.problems.implementations.problems031_040.Problem034;
-import pl.krajewski.euler.problems.implementations.problems031_040.Problem035;
-import pl.krajewski.euler.problems.implementations.problems031_040.Problem036;
-import pl.krajewski.euler.problems.implementations.problems031_040.Problem037;
-import pl.krajewski.euler.problems.implementations.problems031_040.Problem038;
-import pl.krajewski.euler.problems.implementations.problems031_040.Problem039;
-import pl.krajewski.euler.problems.implementations.problems031_040.Problem040;
-import pl.krajewski.euler.problems.implementations.problems200_210.Problem210;
-import pl.krajewski.euler.problems.implementations.problems300_310.Problem304;
+import pl.krajewski.euler.problems.implementations.problems001_010.*;
+import pl.krajewski.euler.problems.implementations.problems011_020.*;
+import pl.krajewski.euler.problems.implementations.problems021_030.*;
+import pl.krajewski.euler.problems.implementations.problems031_040.*;
+import pl.krajewski.euler.problems.implementations.problems200_210.*;
+import pl.krajewski.euler.problems.implementations.problems300_310.*;
 
 @SuppressWarnings("rawtypes")
 public class ProblemGetter {
 
 	private static Date startDate, stopDate;
-	
+
 	private static int MAX_PROBLEM_NUMBER = 344;
 
 	private static Map<Integer, ProblemResolver> problems = new HashMap<Integer, ProblemResolver>();
+
+	private static ProblemGetter instance;
 	static {
 		problems.put(1, new Problem001());
 		problems.put(2, new Problem002());
@@ -99,27 +67,37 @@ public class ProblemGetter {
 		problems.put(210, new Problem210());
 		problems.put(304, new Problem304());
 	}
+	
+	private ProblemGetter() {
+	}
+	
+	public synchronized static ProblemGetter getInstance() {
+		if(instance == null) {
+			instance = new ProblemGetter();
+		}
+		return instance;
+	}
 
-	public static ProblemResolver getProblemForNumber(Integer problemNumber) {
+	public ProblemResolver getProblemForNumber(Integer problemNumber) {
 		return problems.get(problemNumber);
 	}
 
-	public static Map<Integer, ProblemResolver> getProblems() {
+	public Map<Integer, ProblemResolver> getProblems() {
 		return problems;
 	}
-	
-	public static List<Integer> getProblemsToRandomize() {
-		
+
+	public List<Integer> getProblemsToRandomize() {
+
 		List<Integer> problemsToRandomize = new ArrayList<Integer>();
-		for(int problemIndex=1; problemIndex<MAX_PROBLEM_NUMBER; problemIndex++) {
-			if(!problems.containsKey(problemIndex)) {
+		for (int problemIndex = 1; problemIndex < MAX_PROBLEM_NUMBER; problemIndex++) {
+			if (!problems.containsKey(problemIndex)) {
 				problemsToRandomize.add(problemIndex);
 			}
 		}
 		return problemsToRandomize;
 	}
 
-	public static void resolveProblem(int problemNumber) {
+	public void resolveProblem(int problemNumber) {
 		resolveAndPrintProblem(getProblemForNumber(problemNumber),
 				problemNumber);
 	}
@@ -146,8 +124,7 @@ public class ProblemGetter {
 
 		if (result instanceof String) {
 			return (String) result;
-		}
-		else {
+		} else {
 			return (new DecimalFormat("0")).format(result);
 		}
 	}

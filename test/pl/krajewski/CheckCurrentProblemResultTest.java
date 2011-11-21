@@ -20,7 +20,7 @@ public class CheckCurrentProblemResultTest {
         assertNotNull(problemNumber);
         
         Long startMillis = new Date().getTime();
-        ProblemResolver problemForNumber = ProblemGetter.getProblemForNumber(problemNumber);
+        ProblemResolver problemForNumber = ProblemGetter.getInstance().getProblemForNumber(problemNumber);
         Object expectedProblemResult = problemForNumber.getCorrectProblemAnswer();
         Object problemResult = problemForNumber.resolveProblem();
         Long resolveMillis = new Date().getTime() - startMillis;
