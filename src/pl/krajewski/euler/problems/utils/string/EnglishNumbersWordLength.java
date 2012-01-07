@@ -6,7 +6,7 @@ import java.util.Map;
 public class EnglishNumbersWordLength {
 
 	private static Map<Integer, String> numbersAndEnglishNames = new HashMap<Integer, String>();
-	static { 
+	static {
 		numbersAndEnglishNames.put(0, "zero");
 		numbersAndEnglishNames.put(1, "one");
 		numbersAndEnglishNames.put(2, "two");
@@ -38,69 +38,67 @@ public class EnglishNumbersWordLength {
 		numbersAndEnglishNames.put(100, "hundred");
 		numbersAndEnglishNames.put(1000, "thousand");
 	}
-	
+
 	public static Integer getNumberLen(int number) {
 		return getStringForNumberBelow10000(number, true).trim().length();
 	}
-	
+
 	public static String getStringForNumberBelow10000(int number, boolean toCount) {
-		if(toCount) {
+		if (toCount) {
 			return getStringForNumberBelow10000(number).replaceAll(" ", "").replaceAll("-", "");
 		}
 		return getStringForNumberBelow10000(number);
 	}
-	
+
 	public static String getStringForNumberBelow10000(int number) {
-		
-		if(number >= 10000) {
+
+		if (number >= 10000) {
 			return "ERROR";
 		}
-		
-		int thousands = (number/1000)%10;
-		int hundreds = (number/100)%10;
-		int tens = (number/10)%10;
-		int singles = number%10;
-		
+
+		int thousands = (number / 1000) % 10;
+		int hundreds = (number / 100) % 10;
+		int tens = (number / 10) % 10;
+		int singles = number % 10;
+
 		StringBuilder sb = new StringBuilder();
-		
-		if(thousands > 0) {
+
+		if (thousands > 0) {
 			sb.append(numbersAndEnglishNames.get(thousands));
 			sb.append(" ");
 			sb.append(numbersAndEnglishNames.get(1000));
 		}
-		if(hundreds > 0) {
-			if(!sb.toString().trim().isEmpty()) {
+		if (hundreds > 0) {
+			if (!sb.toString().trim().isEmpty()) {
 				sb.append(" and ");
 			}
 			sb.append(numbersAndEnglishNames.get(hundreds));
 			sb.append(" ");
 			sb.append(numbersAndEnglishNames.get(100));
 		}
-		if(tens > 1) {
-			if(!sb.toString().trim().isEmpty()) {
+		if (tens > 1) {
+			if (!sb.toString().trim().isEmpty()) {
 				sb.append(" and ");
 			}
-			sb.append(numbersAndEnglishNames.get(tens*10));
-			if(singles > 0) {
-				if(!sb.toString().trim().isEmpty()) {
+			sb.append(numbersAndEnglishNames.get(tens * 10));
+			if (singles > 0) {
+				if (!sb.toString().trim().isEmpty()) {
 					sb.append("-");
 				}
 				sb.append(numbersAndEnglishNames.get(singles));
 			}
-		}
-		else if(tens > 0) {
-			if(!sb.toString().trim().isEmpty()) {
+		} else if (tens > 0) {
+			if (!sb.toString().trim().isEmpty()) {
 				sb.append(" and ");
 			}
-			sb.append(numbersAndEnglishNames.get(tens*10+singles));
-		}
-		else if(singles > 0) {
-			if(!sb.toString().trim().isEmpty()) {
+			sb.append(numbersAndEnglishNames.get(tens * 10 + singles));
+		} else if (singles > 0) {
+			if (!sb.toString().trim().isEmpty()) {
 				sb.append(" and ");
 			}
 			sb.append(numbersAndEnglishNames.get(singles));
 		}
-		
+
 		return sb.toString();
 	}
 }

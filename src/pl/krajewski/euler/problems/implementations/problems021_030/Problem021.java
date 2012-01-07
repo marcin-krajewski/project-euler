@@ -9,18 +9,17 @@ import pl.krajewski.euler.problems.utils.math.PrimeFactor;
 
 public class Problem021 extends pl.krajewski.euler.problems.Problem<Integer> {
 
-    @Override
-    protected Parameters getParametersForProblem() {
-        return new Parameters(10000);
-    }
-    
+	@Override
+	protected Parameters getParametersForProblem() {
+		return new Parameters(10000);
+	}
+
 	@Override
 	public Integer resolveProblem() {
 
-		int max = getParameterForNumber(0);
+		Integer max = getParameterForNumber(0);
 
-		Integer[] sums = ArrayUtils.createArrayWithSizeAndValue(max, null,
-				Integer.class);
+		Integer[] sums = ArrayUtils.createArrayWithSizeAndValue(max, null, Integer.class);
 
 		Set<Integer> amicablePairs = new HashSet<Integer>();
 
@@ -36,7 +35,7 @@ public class Problem021 extends pl.krajewski.euler.problems.Problem<Integer> {
 				continue;
 			}
 
-			int sum = (int) PrimeFactor.getUniqueFactorsSummed((double) index);
+			int sum = (int) PrimeFactor.getUniqueFactorsSummed(index);
 
 			sums[index] = sum;
 
@@ -46,11 +45,9 @@ public class Problem021 extends pl.krajewski.euler.problems.Problem<Integer> {
 					if (temp2 != null) {
 						break;
 					}
-					sums[temp] = (int) PrimeFactor
-							.getUniqueFactorsSummed((double) temp);
+					sums[temp] = (int) PrimeFactor.getUniqueFactorsSummed(temp);
 					temp = sums[temp];
-				}
-				catch (ArrayIndexOutOfBoundsException ex) {
+				} catch (ArrayIndexOutOfBoundsException ex) {
 					break;
 				}
 			}
@@ -66,8 +63,7 @@ public class Problem021 extends pl.krajewski.euler.problems.Problem<Integer> {
 						amicablePairs.add(sumI);
 					}
 				}
-			}
-			catch (ArrayIndexOutOfBoundsException ex) {
+			} catch (ArrayIndexOutOfBoundsException ex) {
 
 			}
 		}
@@ -80,9 +76,9 @@ public class Problem021 extends pl.krajewski.euler.problems.Problem<Integer> {
 		return sum;
 	}
 
-    @Override
-    public Integer getCorrectProblemAnswer() {
-        return 31626;
-    }
+	@Override
+	public Integer getCorrectProblemAnswer() {
+		return 31626;
+	}
 
 }

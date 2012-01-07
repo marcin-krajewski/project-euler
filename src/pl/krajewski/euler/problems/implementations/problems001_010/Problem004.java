@@ -6,16 +6,16 @@ import pl.krajewski.euler.problems.utils.numbers.PalindromNumbers;
 
 public class Problem004 extends Problem<Integer> {
 
-	private Integer maximumNumberOfDigitsIndex = 0;
-	
+	private final Integer maximumNumberOfDigitsIndex = 0;
+
 	@Override
 	protected Parameters getParametersForProblem() {
-	    return new Parameters(3);
+		return new Parameters(3);
 	}
 
 	@Override
 	public Integer resolveProblem() {
-		int maximumNumberOfDigits = getParameterForNumber(maximumNumberOfDigitsIndex);
+		Integer maximumNumberOfDigits = getParameterForNumber(maximumNumberOfDigitsIndex);
 
 		int min = (int) Math.pow(10, maximumNumberOfDigits - 1);
 		int max = (int) Math.pow(10, maximumNumberOfDigits);
@@ -24,9 +24,9 @@ public class Problem004 extends Problem<Integer> {
 		for (int i = min; i < max; i++) {
 			for (int j = min; j < max; j++) {
 				int numberToCheckIfIsPalindrome = i * j;
-				
+
 				if (PalindromNumbers.isNumberPalindrome(numberToCheckIfIsPalindrome)
-						&& numberToCheckIfIsPalindrome > largestPalindrome) {
+						&& (numberToCheckIfIsPalindrome > largestPalindrome)) {
 					largestPalindrome = numberToCheckIfIsPalindrome;
 				}
 			}
@@ -35,9 +35,9 @@ public class Problem004 extends Problem<Integer> {
 		return largestPalindrome;
 	}
 
-    @Override
-    public Integer getCorrectProblemAnswer() {
-        return 906609;
-    }
+	@Override
+	public Integer getCorrectProblemAnswer() {
+		return 906609;
+	}
 
 }

@@ -7,34 +7,34 @@ import pl.krajewski.euler.problems.utils.numbers.PalindromNumbers;
 
 public class Problem036 extends Problem<Integer> {
 
-    private Integer maxNumberIndex = 0;
+	private Integer maxNumberIndex = 0;
 
-    @Override
-    protected Parameters getParametersForProblem() {
-        return new Parameters(1000000);
-    }
+	@Override
+	protected Parameters getParametersForProblem() {
+		return new Parameters(1000000);
+	}
 
-    @Override
-    public Integer resolveProblem() {
+	@Override
+	public Integer resolveProblem() {
 
-        Integer maxNumber = getParameterForNumber(maxNumberIndex);
-        
-        Integer sum = 0;
-        
-        for (int number = 1; number < maxNumber; number += 2) {
-            if(PalindromNumbers.isNumberPalindrome(number)) {
-                String binaryStringForNumber = BinaryNumber.getBinaryStringForNumber(number);
-                if(PalindromNumbers.isStringPalindrome(binaryStringForNumber)) {
-                    sum += number;
-                }
-            }
-        }
+		Integer maxNumber = getParameterForNumber(maxNumberIndex);
 
-        return sum;
-    }
+		Integer sum = 0;
 
-    @Override
-    public Integer getCorrectProblemAnswer() {
-        return 872187;
-    }
+		for (int number = 1; number < maxNumber; number += 2) {
+			if (PalindromNumbers.isNumberPalindrome(number)) {
+				String binaryStringForNumber = BinaryNumber.getBinaryStringForNumber(number);
+				if (PalindromNumbers.isStringPalindrome(binaryStringForNumber)) {
+					sum += number;
+				}
+			}
+		}
+
+		return sum;
+	}
+
+	@Override
+	public Integer getCorrectProblemAnswer() {
+		return 872187;
+	}
 }

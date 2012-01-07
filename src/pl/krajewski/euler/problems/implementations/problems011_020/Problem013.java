@@ -7,23 +7,22 @@ import pl.krajewski.euler.problems.utils.string.StringAsNum;
 
 public class Problem013 extends Problem<String> {
 
-    @Override
-    protected Parameters getParametersForProblem() {
-        return new Parameters("problem13.txt", 10, 50);
-    }
-    
+	@Override
+	protected Parameters getParametersForProblem() {
+		return new Parameters("problem13.txt", 10, 50);
+	}
+
 	@Override
 	public String resolveProblem() {
 
 		String fileName = getParameterForNumber(0);
-		int count = getParameterForNumber(1);
+		Integer count = getParameterForNumber(1);
 
 		String[] lines = FileReader.readProblemFileLines(fileName);
 
 		String numberString = StringAsNum.sumStringNumbers(lines);
 		StringBuilder sb = new StringBuilder();
-		int[] tab = StringAsNum
-				.getStringAsNumArray0IsHigherMaxIsLower(numberString);
+		int[] tab = StringAsNum.getStringAsNumArray0IsHigherMaxIsLower(numberString);
 		for (int i = 0; i < count; i++) {
 			sb.append(tab[i]);
 		}
@@ -31,9 +30,9 @@ public class Problem013 extends Problem<String> {
 		return sb.toString();
 	}
 
-    @Override
-    public String getCorrectProblemAnswer() {
-        return "5537376230";
-    }
+	@Override
+	public String getCorrectProblemAnswer() {
+		return "5537376230";
+	}
 
 }

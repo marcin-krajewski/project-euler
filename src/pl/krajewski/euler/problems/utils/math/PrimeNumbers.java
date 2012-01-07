@@ -20,15 +20,15 @@ public class PrimeNumbers {
 		double testNum = 3.0;
 		double testLimit = number;
 
-		while(testLimit > testNum) {
+		while (testLimit > testNum) {
 			if (number % testNum == 0) {
 				return false;
 			}
-			
-			testLimit = (double) ((int)number / (int) testNum);
-			
+
+			testLimit = (double) ((int) number / (int) testNum);
+
 			testNum += 2.0;
-			
+
 		}
 		return true;
 	}
@@ -60,6 +60,6 @@ public class PrimeNumbers {
 
 	public static double getSmallestPrimeLargerThanParameter(double n) {
 		// TODO Auto-generated method stub
-		return n+n;
+		return n + n;
 	}
 }

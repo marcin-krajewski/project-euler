@@ -6,12 +6,12 @@ import pl.krajewski.euler.problems.utils.math.GreatestCommonDivisor;
 
 public class Problem033 extends Problem<Integer> {
 
-    @Override
-    protected Parameters getParametersForProblem() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-    
+	@Override
+	protected Parameters getParametersForProblem() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	@Override
 	public Integer resolveProblem() {
 
@@ -41,13 +41,13 @@ public class Problem033 extends Problem<Integer> {
 			}
 		}
 
-		return (int) (denominatorProduct / GreatestCommonDivisor
-				.getGreatestCommonDivisor(nominatorProduct, denominatorProduct));
+		return (int) (denominatorProduct / GreatestCommonDivisor.getGreatestCommonDivisor(nominatorProduct,
+				denominatorProduct));
 	}
 
-    @Override
-    public Integer getCorrectProblemAnswer() {
-        return 100;
-    }
+	@Override
+	public Integer getCorrectProblemAnswer() {
+		return 100;
+	}
 
 }

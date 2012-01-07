@@ -3,7 +3,6 @@ package pl.krajewski.euler.problems.implementations.problems011_020;
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.math.Divisors;
-import pl.krajewski.euler.problems.utils.numbers.SequenceOfTriangle;
 
 public class Problem012 extends Problem<Double> {
 
@@ -14,7 +13,7 @@ public class Problem012 extends Problem<Double> {
 
 	@Override
 	public Double resolveProblem() {
-		int divisorsCount = getParameterForNumber(0);
+		Integer divisorsCount = getParameterForNumber(0);
 
 		Double level = 1.0;
 		double value = 1.0;

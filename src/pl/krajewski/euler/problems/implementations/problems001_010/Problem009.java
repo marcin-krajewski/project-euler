@@ -5,15 +5,15 @@ import pl.krajewski.euler.problems.Problem;
 
 public class Problem009 extends Problem<Integer> {
 
-    @Override
-    protected Parameters getParametersForProblem() {
-        return new Parameters(1000);
-    }
-    
+	@Override
+	protected Parameters getParametersForProblem() {
+		return new Parameters(1000);
+	}
+
 	@Override
 	public Integer resolveProblem() {
 
-		int sum = getParameterForNumber(0);
+		Integer sum = getParameterForNumber(0);
 
 		for (int i = 1; i <= sum - 2; i++) {
 			for (int j = i + 1; j <= sum - 1; j++) {
@@ -32,9 +32,9 @@ public class Problem009 extends Problem<Integer> {
 		return 0;
 	}
 
-    @Override
-    public Integer getCorrectProblemAnswer() {
-        return 31875000;
-    }
+	@Override
+	public Integer getCorrectProblemAnswer() {
+		return 31875000;
+	}
 
 }

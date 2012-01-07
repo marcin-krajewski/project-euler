@@ -6,13 +6,13 @@ import pl.krajewski.euler.problems.utils.string.ConcatenateIntegers;
 
 public class Problem040 extends Problem<Integer> {
 
-	private Integer indexesIndex = 0;
-	private Integer maxIndexIndex = 1;
+	private final Integer indexesIndex = 0;
+	private final Integer maxIndexIndex = 1;
 
 	@Override
 	public Integer resolveProblem() {
 		int[] indexes = getParameterForNumber(indexesIndex);
-		int maxIndex = getParameterForNumber(maxIndexIndex);
+		Integer maxIndex = getParameterForNumber(maxIndexIndex);
 		return ConcatenateIntegers.getProductedIntegers(indexes, maxIndex);
 	}
 
@@ -25,8 +25,7 @@ public class Problem040 extends Problem<Integer> {
 	@Override
 	protected Parameters getParametersForProblem() {
 		// TODO Auto-generated method stub
-		return new Parameters(new int[] { 1, 10, 100, 1000, 10000, 100000,
-				1000000 }, 1000000);
+		return new Parameters(new int[] { 1, 10, 100, 1000, 10000, 100000, 1000000 }, 1000000);
 	}
 
 }

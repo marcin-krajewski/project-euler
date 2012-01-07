@@ -1,6 +1,5 @@
 package pl.krajewski.euler;
 
-
 public class ProjectEuler {
 
 	public static Integer problemCallNumber = 304;

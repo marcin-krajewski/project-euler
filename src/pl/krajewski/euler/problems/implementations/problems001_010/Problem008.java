@@ -6,15 +6,15 @@ import pl.krajewski.euler.problems.utils.string.FileReader;
 
 public class Problem008 extends Problem<Integer> {
 
-    @Override
-    protected Parameters getParametersForProblem() {
-        return new Parameters("problem08.txt", 5);
-    }
-    
+	@Override
+	protected Parameters getParametersForProblem() {
+		return new Parameters("problem08.txt", 5);
+	}
+
 	@Override
 	public Integer resolveProblem() {
 		String fileName = getParameterForNumber(0);
-		int consecutiveDigits = getParameterForNumber(1);
+		Integer consecutiveDigits = getParameterForNumber(1);
 
 		Integer result = 0;
 
@@ -33,9 +33,9 @@ public class Problem008 extends Problem<Integer> {
 		return result;
 	}
 
-    @Override
-    public Integer getCorrectProblemAnswer() {
-        return 40824;
-    }
+	@Override
+	public Integer getCorrectProblemAnswer() {
+		return 40824;
+	}
 
 }

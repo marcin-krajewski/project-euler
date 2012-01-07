@@ -6,13 +6,13 @@ import pl.krajewski.euler.problems.utils.math.PrimeFactor;
 
 public class Problem003 extends Problem<Double> {
 
-	private Integer numberToResearchIndex = 0;
+	private final Integer numberToResearchIndex = 0;
 
 	@Override
-    protected Parameters getParametersForProblem() {
-        return new Parameters(600851475143.0);
-    }
-	
+	protected Parameters getParametersForProblem() {
+		return new Parameters(600851475143.0);
+	}
+
 	@Override
 	public Double resolveProblem() {
 
@@ -20,8 +20,8 @@ public class Problem003 extends Problem<Double> {
 		return PrimeFactor.getLargestPrimeFactorOfNumber(numberToResearch);
 	}
 
-    @Override
-    public Double getCorrectProblemAnswer() {
-        return 6857.0;
-    }
+	@Override
+	public Double getCorrectProblemAnswer() {
+		return 6857.0;
+	}
 }

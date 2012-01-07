@@ -10,15 +10,15 @@ import pl.krajewski.euler.problems.utils.math.PrimeNumbers;
 
 public class Problem023 extends Problem<Double> {
 
-    @Override
-    protected Parameters getParametersForProblem() {
-        return new Parameters(28123);
-    }
-    
+	@Override
+	protected Parameters getParametersForProblem() {
+		return new Parameters(28123);
+	}
+
 	@Override
 	public Double resolveProblem() {
 
-		int maxNumber = getParameterForNumber(0);
+		Integer maxNumber = getParameterForNumber(0);
 
 		Set<Double> abundantNumbers = new HashSet<Double>();
 		for (double currentNumber = 1.0; currentNumber <= maxNumber; currentNumber++) {
@@ -57,9 +57,9 @@ public class Problem023 extends Problem<Double> {
 		return sumOfPositiveIntegersNotSummedWithTwoAbundants;
 	}
 
-    @Override
-    public Double getCorrectProblemAnswer() {
-        return 4179871.0;
-    }
+	@Override
+	public Double getCorrectProblemAnswer() {
+		return 4179871.0;
+	}
 
 }

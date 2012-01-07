@@ -1,10 +1,8 @@
 package pl.krajewski.euler.problems.implementations.problems031_040;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
 import java.util.Set;
+
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.math.PrimeNumbers;
@@ -12,11 +10,11 @@ import pl.krajewski.euler.problems.utils.numbers.TruncatedNumbers;
 
 public class Problem037 extends Problem<Integer> {
 
-	private Integer numberOfTruncatedIndex = 0;
+	private final Integer numberOfTruncatedIndex = 0;
 
 	@Override
 	public Integer resolveProblem() {
-		int numberOfTruncated = getParameterForNumber(numberOfTruncatedIndex);
+		Integer numberOfTruncated = getParameterForNumber(numberOfTruncatedIndex);
 
 		int sum = 0;
 
@@ -32,8 +30,7 @@ public class Problem037 extends Problem<Integer> {
 
 			boolean add = true;
 
-			for (Integer numberTruncated : TruncatedNumbers
-					.getNumbersTruncatedFromLeftAndRight(number)) {
+			for (Integer numberTruncated : TruncatedNumbers.getNumbersTruncatedFromLeftAndRight(number)) {
 				if (primes.contains(numberTruncated)) {
 					continue;
 				}

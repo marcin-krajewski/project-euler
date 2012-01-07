@@ -2,18 +2,18 @@ package pl.krajewski.euler.problems.implementations.problems021_030;
 
 import java.util.HashSet;
 import java.util.Set;
+
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
-import pl.krajewski.euler.problems.utils.classes.MapDoubleKey;
 import pl.krajewski.euler.problems.utils.string.StringAsNum;
 import pl.krajewski.euler.problems.utils.string.StringPower;
 
 public class Problem029 extends Problem<Integer> {
 
-	private Integer minAIndex = 0;
-	private Integer maxAIndex = 1;
-	private Integer minBIndex = 2;
-	private Integer maxBIndex = 3;
+	private final Integer minAIndex = 0;
+	private final Integer maxAIndex = 1;
+	private final Integer minBIndex = 2;
+	private final Integer maxBIndex = 3;
 
 	@Override
 	protected Parameters getParametersForProblem() {
@@ -22,10 +22,10 @@ public class Problem029 extends Problem<Integer> {
 
 	@Override
 	public Integer resolveProblem() {
-		int minA = getParameterForNumber(minAIndex);
-		int maxA = getParameterForNumber(maxAIndex);
-		int minB = getParameterForNumber(minBIndex);
-		int maxB = getParameterForNumber(maxBIndex);
+		Integer minA = getParameterForNumber(minAIndex);
+		Integer maxA = getParameterForNumber(maxAIndex);
+		Integer minB = getParameterForNumber(minBIndex);
+		Integer maxB = getParameterForNumber(maxBIndex);
 
 		Set<String> powers = new HashSet<String>();
 		for (int a = minA; a <= maxA; a++) {
@@ -34,17 +34,14 @@ public class Problem029 extends Problem<Integer> {
 		return powers.size();
 	}
 
-	private Set<String> getPowerForNumberBelow(int number, int minPow,
-			int maxPow) {
+	private Set<String> getPowerForNumberBelow(int number, int minPow, int maxPow) {
 
 		Set<String> powers = new HashSet<String>();
-		String stringPower = StringPower.getPowerForNumberBelow10(number,
-				minPow);
+		String stringPower = StringPower.getPowerForNumberBelow10(number, minPow);
 		powers.add(stringPower);
 
 		for (int i = minPow + 1; i <= maxPow; i++) {
-			stringPower = StringAsNum.productTwoNumbers(number + "",
-					stringPower);
+			stringPower = StringAsNum.productTwoNumbers(number + "", stringPower);
 			powers.add(stringPower);
 		}
 		return powers;

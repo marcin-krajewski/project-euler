@@ -10,8 +10,7 @@ public class Problem002 extends Problem<Integer> {
 	@Override
 	public Integer resolveProblem() {
 
-		Integer maximumFibonacciValue = this
-				.getParameterForNumber(maximumFibonacciValueIndex);
+		Integer maximumFibonacciValue = this.getParameterForNumber(maximumFibonacciValueIndex);
 
 		Integer sumOfEvenOddNumbers = 0;
 
@@ -29,15 +28,15 @@ public class Problem002 extends Problem<Integer> {
 
 		return sumOfEvenOddNumbers;
 	}
-	
+
 	@Override
 	protected Parameters getParametersForProblem() {
-	    return new Parameters(4000000);
+		return new Parameters(4000000);
 	}
 
-    @Override
-    public Integer getCorrectProblemAnswer() {
-        return 4613732;
-    }
+	@Override
+	public Integer getCorrectProblemAnswer() {
+		return 4613732;
+	}
 
 }

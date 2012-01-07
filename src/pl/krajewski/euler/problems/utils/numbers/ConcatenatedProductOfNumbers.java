@@ -6,8 +6,7 @@ public class ConcatenatedProductOfNumbers {
 
 	public static Boolean checkIfNumberHasDifferentDigits(int number) {
 
-		Boolean[] numbers = ArrayUtils.createArrayWithSizeAndValue(10, false,
-				Boolean.class);
+		Boolean[] numbers = ArrayUtils.createArrayWithSizeAndValue(10, false, Boolean.class);
 
 		int temp = number;
 		int mod = 0;
@@ -24,15 +23,13 @@ public class ConcatenatedProductOfNumbers {
 		return true;
 	}
 
-	public static Boolean checkIfNumberHasDifferentDigitsAndNotContains0(
-			int number) {
+	public static Boolean checkIfNumberHasDifferentDigitsAndNotContains0(int number) {
 
 		if (number <= 0) {
 			return false;
 		}
 
-		Boolean[] numbers = ArrayUtils.createArrayWithSizeAndValue(10, false,
-				Boolean.class);
+		Boolean[] numbers = ArrayUtils.createArrayWithSizeAndValue(10, false, Boolean.class);
 
 		int temp = number;
 		int mod = 0;

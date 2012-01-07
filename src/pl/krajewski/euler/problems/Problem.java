@@ -1,13 +1,15 @@
 package pl.krajewski.euler.problems;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
 import java.util.HashMap;
 import java.util.Map;
+
 import org.junit.Test;
 
 public abstract class Problem<T> implements ProblemResolver<T> {
 
-	private Parameters parameters;
+	protected Parameters parameters;
 
 	@SuppressWarnings("unchecked")
 	protected <S> S getParameterForNumber(Integer number) {
@@ -17,6 +19,10 @@ public abstract class Problem<T> implements ProblemResolver<T> {
 	public Problem() {
 		this.parameters = getParametersForProblem();
 	}
+
+	public abstract T getCorrectProblemAnswer();
+
+	public abstract T resolveProblem();
 
 	protected abstract Parameters getParametersForProblem();
 

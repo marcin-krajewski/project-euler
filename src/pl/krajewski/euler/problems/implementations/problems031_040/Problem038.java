@@ -6,12 +6,12 @@ import pl.krajewski.euler.problems.utils.numbers.ConcatenatedProductOfNumbers;
 
 public class Problem038 extends Problem<Integer> {
 
-	private Integer maxNumberIndex = 0;
+	private final Integer maxNumberIndex = 0;
 
 	@Override
 	public Integer resolveProblem() {
 
-		int maxNumber = getParameterForNumber(maxNumberIndex);
+		Integer maxNumber = getParameterForNumber(maxNumberIndex);
 
 		int max = 0;
 		int index;
@@ -20,8 +20,7 @@ public class Problem038 extends Problem<Integer> {
 		int parseInt;
 
 		for (int i = 1; i < maxNumber; i++) {
-			if (!ConcatenatedProductOfNumbers
-					.checkIfNumberHasDifferentDigitsAndNotContains0(i)) {
+			if (!ConcatenatedProductOfNumbers.checkIfNumberHasDifferentDigitsAndNotContains0(i)) {
 				continue;
 			}
 			index = 2;
@@ -38,9 +37,8 @@ public class Problem038 extends Problem<Integer> {
 				if (numString.length() > 9) {
 					break;
 				}
-				if (!ConcatenatedProductOfNumbers
-						.checkIfNumberHasDifferentDigitsAndNotContains0(Integer
-								.parseInt(numString))) {
+				if (!ConcatenatedProductOfNumbers.checkIfNumberHasDifferentDigitsAndNotContains0(Integer
+						.parseInt(numString))) {
 					break;
 				}
 				if (numString.length() == 9) {

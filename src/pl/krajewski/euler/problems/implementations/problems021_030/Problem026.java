@@ -6,33 +6,33 @@ import pl.krajewski.euler.problems.utils.math.RecurringCycle;
 
 public class Problem026 extends Problem<Integer> {
 
-	private Integer maximumNumberIndex = 0;
+	private final Integer maximumNumberIndex = 0;
 
 	@Override
 	protected Parameters getParametersForProblem() {
-	    return new Parameters(1000);
+		return new Parameters(1000);
 	}
-	
+
 	@Override
 	public Integer resolveProblem() {
-		int maximumNumber = getParameterForNumber(maximumNumberIndex);
-		
+		Integer maximumNumber = getParameterForNumber(maximumNumberIndex);
+
 		int maximumResult = 0;
 		int maximumIndex = 0;
-		for(double currentNumber = 1.0; currentNumber < maximumNumber; currentNumber++) {
-			
+		for (double currentNumber = 1.0; currentNumber < maximumNumber; currentNumber++) {
+
 			int cycleLength = RecurringCycle.getReccuringCycleLengthForNumber(currentNumber);
-			if(cycleLength > maximumResult) {
+			if (cycleLength > maximumResult) {
 				maximumResult = cycleLength;
-				maximumIndex = (int)currentNumber;
+				maximumIndex = (int) currentNumber;
 			}
 		}
 		return maximumIndex;
 	}
 
-    @Override
-    public Integer getCorrectProblemAnswer() {
-        return 983;
-    }
+	@Override
+	public Integer getCorrectProblemAnswer() {
+		return 983;
+	}
 
 }

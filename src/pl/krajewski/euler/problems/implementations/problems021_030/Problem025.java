@@ -10,18 +10,18 @@ public class Problem025 extends Problem<Integer> {
 
 	@Override
 	protected Parameters getParametersForProblem() {
-	    return new Parameters(1000);
+		return new Parameters(1000);
 	}
-	
+
 	@Override
 	public Integer resolveProblem() {
 		Integer numberOfDigits = getParameterForNumber(numberOfDigitsIndex);
 		return FibonacciSequence.getFirstTermOfFibonacciWithNumberOfDigits(numberOfDigits);
 	}
 
-    @Override
-    public Integer getCorrectProblemAnswer() {
-        return 4782;
-    }
+	@Override
+	public Integer getCorrectProblemAnswer() {
+		return 4782;
+	}
 
 }

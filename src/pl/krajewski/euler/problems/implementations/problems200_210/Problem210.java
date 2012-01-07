@@ -3,18 +3,19 @@ package pl.krajewski.euler.problems.implementations.problems200_210;
 import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
+
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.string.StringAsNum;
 
 public class Problem210 extends Problem<String> {
 
-	private Integer radiusIndex = 0;
+	private final Integer radiusIndex = 0;
 
 	@Override
 	public String resolveProblem() {
 
-		double radius = getParameterForNumber(radiusIndex);
+		Double radius = getParameterForNumber(radiusIndex);
 
 		double rdiv2 = radius / 2.0;
 		double rdiv2minus2 = rdiv2 - 2.0;
@@ -25,20 +26,16 @@ public class Problem210 extends Problem<String> {
 
 		String resultS = "0";
 
-		System.out.println("ROZPOCZÊTO!");
-		// PRZEDZIA£ I
+		System.out.println("ROZPOCZETO!");
+		// PRZEDZIAL I
 
 		String formatRDiv4 = format(rdiv4);
-		String resultOfProductFirstRange = StringAsNum.productTwoNumbers(
-				formatRDiv4, formatRDiv4);
-		resultOfProductFirstRange = StringAsNum.productTwoNumbers(
-				resultOfProductFirstRange, "24");
+		String resultOfProductFirstRange = StringAsNum.productTwoNumbers(formatRDiv4, formatRDiv4);
+		resultOfProductFirstRange = StringAsNum.productTwoNumbers(resultOfProductFirstRange, "24");
 
-		String resultOfProductAndSum = StringAsNum.productTwoNumbers(
-				format(rdiv4minus1), formatRDiv4);
-		resultOfProductAndSum = StringAsNum.sumStringNumbers(new String[] {
-				resultOfProductFirstRange, resultOfProductAndSum,
-				format(rdiv2minus2) });
+		String resultOfProductAndSum = StringAsNum.productTwoNumbers(format(rdiv4minus1), formatRDiv4);
+		resultOfProductAndSum = StringAsNum.sumStringNumbers(new String[] { resultOfProductFirstRange,
+				resultOfProductAndSum, format(rdiv2minus2) });
 		resultS = resultOfProductAndSum;
 
 		double numberOfPointsInRange = 0.0;
@@ -48,8 +45,7 @@ public class Problem210 extends Problem<String> {
 				numberOfPointsInRange++;
 			}
 		}
-		resultS = StringAsNum.sumStringNumbers(new String[] { resultS,
-				format(numberOfPointsInRange * 4.0) });
+		resultS = StringAsNum.sumStringNumbers(new String[] { resultS, format(numberOfPointsInRange * 4.0) });
 
 		double rdiv8pow2 = rdiv8 * rdiv8;
 		double rdiv8mul2 = rdiv8 * 2;
@@ -59,14 +55,12 @@ public class Problem210 extends Problem<String> {
 		numberOfPointsInRange = 0.0;
 
 		for (double x = 1; x < rdiv8; x++) {
-			if (Math.sqrt(rdiv8pow2 - x * (x - rdiv8mul2)) > prevChanged
-					+ rdiv8plus1) {
+			if (Math.sqrt(rdiv8pow2 - x * (x - rdiv8mul2)) > prevChanged + rdiv8plus1) {
 				prevChanged++;
 			}
 			numberOfPointsInRange += prevChanged;
 		}
-		resultS = StringAsNum.sumStringNumbers(new String[] { resultS,
-				format(8.0 * numberOfPointsInRange) });
+		resultS = StringAsNum.sumStringNumbers(new String[] { resultS, format(8.0 * numberOfPointsInRange) });
 
 		return resultS;
 	}

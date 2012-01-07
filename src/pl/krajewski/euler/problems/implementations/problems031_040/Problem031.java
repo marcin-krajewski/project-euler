@@ -2,10 +2,8 @@ package pl.krajewski.euler.problems.implementations.problems031_040;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 import pl.krajewski.euler.problems.Parameters;
@@ -15,24 +13,24 @@ public class Problem031 extends Problem<Integer> {
 
 	private Integer coinsIndex = 0;
 	private Integer maxMoneyIndex = 1;
-	
+
 	@Override
 	protected Parameters getParametersForProblem() {
-	    return new Parameters(getCoinsForProblem31(), 200);
+		return new Parameters(getCoinsForProblem31(), 200);
 	}
-	
+
 	private static Set<Integer> getCoinsForProblem31() {
-        Set<Integer> coins = new HashSet<Integer>();
-        coins.add(1);
-        coins.add(2);
-        coins.add(5);
-        coins.add(10);
-        coins.add(20);
-        coins.add(50);
-        coins.add(100);
-        coins.add(200);
-        return coins;
-    }
+		Set<Integer> coins = new HashSet<Integer>();
+		coins.add(1);
+		coins.add(2);
+		coins.add(5);
+		coins.add(10);
+		coins.add(20);
+		coins.add(50);
+		coins.add(100);
+		coins.add(200);
+		return coins;
+	}
 
 	@Override
 	public Integer resolveProblem() {
@@ -90,20 +88,21 @@ public class Problem031 extends Problem<Integer> {
 		}
 
 		return sum;
-//		return getResultOfExampleForUnknownParameters(max, coins);
+		// return getResultOfExampleForUnknownParameters(max, coins);
 	}
-	
+
 	private int getResultOfExampleForUnknownParameters(int max, Set<Integer> coins) {
 		List<Integer> listOfCoins = new ArrayList<Integer>();
-		for(Integer coin : coins) {
+		for (Integer coin : coins) {
 			listOfCoins.add(coin);
 		}
 		Collections.sort(listOfCoins);
 		Collections.reverse(listOfCoins);
 		return getResultOfExampleForUnknownParameters(0, listOfCoins, max, 0);
 	}
-	
-	private int getResultOfExampleForUnknownParameters(int indexOfCurrentCoin, List<Integer> coinsList, int maxSumOfCoins, int previousCoin) {
+
+	private int getResultOfExampleForUnknownParameters(int indexOfCurrentCoin, List<Integer> coinsList,
+			int maxSumOfCoins, int previousCoin) {
 		try {
 			int currentCoin = coinsList.get(indexOfCurrentCoin);
 			int sumOfCombinations = 0;
@@ -112,18 +111,18 @@ public class Problem031 extends Problem<Integer> {
 					sumOfCombinations++;
 					continue;
 				}
-				sumOfCombinations += getResultOfExampleForUnknownParameters(indexOfCurrentCoin+1, coinsList, maxSumOfCoins, currentCoinAcceptedValue);
+				sumOfCombinations += getResultOfExampleForUnknownParameters(indexOfCurrentCoin + 1,
+						coinsList, maxSumOfCoins, currentCoinAcceptedValue);
 			}
 			return sumOfCombinations;
-		}
-		catch(IndexOutOfBoundsException ex) {
+		} catch (IndexOutOfBoundsException ex) {
 			return 0;
 		}
-		
+
 	}
 
-    @Override
-    public Integer getCorrectProblemAnswer() {
-        return 73682;
-    }
+	@Override
+	public Integer getCorrectProblemAnswer() {
+		return 73682;
+	}
 }

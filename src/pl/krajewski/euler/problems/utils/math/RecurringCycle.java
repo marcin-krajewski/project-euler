@@ -1,8 +1,6 @@
 package pl.krajewski.euler.problems.utils.math;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class RecurringCycle {

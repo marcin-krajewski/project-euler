@@ -8,23 +8,22 @@ import pl.krajewski.euler.problems.utils.numbers.DateChecker.Month;
 
 public class Problem019 extends Problem<Integer> {
 
-    @Override
-    protected Parameters getParametersForProblem() {
-        return new Parameters(1901, 2000, 1, DayOfWeek.SUN);
-    }
-    
+	@Override
+	protected Parameters getParametersForProblem() {
+		return new Parameters(1901, 2000, 1, DayOfWeek.SUN);
+	}
+
 	@Override
 	public Integer resolveProblem() {
-		int minYear = getParameterForNumber(0);
-		int maxYear = getParameterForNumber(1);
+		Integer minYear = getParameterForNumber(0);
+		Integer maxYear = getParameterForNumber(1);
 		Integer dayOfMonth = getParameterForNumber(2);
 		DayOfWeek day = getParameterForNumber(3);
 
 		int countOfDays = 0;
 		for (int year = minYear; year <= maxYear; year++) {
 			for (Month m : Month.values()) {
-				DayOfWeek dow = DateChecker.checkWhichDayWasDate(dayOfMonth, m,
-						year);
+				DayOfWeek dow = DateChecker.checkWhichDayWasDate(dayOfMonth, m, year);
 				if (dow == day) {
 					countOfDays++;
 				}
@@ -33,9 +32,9 @@ public class Problem019 extends Problem<Integer> {
 		return countOfDays;
 	}
 
-    @Override
-    public Integer getCorrectProblemAnswer() {
-        return 171;
-    }
+	@Override
+	public Integer getCorrectProblemAnswer() {
+		return 171;
+	}
 
 }

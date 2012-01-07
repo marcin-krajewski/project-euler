@@ -2,7 +2,6 @@ package pl.krajewski.euler.problems.implementations.problems021_030;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import pl.krajewski.euler.problems.Parameters;
@@ -13,18 +12,17 @@ import pl.krajewski.euler.problems.utils.string.StringUtils;
 
 public class Problem022 extends Problem<Double> {
 
-    @Override
-    protected Parameters getParametersForProblem() {
-        return new Parameters("problem22.txt", ",");
-    }
-    
+	@Override
+	protected Parameters getParametersForProblem() {
+		return new Parameters("problem22.txt", ",");
+	}
+
 	@Override
 	public Double resolveProblem() {
 		String fileName = getParameterForNumber(0);
 		String separator = getParameterForNumber(1);
 
-		String[] names = getNamesArrayForFileNameAndSeparator(fileName,
-				separator);
+		String[] names = getNamesArrayForFileNameAndSeparator(fileName, separator);
 		List<String> namesList = getSortedListForNamesArray(names);
 
 		double value = 0.0;
@@ -35,8 +33,7 @@ public class Problem022 extends Problem<Double> {
 		return value;
 	}
 
-	private String[] getNamesArrayForFileNameAndSeparator(String fileName,
-			String separator) {
+	private String[] getNamesArrayForFileNameAndSeparator(String fileName, String separator) {
 
 		String file = FileReader.readProblemFile(fileName).replaceAll("\"", "");
 		String[] names = file.split(separator);
@@ -60,9 +57,9 @@ public class Problem022 extends Problem<Double> {
 		return value;
 	}
 
-    @Override
-    public Double getCorrectProblemAnswer() {
-        return 871198282.0;
-    }
+	@Override
+	public Double getCorrectProblemAnswer() {
+		return 871198282.0;
+	}
 
 }

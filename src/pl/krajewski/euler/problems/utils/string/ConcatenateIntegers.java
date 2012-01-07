@@ -6,8 +6,7 @@ public class ConcatenateIntegers {
 		String concatenatedNumbers = getConcatenatedNumbersForIndex(max);
 		int product = 1;
 		for (int index : array) {
-			product *= Integer.parseInt(concatenatedNumbers.substring(
-					index - 1, index));
+			product *= Integer.parseInt(concatenatedNumbers.substring(index - 1, index));
 		}
 		return product;
 	}
@@ -16,15 +15,13 @@ public class ConcatenateIntegers {
 		String concatenatedNumbers = getConcatenatedNumbersForIndex(max);
 		int sum = 0;
 		for (int index : array) {
-			sum += Integer.parseInt(concatenatedNumbers.substring(index - 1,
-					index));
+			sum += Integer.parseInt(concatenatedNumbers.substring(index - 1, index));
 		}
 		return sum;
 	}
 
 	public static Integer getIntegerForIndex(int index) {
-		return Integer.parseInt(getConcatenatedNumbersForIndex(index)
-				.substring(index, index + 1));
+		return Integer.parseInt(getConcatenatedNumbersForIndex(index).substring(index, index + 1));
 	}
 
 	public static String getConcatenatedNumbersForIndex(int index) {

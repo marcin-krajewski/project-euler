@@ -7,22 +7,20 @@ import pl.krajewski.euler.problems.utils.string.StringPower;
 
 public class Problem016 extends Problem<Integer> {
 
-    @Override
-    protected Parameters getParametersForProblem() {
-        return new Parameters(2, 1000);
-    }
-    
+	@Override
+	protected Parameters getParametersForProblem() {
+		return new Parameters(2, 1000);
+	}
+
 	@Override
 	public Integer resolveProblem() {
-		int number = getParameterForNumber(0);
-		int powNumber = getParameterForNumber(1);
+		Integer number = getParameterForNumber(0);
+		Integer powNumber = getParameterForNumber(1);
 
 		int sum = 0;
 
-		String stringPow = StringPower.getPowerForNumberBelow10(number,
-				powNumber);
-		int[] numbers = StringAsNum
-				.getStringAsNumArray0IsLowerMaxIsHigher(stringPow);
+		String stringPow = StringPower.getPowerForNumberBelow10(number, powNumber);
+		int[] numbers = StringAsNum.getStringAsNumArray0IsLowerMaxIsHigher(stringPow);
 		for (int i = 0; i < numbers.length; i++) {
 			sum += numbers[i];
 		}
@@ -31,9 +29,9 @@ public class Problem016 extends Problem<Integer> {
 		return sum;
 	}
 
-    @Override
-    public Integer getCorrectProblemAnswer() {
-        return 1366;
-    }
+	@Override
+	public Integer getCorrectProblemAnswer() {
+		return 1366;
+	}
 
 }

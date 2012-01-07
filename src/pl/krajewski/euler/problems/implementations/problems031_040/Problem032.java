@@ -1,26 +1,27 @@
 package pl.krajewski.euler.problems.implementations.problems031_040;
 
-import pl.krajewski.euler.problems.Parameters;
 import java.util.HashSet;
 import java.util.Set;
+
+import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 
 public class Problem032 extends Problem<Double> {
 
-    private Integer minDigitIndex = 0;
-    private Integer maxDigitIndex = 1;
-    
-    @Override
-    protected Parameters getParametersForProblem() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-    
+	private final Integer minDigitIndex = 0;
+	private final Integer maxDigitIndex = 1;
+
+	@Override
+	protected Parameters getParametersForProblem() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	@Override
 	public Double resolveProblem() {
 
-		int min = getParameterForNumber(minDigitIndex);
-		int max = getParameterForNumber(maxDigitIndex);
+		Integer min = getParameterForNumber(minDigitIndex);
+		Integer max = getParameterForNumber(maxDigitIndex);
 
 		double sum = 0.0;
 		Set<Integer> products = new HashSet<Integer>();
@@ -38,8 +39,7 @@ public class Problem032 extends Problem<Double> {
 				}
 
 				string = i + "" + j;
-				if (string.length() > (maxMinusMinPlus1 - String.valueOf(j)
-						.length())) {
+				if (string.length() > (maxMinusMinPlus1 - String.valueOf(j).length())) {
 					break;
 				}
 				string += product;
@@ -53,8 +53,7 @@ public class Problem032 extends Problem<Double> {
 		return sum;
 	}
 
-	private boolean isNumStringFromMinToMaxDigits(int min, int max,
-			String numString) {
+	private boolean isNumStringFromMinToMaxDigits(int min, int max, String numString) {
 
 		int result = max - min + 1;
 		if (numString.length() != result) {
@@ -68,8 +67,8 @@ public class Problem032 extends Problem<Double> {
 		return true;
 	}
 
-    @Override
-    public Double getCorrectProblemAnswer() {
-        return 45228.0;
-    }
+	@Override
+	public Double getCorrectProblemAnswer() {
+		return 45228.0;
+	}
 }

@@ -7,11 +7,11 @@ import pl.krajewski.euler.problems.utils.string.FileReader;
 
 public class Problem018 extends Problem<Double> {
 
-    @Override
-    protected Parameters getParametersForProblem() {
-        return new Parameters("problem18.txt");
-    }
-    
+	@Override
+	protected Parameters getParametersForProblem() {
+		return new Parameters("problem18.txt");
+	}
+
 	@Override
 	public Double resolveProblem() {
 		String fileName = getParameterForNumber(0);
@@ -37,8 +37,7 @@ public class Problem018 extends Problem<Double> {
 		return max;
 	}
 
-	private Double best(int row, int col,
-			MapDoubleKey<Integer, Integer, Integer> map,
+	private Double best(int row, int col, MapDoubleKey<Integer, Integer, Integer> map,
 			MapDoubleKey<Integer, Integer, Double> was) {
 
 		Integer integer = map.get(row, col);
@@ -58,15 +57,12 @@ public class Problem018 extends Problem<Double> {
 
 				if (bestL == null) {
 					returnValue = bestR + integer;
-				}
-				else if (bestR == null) {
+				} else if (bestR == null) {
 					returnValue = bestL + integer;
-				}
-				else {
+				} else {
 					returnValue = Math.max(bestL, bestR) + integer;
 				}
-			}
-			else {
+			} else {
 				returnValue = Double.valueOf(integer + "");
 			}
 			was.put(row, col, returnValue);
@@ -74,9 +70,9 @@ public class Problem018 extends Problem<Double> {
 		return returnValue;
 	}
 
-    @Override
-    public Double getCorrectProblemAnswer() {
-        return 1074.0;
-    }
+	@Override
+	public Double getCorrectProblemAnswer() {
+		return 1074.0;
+	}
 
 }

@@ -5,9 +5,9 @@ import pl.krajewski.euler.problems.Problem;
 
 public class Problem001 extends Problem<Integer> {
 
-	private Integer multiplier1Index = 0;
-	private Integer multiplier2Index = 1;
-	private Integer maximumNumberIndex = 2;
+	private final Integer multiplier1Index = 0;
+	private final Integer multiplier2Index = 1;
+	private final Integer maximumNumberIndex = 2;
 
 	@Override
 	public Integer resolveProblem() {
@@ -21,23 +21,22 @@ public class Problem001 extends Problem<Integer> {
 
 			if (currentNumber % multiplier1 == 0) {
 				resultOfProblem1 += currentNumber;
-			}
-			else if (currentNumber % multiplier2 == 0) {
+			} else if (currentNumber % multiplier2 == 0) {
 				resultOfProblem1 += currentNumber;
 			}
 		}
 
 		return resultOfProblem1;
 	}
-	
+
 	@Override
 	protected Parameters getParametersForProblem() {
-	    return new Parameters(3,5,1000);
+		return new Parameters(3, 5, 1000);
 	}
 
-    @Override
-    public Integer getCorrectProblemAnswer() {
-        return 233168;
-    }
+	@Override
+	public Integer getCorrectProblemAnswer() {
+		return 233168;
+	}
 
 }

@@ -2,21 +2,20 @@ package pl.krajewski.euler.problems.implementations.problems031_040;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.classes.ArrayUtils;
-import pl.krajewski.euler.problems.utils.numbers.Triangle;
 
 public class Problem039 extends Problem<Integer> {
 
-	private Integer maxPerimeterIndex = 0;
+	private final Integer maxPerimeterIndex = 0;
 
 	@Override
 	public Integer resolveProblem() {
-		int maxPerimeter = getParameterForNumber(maxPerimeterIndex);
+		Integer maxPerimeter = getParameterForNumber(maxPerimeterIndex);
 
-		Integer[] triangles = ArrayUtils.createArrayWithSizeAndValue(
-				maxPerimeter + 1, 0, Integer.class);
+		Integer[] triangles = ArrayUtils.createArrayWithSizeAndValue(maxPerimeter + 1, 0, Integer.class);
 
 		int maxPerimeterDiv2 = maxPerimeter / 2;
 		for (int a = 1; a <= maxPerimeterDiv2; a++) {

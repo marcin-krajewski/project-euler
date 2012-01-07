@@ -14,7 +14,7 @@ public class Parameters {
 	public Parameters(Object... parameters) {
 		this();
 		int length = parameters.length;
-		if (parameters == null || length == 0) {
+		if ((parameters == null) || (length == 0)) {
 			return;
 		}
 		for (int i = 0; i < length; i++) {
@@ -32,16 +32,16 @@ public class Parameters {
 	@Override
 	public String toString() {
 		String string = "PARAMETERS: [";
-		int i=0;
-		int lenMinus1 = this.parameters.size()-1;
+		int i = 0;
+		int lenMinus1 = this.parameters.size() - 1;
 		for (int key : this.parameters.keySet()) {
 			string += this.parameters.get(key);
-			if(i<lenMinus1) {
+			if (i < lenMinus1) {
 				string += ", ";
 			}
 			i++;
-			
+
 		}
-		return string+"]";
+		return string + "]";
 	}
 }
