@@ -7,6 +7,7 @@ import java.text.DecimalFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -30,9 +31,10 @@ public class CheckAllProblemsResultTest {
 		Object problemResult;
 		Object expectedProblemResult;
 		Date start, end;
-		for (Integer problemNumberToCheck : ProblemGetter.getInstance().getProblems().keySet()) {
+		for (Entry<Integer, ProblemResolver> entry : ProblemGetter.getInstance().getProblems().entrySet()) {
+			Integer problemNumberToCheck = entry.getKey();
 			System.out.println("CHECKING PROBLEM NUMBER " + problemNumberToCheck);
-			problemResolver = ProblemGetter.getInstance().getProblemForNumber(problemNumberToCheck);
+			problemResolver = entry.getValue();
 
 			expectedProblemResult = problemResolver.getCorrectProblemAnswer();
 			if (expectedProblemResult == null) {

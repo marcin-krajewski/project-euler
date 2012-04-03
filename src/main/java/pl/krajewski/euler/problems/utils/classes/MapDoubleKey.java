@@ -3,6 +3,7 @@ package pl.krajewski.euler.problems.utils.classes;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class MapDoubleKey<K1, K2, V> {
@@ -38,5 +39,14 @@ public class MapDoubleKey<K1, K2, V> {
 			return new HashSet<K2>();
 		}
 		return mapValue.keySet();
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		for (Entry<K1, Map<K2, V>> entry : mainMap.entrySet()) {
+			sb.append("K1: " + entry.getKey() + " : " + entry.getValue() + "\n");
+		}
+		return sb.toString();
 	}
 }
