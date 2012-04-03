@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class ProblemNumberToSolveGenerator {
 
-	private static int lastToSolve = 116;
+	private static int lastToSolve = 319;
 	private static boolean lastSolved = false;
 
 	/**

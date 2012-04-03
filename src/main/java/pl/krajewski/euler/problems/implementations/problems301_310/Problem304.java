@@ -1,4 +1,4 @@
-package pl.krajewski.euler.problems.implementations.problems300_310;
+package pl.krajewski.euler.problems.implementations.problems301_310;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -47,9 +47,9 @@ import pl.krajewski.euler.problems.implementations.problems031_040.Problem038;
 import pl.krajewski.euler.problems.implementations.problems031_040.Problem039;
 import pl.krajewski.euler.problems.implementations.problems031_040.Problem040;
 import pl.krajewski.euler.problems.implementations.problems111_120.Problem116;
-import pl.krajewski.euler.problems.implementations.problems200_210.Problem205;
-import pl.krajewski.euler.problems.implementations.problems200_210.Problem210;
-import pl.krajewski.euler.problems.implementations.problems300_310.Problem304;
+import pl.krajewski.euler.problems.implementations.problems201_210.Problem205;
+import pl.krajewski.euler.problems.implementations.problems201_210.Problem210;
+import pl.krajewski.euler.problems.implementations.problems301_310.Problem304;
 
 @SuppressWarnings("rawtypes")
 public class ProblemGetter {
