@@ -7,7 +7,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import pl.krajewski.euler.problems.utils.classes.MapDoubleKey;
 
@@ -103,5 +105,14 @@ public class FileReader {
 			colNumber = 0;
 		}
 		return numbers;
+	}
+	
+	public static Set<String> getWordsSeparatedWithCommasWithoutQuotations(String file) {
+		String[] words = file.replaceAll("\\\"", "").split(",");
+		Set<String> set = new HashSet<String>();
+		for(String word : words) {
+			set.add(word.trim());
+		}
+		return set;
 	}
 }

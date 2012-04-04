@@ -28,7 +28,7 @@ public class Problem022 extends Problem<Double> {
 		double value = 0.0;
 		int index = 1;
 		for (String name : namesList) {
-			value += getNameValue(name.trim()) * (index++);
+			value += EnglishAlphabet.getStringDoubleValue(name.trim()) * (index++);
 		}
 		return value;
 	}
@@ -47,14 +47,6 @@ public class Problem022 extends Problem<Double> {
 		}
 		Collections.sort(namesList, StringUtils.getStringComparator());
 		return namesList;
-	}
-
-	private Double getNameValue(String name) {
-		Double value = 0.0;
-		for (int i = 0; i < name.length(); i++) {
-			value += EnglishAlphabet.letters.get(name.charAt(i));
-		}
-		return value;
 	}
 
 	@Override

@@ -34,4 +34,16 @@ public class EnglishAlphabet {
 		letters.put('Y', 25);
 		letters.put('Z', 26);
 	}
+	
+	public static Double getStringDoubleValue(String string) {
+		return getStringLongValue(string).doubleValue();
+	}
+
+	public static Long getStringLongValue(String string) {
+		Long value = 0L;
+		for (int i = 0; i < string.length(); i++) {
+			value += EnglishAlphabet.letters.get(string.charAt(i));
+		}
+		return value;
+	}
 }
