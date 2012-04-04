@@ -47,6 +47,7 @@ import pl.krajewski.euler.problems.implementations.problems031_040.Problem038;
 import pl.krajewski.euler.problems.implementations.problems031_040.Problem039;
 import pl.krajewski.euler.problems.implementations.problems031_040.Problem040;
 import pl.krajewski.euler.problems.implementations.problems041_050.Problem042;
+import pl.krajewski.euler.problems.implementations.problems041_050.Problem045;
 import pl.krajewski.euler.problems.implementations.problems111_120.Problem116;
 import pl.krajewski.euler.problems.implementations.problems201_210.Problem205;
 import pl.krajewski.euler.problems.implementations.problems201_210.Problem210;
@@ -102,6 +103,7 @@ public class ProblemGetter {
 		problems.put(39, new Problem039());
 		problems.put(40, new Problem040());
 		problems.put(42, new Problem042());
+		problems.put(45, new Problem045());
 		problems.put(116, new Problem116());
 		problems.put(205, new Problem205());
 		problems.put(210, new Problem210());

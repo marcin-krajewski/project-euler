@@ -42,11 +42,27 @@ public class SequenceNumbers {
 		return triangleNumbers;
 	}
 	
-	private Long getTriangleNumberForIndex(Long index) {
+	public Long getTriangleNumberForIndex(Long index) {
 		return index * (index + 1) / 2;
 	}
 
-	private Long getTriangleNumberForIndexAndPrevious(Long index, Long previous) {
+	public Long getTriangleNumberForIndexAndPrevious(Long index, Long previous) {
 		return previous + index;
+	}
+	
+	public Long getPentagonalNumberForIndex(Long index) {
+		return index * (3 * index - 1) / 2;
+	}
+	
+	public Long getPentagonalNumberForIndexAndPrevious(Long index, Long previous) {
+		return previous + 3 * index - 2;
+	}
+
+	public Long getHexagonalNumberForIndex(Long index) {
+		return index * (2 * index - 1);
+	}
+	
+	public Long getHexagonalNumberForIndexAndPrevious(Long index, Long previous) {
+		return previous + 4*index - 3;
 	}
 }
