@@ -1,6 +1,11 @@
 package pl.krajewski.euler;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class ProjectEuler {
+	
+	private static Logger logger = LoggerFactory.getLogger(ProjectEuler.class);
 
 	public static Integer problemCallNumber = 52;
 
@@ -13,7 +18,7 @@ public class ProjectEuler {
 
 	@SuppressWarnings("unused")
 	private static void print(Object a) {
-		System.out.println("OBJECT " + a);
+		logger.info("Object " + a);
 	}
 
 }
