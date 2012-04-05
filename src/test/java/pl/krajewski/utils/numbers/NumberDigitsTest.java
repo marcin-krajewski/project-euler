@@ -2,28 +2,28 @@ package pl.krajewski.utils.numbers;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import pl.krajewski.euler.problems.utils.numbers.ConcatenatedProductOfNumbers;
+import pl.krajewski.euler.problems.utils.numbers.NumberDigits;
 
-public class ConcatenatedProductOfNumbersTest {
+public class NumberDigitsTest {
 
 	@Test
 	public void checkIfNumberHasDifferentDigits() {
 
-		assertTrue(ConcatenatedProductOfNumbers
+		assertTrue(NumberDigits.getInstance()
 				.checkIfNumberHasDifferentDigits(12345));
-		assertTrue(ConcatenatedProductOfNumbers
+		assertTrue(NumberDigits.getInstance()
 				.checkIfNumberHasDifferentDigits(0));
-		assertTrue(ConcatenatedProductOfNumbers
+		assertTrue(NumberDigits.getInstance()
 				.checkIfNumberHasDifferentDigits(1));
-		assertTrue(ConcatenatedProductOfNumbers
+		assertTrue(NumberDigits.getInstance()
 				.checkIfNumberHasDifferentDigits(1234567890));
-		assertTrue(ConcatenatedProductOfNumbers
+		assertTrue(NumberDigits.getInstance()
 				.checkIfNumberHasDifferentDigits(12));
-		assertFalse(ConcatenatedProductOfNumbers
+		assertFalse(NumberDigits.getInstance()
 				.checkIfNumberHasDifferentDigits(11));
-		assertFalse(ConcatenatedProductOfNumbers
+		assertFalse(NumberDigits.getInstance()
 				.checkIfNumberHasDifferentDigits(1111111));
-		assertFalse(ConcatenatedProductOfNumbers
+		assertFalse(NumberDigits.getInstance()
 				.checkIfNumberHasDifferentDigits(1234567891));
 
 	}
@@ -31,21 +31,21 @@ public class ConcatenatedProductOfNumbersTest {
 	@Test
 	public void checkIfNumberHasDifferentAndNotContains0Digits() {
 
-		assertTrue(ConcatenatedProductOfNumbers
+		assertTrue(NumberDigits.getInstance()
 				.checkIfNumberHasDifferentDigitsAndNotContains0(12345));
-		assertFalse(ConcatenatedProductOfNumbers
+		assertFalse(NumberDigits.getInstance()
 				.checkIfNumberHasDifferentDigitsAndNotContains0(0));
-		assertTrue(ConcatenatedProductOfNumbers
+		assertTrue(NumberDigits.getInstance()
 				.checkIfNumberHasDifferentDigitsAndNotContains0(1));
-		assertFalse(ConcatenatedProductOfNumbers
+		assertFalse(NumberDigits.getInstance()
 				.checkIfNumberHasDifferentDigitsAndNotContains0(1234567890));
-		assertTrue(ConcatenatedProductOfNumbers
+		assertTrue(NumberDigits.getInstance()
 				.checkIfNumberHasDifferentDigitsAndNotContains0(12));
-		assertFalse(ConcatenatedProductOfNumbers
+		assertFalse(NumberDigits.getInstance()
 				.checkIfNumberHasDifferentDigitsAndNotContains0(11));
-		assertFalse(ConcatenatedProductOfNumbers
+		assertFalse(NumberDigits.getInstance()
 				.checkIfNumberHasDifferentDigitsAndNotContains0(1111111));
-		assertFalse(ConcatenatedProductOfNumbers
+		assertFalse(NumberDigits.getInstance()
 				.checkIfNumberHasDifferentDigitsAndNotContains0(1234567891));
 	}
 }

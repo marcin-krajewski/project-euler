@@ -2,7 +2,7 @@ package pl.krajewski.euler.problems.implementations.problems031_040;
 
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
-import pl.krajewski.euler.problems.utils.numbers.ConcatenatedProductOfNumbers;
+import pl.krajewski.euler.problems.utils.numbers.NumberDigits;
 
 public class Problem038 extends Problem<Integer> {
 
@@ -20,7 +20,7 @@ public class Problem038 extends Problem<Integer> {
 		int parseInt;
 
 		for (int i = 1; i < maxNumber; i++) {
-			if (!ConcatenatedProductOfNumbers.checkIfNumberHasDifferentDigitsAndNotContains0(i)) {
+			if (!NumberDigits.getInstance().checkIfNumberHasDifferentDigitsAndNotContains0(i)) {
 				continue;
 			}
 			index = 2;
@@ -29,7 +29,7 @@ public class Problem038 extends Problem<Integer> {
 			while (true) {
 
 				numberProduct = i * index++;
-				if (!ConcatenatedProductOfNumbers
+				if (!NumberDigits.getInstance()
 						.checkIfNumberHasDifferentDigitsAndNotContains0(numberProduct)) {
 					break;
 				}
@@ -37,7 +37,7 @@ public class Problem038 extends Problem<Integer> {
 				if (numString.length() > 9) {
 					break;
 				}
-				if (!ConcatenatedProductOfNumbers.checkIfNumberHasDifferentDigitsAndNotContains0(Integer
+				if (!NumberDigits.getInstance().checkIfNumberHasDifferentDigitsAndNotContains0(Integer
 						.parseInt(numString))) {
 					break;
 				}

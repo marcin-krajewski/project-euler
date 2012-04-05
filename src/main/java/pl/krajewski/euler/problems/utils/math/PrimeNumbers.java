@@ -3,6 +3,8 @@ package pl.krajewski.euler.problems.utils.math;
 import java.util.HashSet;
 import java.util.Set;
 
+import pl.krajewski.euler.problems.utils.string.StringAsNum;
+
 public class PrimeNumbers {
 
 	public static boolean isNumberPrime(double number) {
@@ -13,10 +15,10 @@ public class PrimeNumbers {
 			return true;
 		}
 
-		if (((int) number & 1) == 0) {
+		if (((int) number & 1) == 0 || (int)number % 5 == 0) {
 			return false;
 		}
-
+		
 		double testNum = 3.0;
 		double testLimit = number;
 

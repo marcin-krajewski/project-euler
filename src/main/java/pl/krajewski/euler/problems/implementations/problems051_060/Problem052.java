@@ -5,6 +5,7 @@ import java.util.Set;
 
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
+import pl.krajewski.euler.problems.utils.numbers.NumberDigits;
 import pl.krajewski.euler.problems.utils.string.StringAsNum;
 
 public class Problem052 extends Problem<Long> {
@@ -21,7 +22,7 @@ public class Problem052 extends Problem<Long> {
 
 		for (long i = 2;; i++) {
 			multiplyArray[0] = i * 2;
-			if (hasDoubleDigits(multiplyArray[0])) {
+			if (!NumberDigits.getInstance().checkIfNumberHasDifferentDigitsForLong(multiplyArray[0])) {
 				continue;
 			}
 			multiplyArray[1] = i * 3;
@@ -52,17 +53,6 @@ public class Problem052 extends Problem<Long> {
 			}
 		}
 		return true;
-	}
-
-	private boolean hasDoubleDigits(long number) {
-		int[] numberDigits = StringAsNum.getStringAsNumArray0IsLowerMaxIsHigher(number + "");
-		Set<Integer> numberDigitsSet = new HashSet<Integer>();
-		for (int digit : numberDigits) {
-			if (!numberDigitsSet.add(digit)) {
-				return true;
-			}
-		}
-		return false;
 	}
 
 	@Override
