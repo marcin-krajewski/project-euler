@@ -36,7 +36,6 @@ public class Permutations {
 				}
 			}
 		}
-		System.out.println("LEN " + l.size());
 		return l;
 	}
 
@@ -67,7 +66,6 @@ public class Permutations {
 		Integer[] tab1 = ArrayUtils.createArrayWithSizeAndValue(size, -1, Integer.class);
 		List<Integer[]> lista = new ArrayList<Integer[]>();
 		permutacje(tab, size, 0, tab1, lista);
-		System.out.println("LIST SIZE " + lista.size());
 		return StringAsNum.getIntegerArrayAsString(lista.get(permutationIndex));
 	}
 

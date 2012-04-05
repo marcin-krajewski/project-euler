@@ -45,7 +45,7 @@ public class Problem045 extends Problem<Long> {
 						Long tVal = SequenceNumbers.getInstance().getTriangleNumberForIndexAndPrevious(tIndex, tValues.get(tIndex - 1)); 
 						tValues.put(tIndex, tVal);
 						if(tVal.equals(pVal)) {
-							System.out.println("INDEXES, T:" + tIndex+",P:" + pIndex + ",H:"+hIndex);
+							logger.info("INDEXES, T:" + tIndex+",P:" + pIndex + ",H:"+hIndex);
 							return tVal;
 						} else if (tVal > pVal) {
 							break;

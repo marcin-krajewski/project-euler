@@ -22,7 +22,6 @@ public class Problem011 extends Problem<Integer> {
 		MapDoubleKey<Integer, Integer, Integer> numbers = FileReader
 				.getLinesWithNumbersSeparatedWithSpaceForFileName(fileName);
 
-		Date d1 = new Date();
 		int[][] diffs = { { 0, 1 }, { 1, 0 }, { 1, 1 }, { 1, -1 } };
 
 		int max = 0;
@@ -49,8 +48,6 @@ public class Problem011 extends Problem<Integer> {
 				}
 			}
 		}
-		Date d2 = new Date();
-		System.out.println(d2.getTime() - d1.getTime() + " --- TIME");
 		return max;
 	}
 

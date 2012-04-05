@@ -7,6 +7,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import pl.krajewski.euler.problems.ProblemResolver;
 import pl.krajewski.euler.problems.implementations.problems001_010.Problem001;
 import pl.krajewski.euler.problems.implementations.problems001_010.Problem002;
@@ -56,6 +59,8 @@ import pl.krajewski.euler.problems.implementations.problems301_310.Problem304;
 
 @SuppressWarnings("rawtypes")
 public class ProblemGetter {
+	
+	private static Logger logger = LoggerFactory.getLogger(ProblemGetter.class);
 
 	private static Date startDate, stopDate;
 
@@ -149,7 +154,7 @@ public class ProblemGetter {
 		startDate = new Date();
 		Object result = problemResolver.resolveProblem();
 		stopDate = new Date();
-		System.out.println(addTimeToResult(getResult(result, number),
+		logger.info(addTimeToResult(getResult(result, number),
 				(stopDate.getTime() - startDate.getTime())));
 	}
 

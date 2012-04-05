@@ -43,7 +43,7 @@ public class Problem030 extends Problem<Double> {
 			}
 			level++;
 		}
-		System.out.println("LEVEL " + level);
+		logger.info("LEVEL " + level);
 
 		Set<Integer> values = new HashSet<Integer>();
 		double sumOfNumbers = checkNumbersForLevelAndOtherValues(level, 0, mapWithPowers, values,

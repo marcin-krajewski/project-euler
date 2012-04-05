@@ -11,11 +11,15 @@ import java.util.Map.Entry;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import pl.krajewski.euler.ProblemGetter;
 import pl.krajewski.euler.problems.ProblemResolver;
 
 public class CheckAllProblemsResultTest {
+	
+	private Logger logger = LoggerFactory.getLogger(getClass());
 
 	private Map<Integer, Long> callTimes;
 
@@ -33,12 +37,12 @@ public class CheckAllProblemsResultTest {
 		Date start, end;
 		for (Entry<Integer, ProblemResolver> entry : ProblemGetter.getInstance().getProblems().entrySet()) {
 			Integer problemNumberToCheck = entry.getKey();
-			System.out.println("CHECKING PROBLEM NUMBER " + problemNumberToCheck);
+			logger.info("CHECKING PROBLEM NUMBER " + problemNumberToCheck);
 			problemResolver = entry.getValue();
 
 			expectedProblemResult = problemResolver.getCorrectProblemAnswer();
 			if (expectedProblemResult == null) {
-				System.out.println("\tNO ANSWER FOR PROBLEM " + problemNumberToCheck);
+				logger.info("\tNO ANSWER FOR PROBLEM " + problemNumberToCheck);
 				continue;
 			}
 
@@ -51,14 +55,14 @@ public class CheckAllProblemsResultTest {
 
 			callTimes.put(problemNumberToCheck, end.getTime() - start.getTime());
 
-			System.out.println("\t TEST SUCCESS");
+			logger.info("\t TEST SUCCESS");
 		}
 		printTimes();
 	}
 
 	private void printTimes() {
 		for (Integer number : callTimes.keySet()) {
-			System.out.println("NUMBER: " + number + " -- TIME: "
+			logger.info("NUMBER: " + number + " -- TIME: "
 					+ (new DecimalFormat("0.000")).format((double) callTimes.get(number) / 1000.0) + "s");
 		}
 	}

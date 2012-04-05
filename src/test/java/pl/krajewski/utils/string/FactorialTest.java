@@ -7,10 +7,14 @@ import java.util.Map;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import pl.krajewski.euler.problems.utils.string.Factorial;
 
 public class FactorialTest {
+	
+	private Logger logger = LoggerFactory.getLogger(getClass());
 
     private String factorial;
     private Map<Integer, String> factorialValues = new HashMap<Integer, String>(); 
@@ -53,12 +57,12 @@ public class FactorialTest {
     
     @Test
     public void checkFirst10FactorialValues() {
-        System.out.println("CHECKING FACTORIALS");
+        logger.info("CHECKING FACTORIALS");
         for(Integer number : factorialValues.keySet()) {
-            System.out.println("CHECKING FACTORIAL: "+number);
+            logger.info("CHECKING FACTORIAL: "+number);
             factorial = Factorial.factorial(number);
             assertEquals(factorialValues.get(number), factorial);
         }
-        System.out.println("\tTEST SUCCESS");
+        logger.info("\tTEST SUCCESS");
     }
 }

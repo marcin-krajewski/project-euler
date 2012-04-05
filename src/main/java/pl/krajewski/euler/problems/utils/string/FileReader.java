@@ -11,9 +11,15 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import pl.krajewski.euler.ProjectEuler;
 import pl.krajewski.euler.problems.utils.classes.MapDoubleKey;
 
 public class FileReader {
+	
+	private static Logger logger = LoggerFactory.getLogger(FileReader.class);
 
 	public static String readProblemFile(String fileName) {
 		try {
@@ -39,7 +45,7 @@ public class FileReader {
 	private static BufferedReader getReader(String fileName) throws FileNotFoundException {
 		File file = new File("src/main/resources/files/" + fileName);
 		try {
-			System.out.println("FILE " + file.getCanonicalPath());
+			logger.info("FILE " + file.getCanonicalPath());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

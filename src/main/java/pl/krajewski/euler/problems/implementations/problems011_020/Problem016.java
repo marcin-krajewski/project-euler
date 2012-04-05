@@ -25,7 +25,7 @@ public class Problem016 extends Problem<Integer> {
 			sum += numbers[i];
 		}
 
-		System.out.println("STRING " + sum);
+		logger.info("STRING " + sum);
 		return sum;
 	}
 

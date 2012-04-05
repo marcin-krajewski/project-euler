@@ -26,7 +26,7 @@ public class Problem210 extends Problem<String> {
 
 		String resultS = "0";
 
-		System.out.println("ROZPOCZETO!");
+		logger.info("ROZPOCZETO!");
 		// PRZEDZIAL I
 
 		String formatRDiv4 = format(rdiv4);

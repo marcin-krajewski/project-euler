@@ -2,12 +2,19 @@ package pl.krajewski.euler.problems;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import pl.krajewski.euler.ProjectEuler;
 
 public abstract class Problem<T> implements ProblemResolver<T> {
+	
+	protected Logger logger = LoggerFactory.getLogger(getClass());
 
 	protected Parameters parameters;
 
@@ -32,16 +39,18 @@ public abstract class Problem<T> implements ProblemResolver<T> {
 		for (Parameters parameters : answers.keySet()) {
 			this.parameters = parameters;
 			T value = this.resolveProblem();
-			System.out.println("CHECKING " + value + " FOR " + parameters);
+			logger.info("CHECKING " + value + " FOR " + parameters);
 			assertEquals(answers.get(parameters), value);
 		}
 	}
 
 	@Test
 	public final void testIfProblemIsCorrect() {
+		Date d1 = new Date();
 		T resolveProblem = this.resolveProblem();
-		System.out.println("*** FULL CHECKING " + getCorrectProblemAnswer()
-				+ " FOR " + resolveProblem);
+		Date d2 = new Date();
+		logger.info("*** FULL CHECKING " + getCorrectProblemAnswer()
+				+ " FOR " + resolveProblem + "; Time: " + (d2.getTime() - d1.getTime())+"ms");
 		assertEquals(this.getCorrectProblemAnswer(), resolveProblem);
 	}
 

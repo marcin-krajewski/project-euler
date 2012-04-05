@@ -3,7 +3,12 @@ package pl.krajewski.euler;
 import java.util.List;
 import java.util.Random;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class ProblemNumberToSolveGenerator {
+	
+	private static Logger logger = LoggerFactory.getLogger(ProblemNumberToSolveGenerator.class);
 
 	private static int lastToSolve = 42;
 	private static boolean lastSolved = false;
@@ -12,7 +17,7 @@ public class ProblemNumberToSolveGenerator {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("PROBLEM NUMBER TO SOLVE: " + getNumberToSolve());
+		logger.info("PROBLEM NUMBER TO SOLVE: " + getNumberToSolve());
 	}
 
 	private static int getNumberToSolve() {

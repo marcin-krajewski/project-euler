@@ -15,7 +15,7 @@ public class Problem304 extends Problem<String> {
 		Integer min = this.<Integer> getParameterForNumber(0);
 		Integer max = this.<Integer> getParameterForNumber(1);
 
-		System.out.println(getB_n(1.0));
+		logger.info(getB_n(1.0));
 
 		return "2.0";
 	}

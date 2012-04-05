@@ -4,18 +4,22 @@ import static org.junit.Assert.*;
 import java.util.Date;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import pl.krajewski.euler.ProblemGetter;
 import pl.krajewski.euler.ProjectEuler;
 import pl.krajewski.euler.problems.ProblemResolver;
 
 public class CheckCurrentProblemResultTest {
+	
+	private Logger logger = LoggerFactory.getLogger(getClass());
 
     @Test
     public void checkIfCurrentProblemNotNullNotEmptyAndCorrect() {
     	
         Integer problemNumber = ProjectEuler.problemCallNumber;
-        System.out.println("TESTING SINGLE PROBLEM NUMBER: "+problemNumber);
+        logger.info("TESTING SINGLE PROBLEM NUMBER: "+problemNumber);
         
         assertNotNull(problemNumber);
         
@@ -29,6 +33,6 @@ public class CheckCurrentProblemResultTest {
         assertNotNull(problemResult);
 		assertEquals(expectedProblemResult, problemResult);
         
-        System.out.println("\tTEST SUCCESSFUL WITH TIME "+resolveMillis);
+        logger.info("\tTEST SUCCESSFUL WITH TIME "+resolveMillis);
     }
 }
