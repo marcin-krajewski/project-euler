@@ -42,13 +42,13 @@ public class Problem052 extends Problem<Long> {
 
 	private boolean numbersContainsTheSameDifferentDigits(long number1, long number2) {
 		int[] number1Digits = StringAsNum.getStringAsNumArray0IsLowerMaxIsHigher(number1 + "");
-		Set<Integer> number1DigitsSet = new HashSet<Integer>();
+		boolean[] number1DigitsArray = new boolean[10];
 		for (int digit : number1Digits) {
-			number1DigitsSet.add(digit);
+			number1DigitsArray[digit] = true;
 		}
 		int[] number2Digits = StringAsNum.getStringAsNumArray0IsLowerMaxIsHigher(number2 + "");
 		for (int digit : number2Digits) {
-			if (!number1DigitsSet.contains(digit)) {
+			if (!number1DigitsArray[digit]) {
 				return false;
 			}
 		}

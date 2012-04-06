@@ -15,7 +15,7 @@ public class PrimeNumbers {
 			return true;
 		}
 
-		if (((int) number & 1) == 0 || (int)number % 5 == 0) {
+		if (((int) number & 1) == 0) {
 			return false;
 		}
 		

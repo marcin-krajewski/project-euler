@@ -3,6 +3,7 @@ package pl.krajewski.utils.string;
 import static org.junit.Assert.*;
 import org.junit.Test;
 import pl.krajewski.euler.problems.utils.string.StringAsNum;
+import pl.krajewski.euler.problems.utils.string.StringUtils;
 
 public class StringUtilsTest {
 
@@ -15,5 +16,12 @@ public class StringUtilsTest {
 		assertEquals("2760", product1);
 		assertEquals("2760", product2);
 		assertEquals(product1, product2);
+	}
+	
+	@Test
+	public void checkIfGetLastStringCharsWorksCorrectTest() {
+		assertEquals("", StringUtils.getInstance().getLastStringCharacters("", 3));
+		assertEquals("cde", StringUtils.getInstance().getLastStringCharacters("cde", 3));
+		assertEquals("cde", StringUtils.getInstance().getLastStringCharacters("abcde", 3));
 	}
 }

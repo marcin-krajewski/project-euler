@@ -1,5 +1,8 @@
 package pl.krajewski.euler.problems.utils.string;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class StringPower {
 
 	public static String getPowerForNumberBelow10(int number, int pow) {
@@ -16,6 +19,24 @@ public class StringPower {
 		String stringPower = "1";
 		for (int i = 0; i < pow; i++) {
 			stringPower = StringAsNum.productTwoNumbers(number + "", stringPower);
+		}
+		return stringPower;
+	}
+
+	public static String getLastDigitsPowerForNumberBelow10(int number, int pow, int digits) {
+		
+		if (number == 0) {
+			return "0";
+		}
+		if (pow == 0) {
+			return "1";
+		}
+		if (pow == 1) {
+			return number + "";
+		}
+		String stringPower = "1";
+		for (int i = 0; i < pow; i++) {
+			stringPower = StringUtils.getInstance().getLastStringCharacters(StringAsNum.productTwoNumbers(number + "", stringPower), 10);
 		}
 		return stringPower;
 	}
