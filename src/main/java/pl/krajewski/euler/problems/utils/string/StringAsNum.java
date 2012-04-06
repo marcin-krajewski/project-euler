@@ -35,7 +35,8 @@ public class StringAsNum {
 		return substring;
 	}
 
-	private static int[] getStringAsNumArray(String stringNumber, boolean reverse) {
+	private static int[] getStringAsNumArray(String stringNumber,
+			boolean reverse) {
 
 		stringNumber = clearStringNumberFromLeadingZeros(stringNumber.trim());
 
@@ -55,7 +56,7 @@ public class StringAsNum {
 		return numbers;
 	}
 
-	public static String sumStringNumbers(String[] strings) {
+	public static String sumStringNumbers(String... strings) {
 
 		List<String> stringsList = new ArrayList<String>();
 
@@ -98,7 +99,8 @@ public class StringAsNum {
 			c = (sum / 10);
 			sb.append(result);
 			if (i == maxLen - 1) {
-				sb.append((new StringBuilder(String.valueOf(c))).reverse().toString());
+				sb.append((new StringBuilder(String.valueOf(c))).reverse()
+						.toString());
 			}
 		}
 
@@ -110,8 +112,12 @@ public class StringAsNum {
 		// System.out.println("MNO�ENIE: "+num1+"x"+num2);
 		int c = 0;
 		boolean num1larger = num1.length() > num2.length();
-		int[] tab1 = StringAsNum.getStringAsNumArray0IsLowerMaxIsHigher(num1larger ? num2 : num1);
-		int[] tab2 = StringAsNum.getStringAsNumArray0IsLowerMaxIsHigher(num1larger ? num1 : num2);
+		int[] tab1 = StringAsNum
+				.getStringAsNumArray0IsLowerMaxIsHigher(num1larger ? num2
+						: num1);
+		int[] tab2 = StringAsNum
+				.getStringAsNumArray0IsLowerMaxIsHigher(num1larger ? num1
+						: num2);
 
 		List<String> stringsToSum = new ArrayList<String>();
 		int len = tab2.length - 1;

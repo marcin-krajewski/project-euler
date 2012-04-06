@@ -6,6 +6,10 @@ public class PalindromNumbers {
 		return isStringPalindrome(String.valueOf(number));
 	}
 
+	public static boolean isLongNumberPalindrome(long number) {
+		return isStringPalindrome(String.valueOf(number));
+	}
+
 	public static boolean isStringPalindrome(String stringValue) {
 		if (stringValue == null || stringValue.trim().isEmpty()) {
 			return false;
@@ -17,7 +21,8 @@ public class PalindromNumbers {
 		int lengthOfStringDecrementedWith1 = lengthOfString - 1;
 		for (int i = 0; i <= endIndex; i++) {
 			char charFront = stringValue.charAt(i);
-			char charEnd = stringValue.charAt(lengthOfStringDecrementedWith1 - i);
+			char charEnd = stringValue.charAt(lengthOfStringDecrementedWith1
+					- i);
 
 			if (charFront != charEnd) {
 				return false;
