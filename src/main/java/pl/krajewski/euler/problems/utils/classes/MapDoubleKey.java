@@ -41,6 +41,10 @@ public class MapDoubleKey<K1, K2, V> {
 		return mapValue.keySet();
 	}
 
+	public int getCount() {
+		return mainMap.size();
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
