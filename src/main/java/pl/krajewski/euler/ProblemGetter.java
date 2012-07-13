@@ -52,6 +52,7 @@ import pl.krajewski.euler.problems.implementations.problems031_040.Problem040;
 import pl.krajewski.euler.problems.implementations.problems041_050.Problem042;
 import pl.krajewski.euler.problems.implementations.problems041_050.Problem045;
 import pl.krajewski.euler.problems.implementations.problems051_060.Problem052;
+import pl.krajewski.euler.problems.implementations.problems051_060.Problem059;
 import pl.krajewski.euler.problems.implementations.problems111_120.Problem116;
 import pl.krajewski.euler.problems.implementations.problems201_210.Problem205;
 import pl.krajewski.euler.problems.implementations.problems201_210.Problem210;
@@ -59,7 +60,7 @@ import pl.krajewski.euler.problems.implementations.problems301_310.Problem304;
 
 @SuppressWarnings("rawtypes")
 public class ProblemGetter {
-	
+
 	private static Logger logger = LoggerFactory.getLogger(ProblemGetter.class);
 
 	private static Date startDate, stopDate;
@@ -111,6 +112,7 @@ public class ProblemGetter {
 		problems.put(42, new Problem042());
 		problems.put(45, new Problem045());
 		problems.put(52, new Problem052());
+		problems.put(59, new Problem059());
 		problems.put(116, new Problem116());
 		problems.put(205, new Problem205());
 		problems.put(210, new Problem210());
@@ -147,10 +149,12 @@ public class ProblemGetter {
 	}
 
 	public void resolveProblem(int problemNumber) {
-		resolveAndPrintProblem(getProblemForNumber(problemNumber), problemNumber);
+		resolveAndPrintProblem(getProblemForNumber(problemNumber),
+				problemNumber);
 	}
 
-	private static void resolveAndPrintProblem(ProblemResolver problemResolver, int number) {
+	private static void resolveAndPrintProblem(ProblemResolver problemResolver,
+			int number) {
 		startDate = new Date();
 		Object result = problemResolver.resolveProblem();
 		stopDate = new Date();
