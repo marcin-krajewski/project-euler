@@ -99,7 +99,7 @@ public class FileReader {
 			StringBuilder sb = new StringBuilder();
 			for (int j = 0; j < line.length(); j++) {
 				char c = line.charAt(j);
-				if (Character.isDigit(c)) {
+				if (Character.isDigit(c) || c == '-') {
 					sb.append(Character.toString(c));
 				} else if (!sb.toString().trim().isEmpty()) {
 					numbers.put(rowNumber, colNumber++,
