@@ -13,8 +13,7 @@ public class Problem032 extends Problem<Double> {
 
 	@Override
 	protected Parameters getParametersForProblem() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Parameters(1, 9);
 	}
 
 	@Override
