@@ -3,7 +3,7 @@ package pl.krajewski.euler.problems.utils.numbers;
 import pl.krajewski.euler.problems.utils.classes.ArrayUtils;
 
 public class NumberDigits {
-	
+
 	private static NumberDigits instance;
 
 	private NumberDigits() {
@@ -36,12 +36,12 @@ public class NumberDigits {
 	}
 
 	public Boolean checkIfNumberHasDifferentDigitsForLong(long number) {
-		
+
 		boolean[] numbers = new boolean[10];
-		
+
 		long temp = number;
 		int mod = 0;
-		
+
 		while (temp > 0) {
 			mod = (int) (temp % 10);
 			if (numbers[mod]) {
@@ -50,7 +50,43 @@ public class NumberDigits {
 			numbers[mod] = true;
 			temp /= 10;
 		}
-		
+
+		return true;
+	}
+
+	public Boolean checkIfNumbersHasTheSameDigits(int number1, int number2) {
+
+		String sNumber1 = number1 + "";
+		String sNumber2 = number2 + "";
+
+		if (sNumber1.length() != sNumber2.length()) {
+			return false;
+		}
+
+		int[] numbers = new int[10];
+
+		int temp = number1;
+		int mod = 0;
+		while (temp > 0) {
+			mod = temp % 10;
+			numbers[mod]++;
+			temp /= 10;
+		}
+
+		temp = number2;
+		mod = 0;
+		while (temp > 0) {
+			mod = temp % 10;
+			numbers[mod]--;
+			temp /= 10;
+		}
+
+		for (int i = 0; i < 10; i++) {
+			if (numbers[i] != 0) {
+				return false;
+			}
+		}
+
 		return true;
 	}
 
