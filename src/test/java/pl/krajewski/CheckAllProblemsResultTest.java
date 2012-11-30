@@ -5,7 +5,7 @@ import static org.junit.Assert.assertNotNull;
 
 import java.text.DecimalFormat;
 import java.util.Date;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -18,14 +18,14 @@ import pl.krajewski.euler.ProblemGetter;
 import pl.krajewski.euler.problems.ProblemResolver;
 
 public class CheckAllProblemsResultTest {
-	
+
 	private Logger logger = LoggerFactory.getLogger(getClass());
 
 	private Map<Integer, Long> callTimes;
 
 	@Before
 	public void init() {
-		callTimes = new HashMap<Integer, Long>();
+		callTimes = new LinkedHashMap<Integer, Long>();
 	}
 
 	@Test
