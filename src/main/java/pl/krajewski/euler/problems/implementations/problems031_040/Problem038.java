@@ -29,16 +29,15 @@ public class Problem038 extends Problem<Integer> {
 			while (true) {
 
 				numberProduct = i * index++;
-				if (!NumberDigits.getInstance()
-						.checkIfNumberHasDifferentDigitsAndNotContains0(numberProduct)) {
+				if (!NumberDigits.getInstance().checkIfNumberHasDifferentDigitsAndNotContains0(numberProduct)) {
 					break;
 				}
 				numString += numberProduct;
 				if (numString.length() > 9) {
 					break;
 				}
-				if (!NumberDigits.getInstance().checkIfNumberHasDifferentDigitsAndNotContains0(Integer
-						.parseInt(numString))) {
+				if (!NumberDigits.getInstance().checkIfNumberHasDifferentDigitsAndNotContains0(
+						Integer.parseInt(numString))) {
 					break;
 				}
 				if (numString.length() == 9) {

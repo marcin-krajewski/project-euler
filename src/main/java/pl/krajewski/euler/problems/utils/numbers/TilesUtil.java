@@ -28,16 +28,14 @@ public class TilesUtil {
 		for (int singleNumber = 0; singleNumber < tiles; singleNumber++) {
 			for (int colorNumber = 1; colorNumber <= tiles; colorNumber++) {
 				if (tiles == (singleNumber + colorNumber * len)) {
-					sum += nonReturnMoves(colorNumber, singleNumber,
-							new MapDoubleKey<Integer, Integer, Long>());
+					sum += nonReturnMoves(colorNumber, singleNumber, new MapDoubleKey<Integer, Integer, Long>());
 				}
 			}
 		}
 		return sum;
 	}
 
-	private Long nonReturnMoves(int colors, int single,
-			MapDoubleKey<Integer, Integer, Long> map) {
+	private Long nonReturnMoves(int colors, int single, MapDoubleKey<Integer, Integer, Long> map) {
 
 		if (colors == 0 && single == 0) {
 			return 1L;
@@ -80,8 +78,7 @@ public class TilesUtil {
 		return sum;
 	}
 
-	private Long returnMoves(int red, int green, int blue, int single,
-			Long[][][][] tab) {
+	private Long returnMoves(int red, int green, int blue, int single, Long[][][][] tab) {
 
 		if (red == 0 && green == 0 && blue == 0 && single == 0) {
 			return 1L;

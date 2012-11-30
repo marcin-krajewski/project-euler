@@ -23,8 +23,7 @@ public class Problem191 extends Problem<Long> {
 		return recursiveDays(days, 0, 0, 0);
 	}
 
-	private Long recursiveDays(int lastDay, int position, int absentCount,
-			int lCount) {
+	private Long recursiveDays(int lastDay, int position, int absentCount, int lCount) {
 
 		if (lCount > 1 || absentCount > 2) {
 			return 0L;
@@ -34,8 +33,7 @@ public class Problem191 extends Problem<Long> {
 			return 1L;
 		}
 
-		return recursiveDays(lastDay, position + 1, 0, lCount)
-				+ recursiveDays(lastDay, position + 1, 0, lCount + 1)
+		return recursiveDays(lastDay, position + 1, 0, lCount) + recursiveDays(lastDay, position + 1, 0, lCount + 1)
 				+ recursiveDays(lastDay, position + 1, absentCount + 1, lCount);
 	}
 

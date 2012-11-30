@@ -34,7 +34,7 @@ public class EnglishAlphabet {
 		letters.put('Y', 25);
 		letters.put('Z', 26);
 	}
-	
+
 	public static Double getStringDoubleValue(String string) {
 		return getStringLongValue(string).doubleValue();
 	}

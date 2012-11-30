@@ -35,17 +35,20 @@ public class Problem045 extends Problem<Long> {
 		hIndex++;
 
 		for (;; hIndex++) {
-			Long hVal = SequenceNumbers.getInstance().getHexagonalNumberForIndexAndPrevious(hIndex, hValues.get(hIndex - 1));
+			Long hVal = SequenceNumbers.getInstance().getHexagonalNumberForIndexAndPrevious(hIndex,
+					hValues.get(hIndex - 1));
 			hValues.put(hIndex, hVal);
 			for (;; pIndex++) {
-				Long pVal = SequenceNumbers.getInstance().getPentagonalNumberForIndexAndPrevious(pIndex, pValues.get(pIndex - 1));
+				Long pVal = SequenceNumbers.getInstance().getPentagonalNumberForIndexAndPrevious(pIndex,
+						pValues.get(pIndex - 1));
 				pValues.put(pIndex, pVal);
 				if (pVal.equals(hVal)) {
 					for (;; tIndex++) {
-						Long tVal = SequenceNumbers.getInstance().getTriangleNumberForIndexAndPrevious(tIndex, tValues.get(tIndex - 1)); 
+						Long tVal = SequenceNumbers.getInstance().getTriangleNumberForIndexAndPrevious(tIndex,
+								tValues.get(tIndex - 1));
 						tValues.put(tIndex, tVal);
-						if(tVal.equals(pVal)) {
-							logger.info("INDEXES, T:" + tIndex+",P:" + pIndex + ",H:"+hIndex);
+						if (tVal.equals(pVal)) {
+							logger.info("INDEXES, T:" + tIndex + ",P:" + pIndex + ",H:" + hIndex);
 							return tVal;
 						} else if (tVal > pVal) {
 							break;

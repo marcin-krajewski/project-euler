@@ -22,17 +22,17 @@ public class Problem042 extends Problem<Long> {
 		String fileContent = FileReader.readProblemFileInOneLine(fileName).trim();
 		Set<String> words = FileReader.getWordsSeparatedWithCommasWithoutQuotations(fileContent);
 		int maxLen = 0;
-		for(String word : words) {
-			if(maxLen < word.length()) {
+		for (String word : words) {
+			if (maxLen < word.length()) {
 				maxLen = word.length();
 			}
 		}
-		
+
 		long maxTriangle = EnglishAlphabet.letters.get('Z') * maxLen;
 		List<Long> triangleNumbers = SequenceNumbers.getInstance().getTriangleNumberBelowMax(maxTriangle);
 		Long triangleWordsCount = 0L;
-		for(String word : words) {
-			if(triangleNumbers.contains(EnglishAlphabet.getStringLongValue(word))) {
+		for (String word : words) {
+			if (triangleNumbers.contains(EnglishAlphabet.getStringLongValue(word))) {
 				triangleWordsCount++;
 			}
 		}

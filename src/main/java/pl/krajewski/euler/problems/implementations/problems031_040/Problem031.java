@@ -111,8 +111,8 @@ public class Problem031 extends Problem<Integer> {
 					sumOfCombinations++;
 					continue;
 				}
-				sumOfCombinations += getResultOfExampleForUnknownParameters(indexOfCurrentCoin + 1,
-						coinsList, maxSumOfCoins, currentCoinAcceptedValue);
+				sumOfCombinations += getResultOfExampleForUnknownParameters(indexOfCurrentCoin + 1, coinsList,
+						maxSumOfCoins, currentCoinAcceptedValue);
 			}
 			return sumOfCombinations;
 		} catch (IndexOutOfBoundsException ex) {

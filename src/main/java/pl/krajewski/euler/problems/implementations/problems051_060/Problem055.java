@@ -36,8 +36,7 @@ public class Problem055 extends Problem<Integer> {
 			tempSet.add(temp);
 			broke = false;
 			for (int j = 0; j < numberOfIterations; j++) {
-				temp = StringAsNum.sumStringNumbers(temp, new StringBuilder(
-						temp).reverse().toString());
+				temp = StringAsNum.sumStringNumbers(temp, new StringBuilder(temp).reverse().toString());
 
 				if (PalindromNumbers.isStringPalindrome(temp)) {
 					notLychrelSet.addAll(tempSet);

@@ -17,7 +17,7 @@ public class Problem052 extends Problem<Long> {
 
 	@Override
 	public Long resolveProblem() {
-		
+
 		long[] multiplyArray = new long[5];
 
 		for (long i = 2;; i++) {
@@ -33,7 +33,7 @@ public class Problem052 extends Problem<Long> {
 				if (!numbersContainsTheSameDifferentDigits(multiplyArray[index], multiplyArray[index + 1])) {
 					break;
 				}
-				if(index == 3) {
+				if (index == 3) {
 					return i;
 				}
 			}

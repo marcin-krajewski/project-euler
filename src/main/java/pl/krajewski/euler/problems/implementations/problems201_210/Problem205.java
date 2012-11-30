@@ -37,13 +37,11 @@ public class Problem205 extends Problem<String> {
 				}
 			}
 		}
-		
-		double d = correct
-		/ (Math.pow(peterMax, peterCount) * Math.pow(colinMax,
-				colinCount));
+
+		double d = correct / (Math.pow(peterMax, peterCount) * Math.pow(colinMax, colinCount));
 
 		DecimalFormat twoDForm = new DecimalFormat("#.#######");
-        return twoDForm.format(d);
+		return twoDForm.format(d);
 	}
 
 	public Map<Integer, Integer> getAllSums(int max, int count) {

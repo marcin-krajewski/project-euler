@@ -4,8 +4,7 @@ import java.util.List;
 
 public class PrimeNumbers {
 
-	public static List<Integer> getPrimesBelowNumberEratostothenesSieve(
-			Integer number) {
+	public static List<Integer> getPrimesBelowNumberEratostothenesSieve(Integer number) {
 		return getPrimesBelowNumber(number, new EratosthenesSieve());
 	}
 
@@ -13,8 +12,7 @@ public class PrimeNumbers {
 		return getPrimesBelowNumber(number, new AtkinSieve());
 	}
 
-	private static List<Integer> getPrimesBelowNumber(Integer number,
-			IPrimeNumbersInRange algorithm) {
+	private static List<Integer> getPrimesBelowNumber(Integer number, IPrimeNumbersInRange algorithm) {
 		return algorithm.getPrimesBelowNumber(number);
 	}
 

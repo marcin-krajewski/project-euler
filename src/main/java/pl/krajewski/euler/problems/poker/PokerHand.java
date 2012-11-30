@@ -81,8 +81,7 @@ public class PokerHand implements Comparable<PokerHand> {
 	}
 
 	public int compareTo(PokerHand pokerHand) {
-		int diff = this.getType().getPriority()
-				- pokerHand.getType().getPriority();
+		int diff = this.getType().getPriority() - pokerHand.getType().getPriority();
 		if (diff != 0) {
 			return diff;
 		}
@@ -90,27 +89,20 @@ public class PokerHand implements Comparable<PokerHand> {
 		switch (type) {
 		case HighCard:
 		case Flush:
-			return this.poker.getHighCardPriority()
-					- pokerHand.getPoker().getHighCardPriority();
+			return this.poker.getHighCardPriority() - pokerHand.getPoker().getHighCardPriority();
 		case OnePair:
-			return this.poker.getOnePairPriority()
-					- pokerHand.getPoker().getOnePairPriority();
+			return this.poker.getOnePairPriority() - pokerHand.getPoker().getOnePairPriority();
 		case TwoPairs:
-			return this.poker.getTwoPairsPriority()
-					- pokerHand.getPoker().getTwoPairsPriority();
+			return this.poker.getTwoPairsPriority() - pokerHand.getPoker().getTwoPairsPriority();
 		case ThreeOfKind:
-			return this.poker.getThreeOfKindPriority()
-					- pokerHand.getPoker().getThreeOfKindPriority();
+			return this.poker.getThreeOfKindPriority() - pokerHand.getPoker().getThreeOfKindPriority();
 		case Straight:
 		case StraightFlush:
-			return this.poker.getStraightPriority()
-					- pokerHand.getPoker().getStraightPriority();
+			return this.poker.getStraightPriority() - pokerHand.getPoker().getStraightPriority();
 		case FullHouse:
-			return this.poker.getFullHousePriority()
-					- pokerHand.getPoker().getFullHousePriority();
+			return this.poker.getFullHousePriority() - pokerHand.getPoker().getFullHousePriority();
 		case FourOfKind:
-			return this.poker.getFourOfKindPriority()
-					- pokerHand.getPoker().getFourOfKindPriority();
+			return this.poker.getFourOfKindPriority() - pokerHand.getPoker().getFourOfKindPriority();
 		case RoyalFlush:
 		default:
 			return 0;

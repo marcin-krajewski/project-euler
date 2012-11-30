@@ -72,8 +72,7 @@ public class Problem059 extends Problem<Long> {
 		String file = FileReader.readProblemFileInOneLine(fileName);
 
 		int index = 0;
-		String[] wordsSeparatedWithCommas = FileReader
-				.getWordsSeparatedWithCommas(file);
+		String[] wordsSeparatedWithCommas = FileReader.getWordsSeparatedWithCommas(file);
 		int[] lineNumberWithByteCodes = new int[wordsSeparatedWithCommas.length];
 		for (String stringByteCode : wordsSeparatedWithCommas) {
 			lineNumberWithByteCodes[index++] = Integer.parseInt(stringByteCode);

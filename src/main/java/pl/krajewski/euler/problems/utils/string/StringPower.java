@@ -24,7 +24,7 @@ public class StringPower {
 	}
 
 	public static String getLastDigitsPowerForNumberBelow10(int number, int pow, int digits) {
-		
+
 		if (number == 0) {
 			return "0";
 		}
@@ -36,7 +36,8 @@ public class StringPower {
 		}
 		String stringPower = "1";
 		for (int i = 0; i < pow; i++) {
-			stringPower = StringUtils.getInstance().getLastStringCharacters(StringAsNum.productTwoNumbers(number + "", stringPower), 10);
+			stringPower = StringUtils.getInstance().getLastStringCharacters(
+					StringAsNum.productTwoNumbers(number + "", stringPower), 10);
 		}
 		return stringPower;
 	}

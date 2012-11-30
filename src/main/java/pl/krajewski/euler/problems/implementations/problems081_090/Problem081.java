@@ -40,8 +40,7 @@ public class Problem081 extends Problem<Double> {
 		return best;
 	}
 
-	private Double best(int row, int col,
-			MapDoubleKey<Integer, Integer, Integer> map,
+	private Double best(int row, int col, MapDoubleKey<Integer, Integer, Integer> map,
 			MapDoubleKey<Integer, Integer, Double> was) {
 
 		Integer integer = map.get(row, col);

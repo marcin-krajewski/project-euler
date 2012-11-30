@@ -21,8 +21,7 @@ public class Problem079 extends Problem<String> {
 	public String resolveProblem() {
 		String fileName = getParameterForNumber(0);
 
-		String[] readProblemFileLines = FileReader
-				.readProblemFileLines(fileName);
+		String[] readProblemFileLines = FileReader.readProblemFileLines(fileName);
 
 		Map<Character, Set<Character>> before = new HashMap<Character, Set<Character>>();
 
@@ -49,8 +48,7 @@ public class Problem079 extends Problem<String> {
 		return result.toString();
 	}
 
-	private void addCharsToBeforeMap(Map<Character, Set<Character>> map,
-			Character before, Character... after) {
+	private void addCharsToBeforeMap(Map<Character, Set<Character>> map, Character before, Character... after) {
 		Set<Character> set = map.get(before);
 		if (set == null) {
 			set = new HashSet<Character>();

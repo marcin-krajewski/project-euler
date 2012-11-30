@@ -16,8 +16,7 @@ public class Problem099 extends Problem<String> {
 	@Override
 	public String resolveProblem() {
 		String fileName = getParameterForNumber(0);
-		String[] readProblemFileLines = FileReader
-				.readProblemFileLines(fileName);
+		String[] readProblemFileLines = FileReader.readProblemFileLines(fileName);
 
 		double temp;
 		double tempExp;
@@ -38,8 +37,7 @@ public class Problem099 extends Problem<String> {
 			valuesWithLineNumber.put(base, exp, lineNumber);
 		}
 
-		logger.info(valuesWithLineNumber.toString() + "C: "
-				+ valuesWithLineNumber.getCount());
+		logger.info(valuesWithLineNumber.toString() + "C: " + valuesWithLineNumber.getCount());
 
 		return result + "";
 	}

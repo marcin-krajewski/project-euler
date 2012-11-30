@@ -27,8 +27,7 @@ public class Problem050 extends Problem<Integer> {
 
 		Integer limit = getParameterForNumber(0);
 
-		List<Integer> primesBelowNumber = PrimeNumbers
-				.getPrimesBelowNumberAtkinSieve(limit);
+		List<Integer> primesBelowNumber = PrimeNumbers.getPrimesBelowNumberAtkinSieve(limit);
 
 		Integer[] primesBelowNumberArray = new Integer[primesBelowNumber.size()];
 		for (int i = 0; i < primesBelowNumber.size(); i++) {

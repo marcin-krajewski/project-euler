@@ -6,8 +6,7 @@ import java.util.Map;
 public class Card implements Comparable<Card> {
 
 	public enum Type {
-		A(13), K(12), Q(11), J(10), _10(9), _9(8), _8(7), _7(6), _6(5), _5(4), _4(
-				3), _3(2), _2(1);
+		A(13), K(12), Q(11), J(10), _10(9), _9(8), _8(7), _7(6), _6(5), _5(4), _4(3), _3(2), _2(1);
 
 		private int order;
 

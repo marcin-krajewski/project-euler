@@ -16,14 +16,14 @@ public class SequenceNumbers {
 		}
 		return instance;
 	}
-	
+
 	public List<Long> getTriangleNumberBelowMax(Long max) {
 		List<Long> triangleNumbers = new ArrayList<Long>();
 		Long num = getTriangleNumberForIndex(1L);
 		triangleNumbers.add(num);
-		for(long index = 2L; ; index++) {
+		for (long index = 2L;; index++) {
 			num = getTriangleNumberForIndexAndPrevious(index, num);
-			if(num > max) {
+			if (num > max) {
 				break;
 			}
 			triangleNumbers.add(num);
@@ -35,13 +35,13 @@ public class SequenceNumbers {
 		List<Long> triangleNumbers = new ArrayList<Long>();
 		Long num = getTriangleNumberForIndex(1L);
 		triangleNumbers.add(num);
-		for(long index = 2L; index <= maxIndex; index++) {
+		for (long index = 2L; index <= maxIndex; index++) {
 			num = getTriangleNumberForIndexAndPrevious(index, num);
 			triangleNumbers.add(num);
 		}
 		return triangleNumbers;
 	}
-	
+
 	public Long getTriangleNumberForIndex(Long index) {
 		return index * (index + 1) / 2;
 	}
@@ -49,11 +49,11 @@ public class SequenceNumbers {
 	public Long getTriangleNumberForIndexAndPrevious(Long index, Long previous) {
 		return previous + index;
 	}
-	
+
 	public Long getPentagonalNumberForIndex(Long index) {
 		return index * (3 * index - 1) / 2;
 	}
-	
+
 	public Long getPentagonalNumberForIndexAndPrevious(Long index, Long previous) {
 		return previous + 3 * index - 2;
 	}
@@ -61,8 +61,8 @@ public class SequenceNumbers {
 	public Long getHexagonalNumberForIndex(Long index) {
 		return index * (2 * index - 1);
 	}
-	
+
 	public Long getHexagonalNumberForIndexAndPrevious(Long index, Long previous) {
-		return previous + 4*index - 3;
+		return previous + 4 * index - 3;
 	}
 }

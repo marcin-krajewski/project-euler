@@ -8,8 +8,7 @@ import org.slf4j.LoggerFactory;
 
 public class ProblemNumberToSolveGenerator {
 
-	private static Logger logger = LoggerFactory
-			.getLogger(ProblemNumberToSolveGenerator.class);
+	private static Logger logger = LoggerFactory.getLogger(ProblemNumberToSolveGenerator.class);
 
 	private static int lastToSolve = 102;
 	private static boolean lastSolved = false;
@@ -23,8 +22,7 @@ public class ProblemNumberToSolveGenerator {
 
 	private static int getNumberToSolve() {
 		if (lastSolved) {
-			List<Integer> problemsToRandomize = ProblemGetter.getInstance()
-					.getProblemsToRandomize();
+			List<Integer> problemsToRandomize = ProblemGetter.getInstance().getProblemsToRandomize();
 			int nextInt = new Random().nextInt(problemsToRandomize.size() - 1);
 			return problemsToRandomize.get(nextInt);
 		}

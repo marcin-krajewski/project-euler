@@ -52,8 +52,8 @@ public class Problem030 extends Problem<Double> {
 		return sumOfNumbers;
 	}
 
-	private double checkNumbersForLevelAndOtherValues(int level, int prevSum,
-			Map<Integer, Integer> mapWithPowers, Set<Integer> values, List<Integer> tabWithOldDigits) {
+	private double checkNumbersForLevelAndOtherValues(int level, int prevSum, Map<Integer, Integer> mapWithPowers,
+			Set<Integer> values, List<Integer> tabWithOldDigits) {
 
 		if (level == 0) {
 			return 0.0;
@@ -73,8 +73,7 @@ public class Problem030 extends Problem<Double> {
 				returnValue += newSum;
 
 			}
-			returnValue += checkNumbersForLevelAndOtherValues(level - 1, newSum, mapWithPowers, values,
-					tabWithDigits);
+			returnValue += checkNumbersForLevelAndOtherValues(level - 1, newSum, mapWithPowers, values, tabWithDigits);
 		}
 		return returnValue;
 	}

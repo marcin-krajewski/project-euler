@@ -19,8 +19,7 @@ public class Problem053 extends Problem<Integer> {
 		int result = 0;
 		for (int n = min; n <= max; n++) {
 			for (int k = 1; k <= n; k++) {
-				if (BinomialCoefficient.isBinomialCoefficientGreaterThan(n, k,
-						1000000)) {
+				if (BinomialCoefficient.isBinomialCoefficientGreaterThan(n, k, 1000000)) {
 					result++;
 				}
 			}

@@ -3,7 +3,7 @@ package pl.krajewski.euler.problems.utils.string;
 import java.util.Comparator;
 
 public class StringUtils {
-	
+
 	private static StringUtils instance;
 
 	private StringUtils() {
@@ -23,10 +23,10 @@ public class StringUtils {
 			}
 		};
 	}
-	
+
 	public String getLastStringCharacters(String string, int chars) {
 		int length = string.length();
-		if(length < chars) {
+		if (length < chars) {
 			return string;
 		}
 		return string.substring(length - chars, length);

@@ -19,15 +19,13 @@ public class Problem041 extends Problem<Integer> {
 			if (number % 5 == 0) {
 				continue;
 			}
-			if (isNumStringFromMinToMaxDigits(1, 7, number + "")
-					&& PrimeNumbers.isNumberPrime(number)) {
+			if (isNumStringFromMinToMaxDigits(1, 7, number + "") && PrimeNumbers.isNumberPrime(number)) {
 				return number;
 			}
 		}
 	}
 
-	private boolean isNumStringFromMinToMaxDigits(int min, int max,
-			String numString) {
+	private boolean isNumStringFromMinToMaxDigits(int min, int max, String numString) {
 
 		int result = max - min + 1;
 		if (numString.length() != result) {

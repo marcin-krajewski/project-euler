@@ -30,8 +30,7 @@ public class Problem092 extends Problem<Integer> {
 
 	private Integer checkIntegerWithPath(Integer numberToCheck, int[] paths) {
 		if (paths[numberToCheck] == 0) {
-			paths[numberToCheck] = checkIntegerWithPath(
-					sumOfDigitSquares(numberToCheck), paths);
+			paths[numberToCheck] = checkIntegerWithPath(sumOfDigitSquares(numberToCheck), paths);
 		}
 		return paths[numberToCheck];
 	}

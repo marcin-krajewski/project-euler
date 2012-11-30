@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 import pl.krajewski.euler.ProjectEuler;
 
 public abstract class Problem<T> implements ProblemResolver<T> {
-	
+
 	protected Logger logger = LoggerFactory.getLogger(getClass());
 
 	protected Parameters parameters;
@@ -49,8 +49,8 @@ public abstract class Problem<T> implements ProblemResolver<T> {
 		Date d1 = new Date();
 		T resolveProblem = this.resolveProblem();
 		Date d2 = new Date();
-		logger.info("*** FULL CHECKING " + getCorrectProblemAnswer()
-				+ " FOR " + resolveProblem + "; Time: " + (d2.getTime() - d1.getTime())+"ms");
+		logger.info("*** FULL CHECKING " + getCorrectProblemAnswer() + " FOR " + resolveProblem + "; Time: "
+				+ (d2.getTime() - d1.getTime()) + "ms");
 		assertEquals(this.getCorrectProblemAnswer(), resolveProblem);
 	}
 

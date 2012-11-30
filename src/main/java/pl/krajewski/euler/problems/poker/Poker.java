@@ -47,8 +47,7 @@ public class Poker {
 		addCardToMapWithKey(card.getType(), types, card);
 	}
 
-	private <T> void addCardToMapWithKey(T key, Map<T, Set<Card>> map,
-			Card cardToAdd) {
+	private <T> void addCardToMapWithKey(T key, Map<T, Set<Card>> map, Card cardToAdd) {
 		Set<Card> set = map.get(key);
 		if (set == null) {
 			set = new HashSet<Card>();
@@ -100,9 +99,8 @@ public class Poker {
 	}
 
 	public boolean isFromAceToFourStraight() {
-		return types.get(Type.A) != null && types.get(Type._2) != null
-				&& types.get(Type._3) != null && types.get(Type._4) != null
-				&& types.get(Type._5) != null;
+		return types.get(Type.A) != null && types.get(Type._2) != null && types.get(Type._3) != null
+				&& types.get(Type._4) != null && types.get(Type._5) != null;
 	}
 
 	public Type getMaxType() {

@@ -12,8 +12,7 @@ public class BinomialCoefficient {
 		return res;
 	}
 
-	public static boolean isBinomialCoefficientGreaterThan(int n, int k,
-			long num) {
+	public static boolean isBinomialCoefficientGreaterThan(int n, int k, long num) {
 		double res = 1;
 		double nMinusK = n - k;
 		for (int i = 1; i <= k; i++) {

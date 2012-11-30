@@ -21,8 +21,7 @@ public class PalindromNumbers {
 		int lengthOfStringDecrementedWith1 = lengthOfString - 1;
 		for (int i = 0; i <= endIndex; i++) {
 			char charFront = stringValue.charAt(i);
-			char charEnd = stringValue.charAt(lengthOfStringDecrementedWith1
-					- i);
+			char charEnd = stringValue.charAt(lengthOfStringDecrementedWith1 - i);
 
 			if (charFront != charEnd) {
 				return false;

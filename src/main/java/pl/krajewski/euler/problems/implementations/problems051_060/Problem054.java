@@ -20,10 +20,8 @@ public class Problem054 extends Problem<Integer> {
 		int p1won = 0;
 		for (String line : lines) {
 			String[] cards = line.split(" ");
-			PokerHand ph1 = new PokerHand(new Poker(cards[0], cards[1],
-					cards[2], cards[3], cards[4]));
-			PokerHand ph2 = new PokerHand(new Poker(cards[5], cards[6],
-					cards[7], cards[8], cards[9]));
+			PokerHand ph1 = new PokerHand(new Poker(cards[0], cards[1], cards[2], cards[3], cards[4]));
+			PokerHand ph2 = new PokerHand(new Poker(cards[5], cards[6], cards[7], cards[8], cards[9]));
 
 			if (ph1.compareTo(ph2) > 0) {
 				p1won++;

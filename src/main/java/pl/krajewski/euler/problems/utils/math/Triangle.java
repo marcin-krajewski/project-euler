@@ -2,8 +2,7 @@ package pl.krajewski.euler.problems.utils.math;
 
 public class Triangle {
 
-	public static boolean isPointInTriangle(Point p1, Point p2, Point p3,
-			Point toCheck) {
+	public static boolean isPointInTriangle(Point p1, Point p2, Point p3, Point toCheck) {
 		long f1 = calculatePoint(p1, p2, toCheck);
 		long f2 = calculatePoint(p2, p3, toCheck);
 		long f3 = calculatePoint(p3, p1, toCheck);
@@ -23,7 +22,6 @@ public class Triangle {
 	}
 
 	private static long calculatePoint(Point p1, Point p2, Point toCheck) {
-		return (p2.x - p1.x) * (toCheck.y - p1.y) - (p2.y - p1.y)
-				* (toCheck.x - p1.x);
+		return (p2.x - p1.x) * (toCheck.y - p1.y) - (p2.y - p1.y) * (toCheck.x - p1.x);
 	}
 }

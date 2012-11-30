@@ -18,7 +18,7 @@ public class PrimeNumbers {
 		if (((int) number & 1) == 0) {
 			return false;
 		}
-		
+
 		double testNum = 3.0;
 		double testLimit = number;
 

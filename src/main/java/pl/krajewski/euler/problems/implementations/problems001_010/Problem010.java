@@ -16,7 +16,7 @@ public class Problem010 extends Problem<Double> {
 		Integer max = getParameterForNumber(0);
 
 		double sum = 2.0;
-		for (double i = 3; i < max; i+=2) {
+		for (double i = 3; i < max; i += 2) {
 			if (PrimeNumbers.isNumberPrime(i)) {
 				sum += i;
 			}

@@ -41,8 +41,7 @@ public class FileReader {
 		}
 	}
 
-	private static BufferedReader getReader(String fileName)
-			throws FileNotFoundException {
+	private static BufferedReader getReader(String fileName) throws FileNotFoundException {
 		File file = new File("src/main/resources/files/" + fileName);
 		try {
 			logger.info("FILE " + file.getCanonicalPath());
@@ -51,8 +50,7 @@ public class FileReader {
 			e.printStackTrace();
 		}
 		FileInputStream fileInputStream = new FileInputStream(file);
-		BufferedReader bufferedReader = new BufferedReader(
-				new InputStreamReader(fileInputStream));
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
 		return bufferedReader;
 	}
 
@@ -89,8 +87,7 @@ public class FileReader {
 		return FileReader.getLinesWithNumbersSeparatedWithSpace(fileLines);
 	}
 
-	public static MapDoubleKey<Integer, Integer, Integer> getLinesWithNumbersSeparatedWithSpace(
-			String[] arr) {
+	public static MapDoubleKey<Integer, Integer, Integer> getLinesWithNumbersSeparatedWithSpace(String[] arr) {
 		MapDoubleKey<Integer, Integer, Integer> numbers = new MapDoubleKey<Integer, Integer, Integer>();
 
 		int colNumber = 0;
@@ -102,14 +99,12 @@ public class FileReader {
 				if (Character.isDigit(c) || c == '-') {
 					sb.append(Character.toString(c));
 				} else if (!sb.toString().trim().isEmpty()) {
-					numbers.put(rowNumber, colNumber++,
-							Integer.parseInt(sb.toString()));
+					numbers.put(rowNumber, colNumber++, Integer.parseInt(sb.toString()));
 					sb = new StringBuilder();
 				}
 			}
 			if (!sb.toString().trim().isEmpty()) {
-				numbers.put(rowNumber, colNumber++,
-						Integer.parseInt(sb.toString()));
+				numbers.put(rowNumber, colNumber++, Integer.parseInt(sb.toString()));
 				sb = new StringBuilder();
 			}
 			colNumber = 0;
@@ -117,8 +112,7 @@ public class FileReader {
 		return numbers;
 	}
 
-	public static Set<String> getWordsSeparatedWithCommasWithoutQuotations(
-			String file) {
+	public static Set<String> getWordsSeparatedWithCommasWithoutQuotations(String file) {
 		String[] words = file.replaceAll("\\\"", "").split(",");
 		Set<String> set = new HashSet<String>();
 		for (String word : words) {

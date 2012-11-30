@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ProjectEuler {
-	
+
 	private static Logger logger = LoggerFactory.getLogger(ProjectEuler.class);
 
 	public static Integer problemCallNumber = 52;
