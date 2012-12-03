@@ -1,6 +1,7 @@
 package pl.krajewski.euler.problems.implementations.problems201_210;
 
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -40,7 +41,12 @@ public class Problem205 extends Problem<String> {
 
 		double d = correct / (Math.pow(peterMax, peterCount) * Math.pow(colinMax, colinCount));
 
+		DecimalFormatSymbols symbols = new DecimalFormatSymbols();
+		symbols.setDecimalSeparator('.');
+
 		DecimalFormat twoDForm = new DecimalFormat("#.#######");
+		twoDForm.setDecimalFormatSymbols(symbols);
+
 		return twoDForm.format(d);
 	}
 
