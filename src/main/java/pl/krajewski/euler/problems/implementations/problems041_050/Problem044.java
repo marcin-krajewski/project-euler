@@ -1,8 +1,5 @@
 package pl.krajewski.euler.problems.implementations.problems041_050;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 
@@ -17,7 +14,6 @@ public class Problem044 extends Problem<Long> {
 	public Long resolveProblem() {
 		long d1, d2;
 		long aa3, bb3;
-		long diff1;
 		double s1, s2;
 		double s3, s4;
 		int min = Integer.MAX_VALUE;
@@ -25,7 +21,6 @@ public class Problem044 extends Problem<Long> {
 			aa3 = 3 * a * a;
 			for (int b = a + 1; b < 2200; b++) {
 				bb3 = b * b * 3;
-				diff1 = a + b - aa3 - bb3;
 				d1 = 1 - 12 * (a + b - aa3 - bb3);
 				double sqrt = Math.sqrt(d1);
 				d2 = 1 - 12 * (b - a + aa3 - bb3);

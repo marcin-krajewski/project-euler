@@ -1,7 +1,5 @@
 package pl.krajewski.euler.problems.implementations.problems011_020;
 
-import java.util.Date;
-
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.classes.MapDoubleKey;

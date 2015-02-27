@@ -213,6 +213,7 @@ public class Poker {
 		return result;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public String toString() {
 		return Arrays.asList(cards).toString();

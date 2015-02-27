@@ -21,7 +21,7 @@ public class ProblemGetter {
 
 	private static Date startDate, stopDate;
 
-	private static int MAX_PROBLEM_NUMBER = 344;
+	private static int MAX_PROBLEM_NUMBER = 50;
 
 	private static ProblemGetter instance;
 
@@ -39,6 +39,7 @@ public class ProblemGetter {
 		return instance;
 	}
 
+	@SuppressWarnings("unchecked")
 	public ProblemResolver getProblemForNumber(Integer problemNumber) {
 		try {
 			String p = getPackageNameForProblemNumber(problemNumber);

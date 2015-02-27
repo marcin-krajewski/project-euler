@@ -1,9 +1,14 @@
 package pl.krajewski.euler.problems.utils.math;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
+
+import pl.krajewski.euler.problems.utils.classes.ArrayUtils;
 
 public class PrimeFactor {
 
@@ -24,6 +29,41 @@ public class PrimeFactor {
 		}
 		// System.out.println("LIST "+list);
 		return list.toArray(new Double[] {});
+	}
+
+	public static Integer countOfFactorsWithoutNumber(int number) {
+		return countOfFactors(number) - number;
+	}
+ 
+	public static Integer countOfFactors(int number) {
+		Map<Integer, Integer> factors = primeFactorsWithCount(number);
+		Integer mul = 1;
+		for (Entry<Integer, Integer> entry : factors.entrySet()) {
+			Integer sum = 0;
+			for (int i = 0; i <= entry.getValue(); i++) {
+				sum += (int) Math.pow(entry.getKey(), i);
+			}
+			mul *= sum;
+		}
+		return mul;
+	}
+
+	public static Map<Integer, Integer> primeFactorsWithCount(int number) {
+		int factor = number;
+		int last = 2;
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+		while (factor > 1) {
+			for (; last <= factor; last++) {
+
+				if (factor % last == 0) {
+					factor = factor / last;
+					ArrayUtils.incrementValueInMapOrPut1(last, map);
+					break;
+				}
+			}
+		}
+		// System.out.println("LIST "+list);
+		return map;
 	}
 
 	public static Set<Double> getUniquePrimeFactorsOfNumber(double number) {

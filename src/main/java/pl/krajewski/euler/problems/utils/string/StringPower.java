@@ -1,7 +1,5 @@
 package pl.krajewski.euler.problems.utils.string;
 
-import java.util.HashSet;
-import java.util.Set;
 
 public class StringPower {
 

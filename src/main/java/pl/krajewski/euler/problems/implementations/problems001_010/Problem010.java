@@ -1,10 +1,12 @@
 package pl.krajewski.euler.problems.implementations.problems001_010;
 
+import java.util.List;
+
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
-import pl.krajewski.euler.problems.utils.math.PrimeNumbers;
+import pl.krajewski.euler.problems.utils.numbers.primes.EratosthenesSieve;
 
-public class Problem010 extends Problem<Double> {
+public class Problem010 extends Problem<Long> {
 
 	@Override
 	protected Parameters getParametersForProblem() {
@@ -12,21 +14,19 @@ public class Problem010 extends Problem<Double> {
 	}
 
 	@Override
-	public Double resolveProblem() {
+	public Long resolveProblem() {
 		Integer max = getParameterForNumber(0);
-
-		double sum = 2.0;
-		for (double i = 3; i < max; i += 2) {
-			if (PrimeNumbers.isNumberPrime(i)) {
-				sum += i;
-			}
+		List<Integer> primesBelowNumber = new EratosthenesSieve().getPrimesBelowNumber(max);
+		long sum = 0;
+		for (int i : primesBelowNumber) {
+			sum += i;
 		}
 		return sum;
 	}
 
 	@Override
-	public Double getCorrectProblemAnswer() {
-		return 142913828922.0;
+	public Long getCorrectProblemAnswer() {
+		return 142913828922L;
 	}
 
 }

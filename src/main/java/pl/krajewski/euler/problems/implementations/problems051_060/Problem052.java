@@ -1,8 +1,5 @@
 package pl.krajewski.euler.problems.implementations.problems051_060;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.numbers.NumberDigits;

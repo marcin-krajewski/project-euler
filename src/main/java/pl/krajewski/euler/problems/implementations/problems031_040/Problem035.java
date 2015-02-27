@@ -1,11 +1,13 @@
 package pl.krajewski.euler.problems.implementations.problems031_040;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
 import pl.krajewski.euler.problems.utils.math.PrimeNumbers;
+import pl.krajewski.euler.problems.utils.numbers.primes.EratosthenesSieve;
 
 public class Problem035 extends Problem<Integer> {
 
@@ -21,17 +23,28 @@ public class Problem035 extends Problem<Integer> {
 
 		Integer maxNumber = getParameterForNumber(maxNumberIndex);
 
-		Set<Double> primesBelowNumber = PrimeNumbers.getPrimesBelowNumber(maxNumber);
-		Set<Double> checked = new HashSet<Double>();
+		boolean[] primesBelowNumber = new EratosthenesSieve().getPrimeFlagsBelowNumber(maxNumber);
+		Set<Integer> checked = new HashSet<Integer>();
 
-		for (Double number : primesBelowNumber) {
+		for (int number = 1; number < primesBelowNumber.length; number++) {
+
+			if (!primesBelowNumber[number]) {
+				continue;
+			}
 
 			if (checked.contains(number)) {
 				continue;
 			}
 
-			Set<Double> circularNumbersForNumber = getCircularNumbersForNumber(number);
-			if (primesBelowNumber.containsAll(circularNumbersForNumber)) {
+			Set<Integer> circularNumbersForNumber = getCircularNumbersForNumber(number);
+			boolean not = false;
+			for (int i : circularNumbersForNumber) {
+				if (!primesBelowNumber[i]) {
+					not = true;
+				}
+			}
+
+			if (!not) {
 				checked.addAll(circularNumbersForNumber);
 			}
 		}
@@ -39,22 +52,13 @@ public class Problem035 extends Problem<Integer> {
 		return checked.size();
 	}
 
-	private Set<Double> getCircularNumbersForNumber(double number) {
-		Set<Double> numbers = new HashSet<Double>();
+	private Set<Integer> getCircularNumbersForNumber(int number) {
+		Set<Integer> numbers = new HashSet<Integer>();
 
-		int digits = 1;
-		int temp = (int) number;
-		while ((temp /= 10) > 0) {
-			digits++;
-		}
-
-		double mod;
-		double newVal = number;
-		for (int i = 0; i < digits; i++) {
-			mod = newVal % 10;
-			newVal = (int) (newVal / 10.0);
-			newVal += Math.pow(10, digits - 1) * mod;
-			numbers.add(newVal);
+		String n = number + "";
+		for (int i = 0; i < n.length(); i++) {
+			n = n.substring(1) + n.substring(0, 1);
+			numbers.add(Integer.parseInt(n));
 		}
 
 		return numbers;

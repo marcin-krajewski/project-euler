@@ -3,10 +3,8 @@ package pl.krajewski.euler.problems.implementations.problems111_120;
 import java.util.HashMap;
 import java.util.Map;
 
-import pl.krajewski.euler.ProblemGetter;
 import pl.krajewski.euler.problems.Parameters;
 import pl.krajewski.euler.problems.Problem;
-import pl.krajewski.euler.problems.utils.classes.MapDoubleKey;
 import pl.krajewski.euler.problems.utils.numbers.TilesUtil;
 
 public class Problem116 extends Problem<Long> {

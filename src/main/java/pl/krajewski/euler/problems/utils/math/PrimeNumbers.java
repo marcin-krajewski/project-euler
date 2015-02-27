@@ -3,10 +3,9 @@ package pl.krajewski.euler.problems.utils.math;
 import java.util.HashSet;
 import java.util.Set;
 
-import pl.krajewski.euler.problems.utils.string.StringAsNum;
-
 public class PrimeNumbers {
 
+	@Deprecated
 	public static boolean isNumberPrime(double number) {
 		if (number == 1.0) {
 			return false;
@@ -35,6 +34,7 @@ public class PrimeNumbers {
 		return true;
 	}
 
+	@Deprecated
 	public static Double getPrimeNumberForIndex(int index) {
 		int i = 0;
 		int j = 2;
@@ -49,6 +49,7 @@ public class PrimeNumbers {
 		return prime;
 	}
 
+	@Deprecated
 	public static Set<Double> getPrimesBelowNumber(int number) {
 
 		Set<Double> primeNumbersBelowNumber = new HashSet<Double>();
@@ -60,6 +61,7 @@ public class PrimeNumbers {
 		return primeNumbersBelowNumber;
 	}
 
+	@Deprecated
 	public static double getSmallestPrimeLargerThanParameter(double n) {
 		// TODO Auto-generated method stub
 		return n + n;
