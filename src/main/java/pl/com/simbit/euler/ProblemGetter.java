@@ -15,7 +15,8 @@ import pl.com.simbit.euler.problems.ProblemResolver;
 @SuppressWarnings("rawtypes")
 public class ProblemGetter {
 
-	public static final String PACKAGE_PREFIX = "pl.krajewski.euler.problems.implementations.problems";
+	public static final String PACKAGE_PREFIX = ProblemGetter.class.getPackage().getName()
+			+ ".problems.implementations.problems";
 
 	private static Logger logger = LoggerFactory.getLogger(ProblemGetter.class);
 
