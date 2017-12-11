@@ -5,7 +5,7 @@ package pl.com.simbit.euler.problems.implementations.problems061_070;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.string.StringPower;
+import pl.com.simbit.utility.string.StringPower;
 
 /**
  * @author mkrajewski

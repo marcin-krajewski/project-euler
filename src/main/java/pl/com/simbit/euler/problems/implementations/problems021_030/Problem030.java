@@ -9,7 +9,7 @@ import java.util.Set;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.string.StringPower;
+import pl.com.simbit.utility.string.StringPower;
 
 public class Problem030 extends Problem<Double> {
 

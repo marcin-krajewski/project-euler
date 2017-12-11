@@ -2,7 +2,7 @@ package pl.com.simbit.euler.problems.implementations.problems051_060;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.numbers.BinomialCoefficient;
+import pl.com.simbit.utility.numbers.BinomialCoefficient;
 
 public class Problem053 extends Problem<Integer> {
 

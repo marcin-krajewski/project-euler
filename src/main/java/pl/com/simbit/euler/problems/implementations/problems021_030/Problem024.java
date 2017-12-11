@@ -5,7 +5,7 @@ import java.util.Map;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.math.Permutations;
+import pl.com.simbit.utility.math.Permutations;
 
 public class Problem024 extends Problem<String> {
 

@@ -4,7 +4,7 @@ import java.util.List;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.numbers.primes.EratosthenesSieve;
+import pl.com.simbit.utility.numbers.primes.EratosthenesSieve;
 
 public class Problem010 extends Problem<Long> {
 

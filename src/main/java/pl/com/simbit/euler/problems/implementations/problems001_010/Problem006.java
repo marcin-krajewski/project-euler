@@ -2,8 +2,8 @@ package pl.com.simbit.euler.problems.implementations.problems001_010;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.numbers.PowerOfSum;
-import pl.com.simbit.utility.problems.numbers.SumOfPowers;
+import pl.com.simbit.utility.numbers.PowerOfSum;
+import pl.com.simbit.utility.numbers.SumOfPowers;
 
 public class Problem006 extends Problem<Double> {
 

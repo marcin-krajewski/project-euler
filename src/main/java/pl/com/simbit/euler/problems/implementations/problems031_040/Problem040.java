@@ -2,7 +2,7 @@ package pl.com.simbit.euler.problems.implementations.problems031_040;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.string.ConcatenateIntegers;
+import pl.com.simbit.utility.string.ConcatenateIntegers;
 
 public class Problem040 extends Problem<Integer> {
 

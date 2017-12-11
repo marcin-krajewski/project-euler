@@ -5,8 +5,8 @@ import java.util.Set;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.classes.ArrayUtils;
-import pl.com.simbit.utility.problems.math.PrimeFactor;
+import pl.com.simbit.utility.classes.ArrayUtils;
+import pl.com.simbit.utility.math.PrimeFactor;
 
 public class Problem021 extends Problem<Integer> {
 

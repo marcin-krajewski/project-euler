@@ -5,7 +5,7 @@ import java.util.Map;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.string.Factorial;
+import pl.com.simbit.utility.string.Factorial;
 
 public class Problem034 extends Problem<Double> {
 

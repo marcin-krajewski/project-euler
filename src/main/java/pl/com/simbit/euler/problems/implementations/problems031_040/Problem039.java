@@ -5,7 +5,7 @@ import java.util.Map;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.classes.ArrayUtils;
+import pl.com.simbit.utility.classes.ArrayUtils;
 
 public class Problem039 extends Problem<Integer> {
 

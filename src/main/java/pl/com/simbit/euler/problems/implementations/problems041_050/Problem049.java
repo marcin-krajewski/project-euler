@@ -5,8 +5,8 @@ import java.util.List;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.numbers.NumberDigits;
-import pl.com.simbit.utility.problems.numbers.primes.PrimeNumbers;
+import pl.com.simbit.utility.numbers.NumberDigits;
+import pl.com.simbit.utility.numbers.primes.PrimeNumbers;
 
 /**
  * @author mkrajewski

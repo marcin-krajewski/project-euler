@@ -2,8 +2,8 @@ package pl.com.simbit.euler.problems.implementations.problems031_040;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.math.BinaryNumber;
-import pl.com.simbit.utility.problems.numbers.PalindromNumbers;
+import pl.com.simbit.utility.math.BinaryNumber;
+import pl.com.simbit.utility.numbers.PalindromNumbers;
 
 public class Problem036 extends Problem<Integer> {
 

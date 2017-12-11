@@ -5,7 +5,7 @@ import java.util.Set;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.math.LeastCommonMultiple;
+import pl.com.simbit.utility.math.LeastCommonMultiple;
 
 public class Problem005 extends Problem<Double> {
 

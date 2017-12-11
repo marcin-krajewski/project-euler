@@ -2,8 +2,8 @@ package pl.com.simbit.euler.problems.implementations.problems051_060;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.string.StringAsNum;
-import pl.com.simbit.utility.problems.string.StringPower;
+import pl.com.simbit.utility.string.StringAsNum;
+import pl.com.simbit.utility.string.StringPower;
 
 public class Problem056 extends Problem<Integer> {
 

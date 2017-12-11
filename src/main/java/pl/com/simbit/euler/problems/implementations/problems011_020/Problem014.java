@@ -5,7 +5,7 @@ import java.util.Map;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.numbers.CollatzSequence;
+import pl.com.simbit.utility.numbers.CollatzSequence;
 
 public class Problem014 extends Problem<Double> {
 

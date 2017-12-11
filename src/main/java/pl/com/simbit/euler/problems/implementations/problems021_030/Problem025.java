@@ -2,7 +2,7 @@ package pl.com.simbit.euler.problems.implementations.problems021_030;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.math.FibonacciSequence;
+import pl.com.simbit.utility.math.FibonacciSequence;
 
 public class Problem025 extends Problem<Integer> {
 

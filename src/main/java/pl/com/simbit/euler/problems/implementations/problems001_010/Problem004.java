@@ -2,7 +2,7 @@ package pl.com.simbit.euler.problems.implementations.problems001_010;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.numbers.PalindromNumbers;
+import pl.com.simbit.utility.numbers.PalindromNumbers;
 
 public class Problem004 extends Problem<Integer> {
 

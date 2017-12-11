@@ -5,7 +5,7 @@ import java.util.Map;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.math.SequenceNumbers;
+import pl.com.simbit.utility.math.SequenceNumbers;
 
 public class Problem045 extends Problem<Long> {
 

@@ -2,7 +2,7 @@ package pl.com.simbit.euler.problems.implementations.problems001_010;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.string.FileReader;
+import pl.com.simbit.utility.string.FileReader;
 
 public class Problem008 extends Problem<Integer> {
 

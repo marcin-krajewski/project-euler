@@ -2,10 +2,10 @@ package pl.com.simbit.euler.problems.implementations.problems101_110;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.classes.MapDoubleKey;
-import pl.com.simbit.utility.problems.math.Point;
-import pl.com.simbit.utility.problems.math.Triangle;
-import pl.com.simbit.utility.problems.string.FileReader;
+import pl.com.simbit.utility.classes.MapDoubleKey;
+import pl.com.simbit.utility.math.Point;
+import pl.com.simbit.utility.math.Triangle;
+import pl.com.simbit.utility.string.FileReader;
 
 public class Problem102 extends Problem<Integer> {
 

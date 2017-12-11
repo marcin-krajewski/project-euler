@@ -4,7 +4,7 @@ import java.util.Map;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.math.PrimeNumbers;
+import pl.com.simbit.utility.math.PrimeNumbers;
 
 /**
  * @author mkrajewski

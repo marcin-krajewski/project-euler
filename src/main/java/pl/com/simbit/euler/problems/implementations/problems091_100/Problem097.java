@@ -2,7 +2,7 @@ package pl.com.simbit.euler.problems.implementations.problems091_100;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.math.Power;
+import pl.com.simbit.utility.math.Power;
 
 public class Problem097 extends Problem<Long> {
 

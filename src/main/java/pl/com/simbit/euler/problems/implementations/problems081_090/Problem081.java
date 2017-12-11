@@ -5,8 +5,8 @@ import java.util.Map;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.classes.MapDoubleKey;
-import pl.com.simbit.utility.problems.string.FileReader;
+import pl.com.simbit.utility.classes.MapDoubleKey;
+import pl.com.simbit.utility.string.FileReader;
 
 public class Problem081 extends Problem<Double> {
 

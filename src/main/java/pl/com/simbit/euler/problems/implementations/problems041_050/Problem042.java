@@ -5,9 +5,9 @@ import java.util.Set;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.math.SequenceNumbers;
-import pl.com.simbit.utility.problems.string.EnglishAlphabet;
-import pl.com.simbit.utility.problems.string.FileReader;
+import pl.com.simbit.utility.math.SequenceNumbers;
+import pl.com.simbit.utility.string.EnglishAlphabet;
+import pl.com.simbit.utility.string.FileReader;
 
 public class Problem042 extends Problem<Long> {
 

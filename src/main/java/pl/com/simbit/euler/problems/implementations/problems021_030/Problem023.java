@@ -6,8 +6,8 @@ import java.util.Map;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.math.AbundantNumbers;
-import pl.com.simbit.utility.problems.numbers.primes.EratosthenesSieve;
+import pl.com.simbit.utility.math.AbundantNumbers;
+import pl.com.simbit.utility.numbers.primes.EratosthenesSieve;
 
 public class Problem023 extends Problem<Integer> {
 

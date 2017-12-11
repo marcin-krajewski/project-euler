@@ -5,8 +5,8 @@ import java.util.Set;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.math.PrimeNumbers;
-import pl.com.simbit.utility.problems.numbers.TruncatedNumbers;
+import pl.com.simbit.utility.math.PrimeNumbers;
+import pl.com.simbit.utility.numbers.TruncatedNumbers;
 
 public class Problem037 extends Problem<Integer> {
 

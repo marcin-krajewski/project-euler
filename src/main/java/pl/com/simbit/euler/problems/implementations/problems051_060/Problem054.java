@@ -2,9 +2,9 @@ package pl.com.simbit.euler.problems.implementations.problems051_060;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.poker.Poker;
-import pl.com.simbit.utility.problems.poker.PokerHand;
-import pl.com.simbit.utility.problems.string.FileReader;
+import pl.com.simbit.utility.poker.Poker;
+import pl.com.simbit.utility.poker.PokerHand;
+import pl.com.simbit.utility.string.FileReader;
 
 public class Problem054 extends Problem<Integer> {
 

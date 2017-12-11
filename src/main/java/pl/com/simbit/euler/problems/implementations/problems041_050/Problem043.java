@@ -4,7 +4,7 @@ import java.util.Set;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.numbers.PandigitalNumbers;
+import pl.com.simbit.utility.numbers.PandigitalNumbers;
 
 public class Problem043 extends Problem<Long> {
 

@@ -2,7 +2,7 @@ package pl.com.simbit.euler.problems.implementations.problems011_020;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.math.Divisors;
+import pl.com.simbit.utility.math.Divisors;
 
 public class Problem012 extends Problem<Double> {
 

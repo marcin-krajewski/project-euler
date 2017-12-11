@@ -2,8 +2,8 @@ package pl.com.simbit.euler.problems.implementations.problems091_100;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.classes.IntegerDoubleKey;
-import pl.com.simbit.utility.problems.string.FileReader;
+import pl.com.simbit.utility.classes.IntegerDoubleKey;
+import pl.com.simbit.utility.string.FileReader;
 
 public class Problem099 extends Problem<String> {
 

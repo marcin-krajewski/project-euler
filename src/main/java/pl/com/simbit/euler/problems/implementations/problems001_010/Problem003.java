@@ -2,7 +2,7 @@ package pl.com.simbit.euler.problems.implementations.problems001_010;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.math.PrimeFactor;
+import pl.com.simbit.utility.math.PrimeFactor;
 
 public class Problem003 extends Problem<Double> {
 

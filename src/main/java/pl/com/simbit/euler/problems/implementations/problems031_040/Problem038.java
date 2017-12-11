@@ -2,7 +2,7 @@ package pl.com.simbit.euler.problems.implementations.problems031_040;
 
 import pl.com.simbit.euler.problems.Parameters;
 import pl.com.simbit.euler.problems.Problem;
-import pl.com.simbit.utility.problems.numbers.NumberDigits;
+import pl.com.simbit.utility.numbers.NumberDigits;
 
 public class Problem038 extends Problem<Integer> {
 
